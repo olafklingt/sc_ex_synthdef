@@ -1,0 +1,5 @@
+includePaths:
+  []
+excludePaths:
+  -   /usr/share/SuperCollider/Extensions/SC3plugins
+postInlineWarnings: false
