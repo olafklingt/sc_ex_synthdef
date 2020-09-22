@@ -1,4 +1,4 @@
-defmodule AmpCompA.Ir do
+defmodule UGen.AmpCompA.Ir do
   def name(_ugen_struct), do: "AmpCompA"
   def rate(_ugen_struct), do: 0
   def number_of_outputs(_ugen_struct), do: 1

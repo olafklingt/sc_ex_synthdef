@@ -1,4 +1,4 @@
-defmodule LinCongC.Ar do
+defmodule UGen.LinCongC.Ar do
   def name(_ugen_struct), do: "LinCongC"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

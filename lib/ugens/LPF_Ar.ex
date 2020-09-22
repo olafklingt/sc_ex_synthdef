@@ -1,4 +1,4 @@
-defmodule LPF.Ar do
+defmodule UGen.LPF.Ar do
   def name(_ugen_struct), do: "LPF"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

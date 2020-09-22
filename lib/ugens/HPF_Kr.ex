@@ -1,4 +1,4 @@
-defmodule HPF.Kr do
+defmodule UGen.HPF.Kr do
   def name(_ugen_struct), do: "HPF"
   def rate(_ugen_struct), do: 1
   def number_of_outputs(_ugen_struct), do: 1

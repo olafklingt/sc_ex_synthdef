@@ -1,4 +1,4 @@
-defmodule Saw.Kr do
+defmodule UGen.Saw.Kr do
   def name(_ugen_struct), do: "Saw"
   def rate(_ugen_struct), do: 1
   def number_of_outputs(_ugen_struct), do: 1

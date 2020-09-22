@@ -1,9 +1,9 @@
 defmodule BrownNoise do
   def ar() do
-  %BrownNoise.Ar{}
+  %UGen.BrownNoise.Ar{}
 end
     def kr() do
-  %BrownNoise.Kr{}
+  %UGen.BrownNoise.Kr{}
 end
 
 end

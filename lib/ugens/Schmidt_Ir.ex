@@ -1,4 +1,4 @@
-defmodule Schmidt.Ir do
+defmodule UGen.Schmidt.Ir do
   def name(_ugen_struct), do: "Schmidt"
   def rate(_ugen_struct), do: 0
   def number_of_outputs(_ugen_struct), do: 1

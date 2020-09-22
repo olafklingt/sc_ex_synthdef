@@ -1,4 +1,4 @@
-defmodule VarLag.Ar do
+defmodule UGen.VarLag.Ar do
   def name(_ugen_struct), do: "VarLag"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 0

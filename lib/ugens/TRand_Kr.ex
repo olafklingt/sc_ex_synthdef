@@ -1,4 +1,4 @@
-defmodule TRand.Kr do
+defmodule UGen.TRand.Kr do
   def name(_ugen_struct), do: "TRand"
   def rate(_ugen_struct), do: 1
   def number_of_outputs(_ugen_struct), do: 1

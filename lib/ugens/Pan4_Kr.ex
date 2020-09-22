@@ -1,4 +1,4 @@
-defmodule Pan4.Kr do
+defmodule UGen.Pan4.Kr do
   def name(_ugen_struct), do: "Pan4"
   def rate(_ugen_struct), do: 1
   def number_of_outputs(_ugen_struct), do: 4

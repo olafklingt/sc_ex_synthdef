@@ -1,9 +1,9 @@
 defmodule Amplitude do
   def ar(inv \\ 0.0, attackTime \\ 0.01, releaseTime \\ 0.01) do
-  %Amplitude.Ar{in: inv, attackTime: attackTime, releaseTime: releaseTime}
+  %UGen.Amplitude.Ar{in: inv, attackTime: attackTime, releaseTime: releaseTime}
 end
     def kr(inv \\ 0.0, attackTime \\ 0.01, releaseTime \\ 0.01) do
-  %Amplitude.Kr{in: inv, attackTime: attackTime, releaseTime: releaseTime}
+  %UGen.Amplitude.Kr{in: inv, attackTime: attackTime, releaseTime: releaseTime}
 end
 
 end

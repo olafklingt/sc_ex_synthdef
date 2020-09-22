@@ -1,4 +1,4 @@
-defmodule FSinOsc.Ar do
+defmodule UGen.FSinOsc.Ar do
   def name(_ugen_struct), do: "FSinOsc"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

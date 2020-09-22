@@ -1,4 +1,4 @@
-defmodule RecordBuf.Ar do
+defmodule UGen.RecordBuf.Ar do
   def name(_ugen_struct), do: "RecordBuf"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

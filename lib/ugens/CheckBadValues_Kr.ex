@@ -1,4 +1,4 @@
-defmodule CheckBadValues.Kr do
+defmodule UGen.CheckBadValues.Kr do
   def name(_ugen_struct), do: "CheckBadValues"
   def rate(_ugen_struct), do: 1
   def number_of_outputs(_ugen_struct), do: 1

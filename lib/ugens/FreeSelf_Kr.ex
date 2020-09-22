@@ -1,4 +1,4 @@
-defmodule FreeSelf.Kr do
+defmodule UGen.FreeSelf.Kr do
   def name(_ugen_struct), do: "FreeSelf"
   def rate(_ugen_struct), do: 1
   def number_of_outputs(_ugen_struct), do: 1

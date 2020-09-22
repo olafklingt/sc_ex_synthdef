@@ -1,4 +1,4 @@
-defmodule Phasor.Ar do
+defmodule UGen.Phasor.Ar do
   def name(_ugen_struct), do: "Phasor"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

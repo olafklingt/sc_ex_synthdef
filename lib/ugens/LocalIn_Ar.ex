@@ -1,4 +1,4 @@
-defmodule LocalIn.Ar do
+defmodule UGen.LocalIn.Ar do
   def name(_ugen_struct), do: "LocalIn"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

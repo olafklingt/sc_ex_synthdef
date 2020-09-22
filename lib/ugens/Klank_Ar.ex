@@ -1,4 +1,4 @@
-defmodule Klank.Ar do
+defmodule UGen.Klank.Ar do
   def name(_ugen_struct), do: "Klank"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

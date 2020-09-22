@@ -1,6 +1,6 @@
 defmodule BlockSize do
   def ir() do
-  %BlockSize.Ir{}
+  %UGen.BlockSize.Ir{}
 end
 
 end

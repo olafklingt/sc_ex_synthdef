@@ -1,6 +1,6 @@
 defmodule NumControlBuses do
   def ir() do
-  %NumControlBuses.Ir{}
+  %UGen.NumControlBuses.Ir{}
 end
 
 end

@@ -1,4 +1,4 @@
-defmodule MantissaMask.Kr do
+defmodule UGen.MantissaMask.Kr do
   def name(_ugen_struct), do: "MantissaMask"
   def rate(_ugen_struct), do: 1
   def number_of_outputs(_ugen_struct), do: 1

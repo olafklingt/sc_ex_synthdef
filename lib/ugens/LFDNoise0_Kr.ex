@@ -1,4 +1,4 @@
-defmodule LFDNoise0.Kr do
+defmodule UGen.LFDNoise0.Kr do
   def name(_ugen_struct), do: "LFDNoise0"
   def rate(_ugen_struct), do: 1
   def number_of_outputs(_ugen_struct), do: 1

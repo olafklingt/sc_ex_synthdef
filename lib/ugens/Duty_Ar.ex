@@ -1,4 +1,4 @@
-defmodule Duty.Ar do
+defmodule UGen.Duty.Ar do
   def name(_ugen_struct), do: "Duty"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

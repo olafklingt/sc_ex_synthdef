@@ -1,4 +1,4 @@
-defmodule PV_MagSquared.New do
+defmodule UGen.PV_MagSquared.New do
   def name(_ugen_struct), do: "PV_MagSquared"
   def rate(_ugen_struct), do: 0
   def number_of_outputs(_ugen_struct), do: 1

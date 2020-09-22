@@ -1,4 +1,4 @@
-defmodule SOS.Kr do
+defmodule UGen.SOS.Kr do
   def name(_ugen_struct), do: "SOS"
   def rate(_ugen_struct), do: 1
   def number_of_outputs(_ugen_struct), do: 1

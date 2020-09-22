@@ -1,4 +1,4 @@
-defmodule Schmidt.Kr do
+defmodule UGen.Schmidt.Kr do
   def name(_ugen_struct), do: "Schmidt"
   def rate(_ugen_struct), do: 1
   def number_of_outputs(_ugen_struct), do: 1

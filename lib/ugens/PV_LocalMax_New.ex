@@ -1,4 +1,4 @@
-defmodule PV_LocalMax.New do
+defmodule UGen.PV_LocalMax.New do
   def name(_ugen_struct), do: "PV_LocalMax"
   def rate(_ugen_struct), do: 0
   def number_of_outputs(_ugen_struct), do: 1

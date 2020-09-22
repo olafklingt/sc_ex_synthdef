@@ -1,4 +1,4 @@
-defmodule LinXFade2.Kr do
+defmodule UGen.LinXFade2.Kr do
   def name(_ugen_struct), do: "LinXFade2"
   def rate(_ugen_struct), do: 1
   def number_of_outputs(_ugen_struct), do: 1

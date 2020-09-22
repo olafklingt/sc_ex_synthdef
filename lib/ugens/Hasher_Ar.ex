@@ -1,4 +1,4 @@
-defmodule Hasher.Ar do
+defmodule UGen.Hasher.Ar do
   def name(_ugen_struct), do: "Hasher"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

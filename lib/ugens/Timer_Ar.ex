@@ -1,4 +1,4 @@
-defmodule Timer.Ar do
+defmodule UGen.Timer.Ar do
   def name(_ugen_struct), do: "Timer"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

@@ -1,4 +1,4 @@
-defmodule Decay.Ar do
+defmodule UGen.Decay.Ar do
   def name(_ugen_struct), do: "Decay"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

@@ -1,4 +1,4 @@
-defmodule SpecFlatness.Kr do
+defmodule UGen.SpecFlatness.Kr do
   def name(_ugen_struct), do: "SpecFlatness"
   def rate(_ugen_struct), do: 1
   def number_of_outputs(_ugen_struct), do: 1

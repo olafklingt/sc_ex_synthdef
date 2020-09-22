@@ -1,4 +1,4 @@
-defmodule XLine.Ar do
+defmodule UGen.XLine.Ar do
   def name(_ugen_struct), do: "XLine"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

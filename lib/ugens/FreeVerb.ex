@@ -1,6 +1,6 @@
 defmodule FreeVerb do
   def ar(inv \\ nil, mix \\ 0.33, room \\ 0.5, damp \\ 0.5) do
-  %FreeVerb.Ar{in: inv, mix: mix, room: room, damp: damp}
+  %UGen.FreeVerb.Ar{in: inv, mix: mix, room: room, damp: damp}
 end
 
 end

@@ -1,4 +1,4 @@
-defmodule GrainFM.Ar do
+defmodule UGen.GrainFM.Ar do
   def name(_ugen_struct), do: "GrainFM"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

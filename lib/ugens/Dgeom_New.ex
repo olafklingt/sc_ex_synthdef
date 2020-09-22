@@ -1,4 +1,4 @@
-defmodule Dgeom.New do
+defmodule UGen.Dgeom.New do
   def name(_ugen_struct), do: "Dgeom"
   def rate(_ugen_struct), do: 0
   def number_of_outputs(_ugen_struct), do: 1

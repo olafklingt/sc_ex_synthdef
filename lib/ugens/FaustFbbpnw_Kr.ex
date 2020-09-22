@@ -1,4 +1,4 @@
-defmodule FaustFbbpnw.Kr do
+defmodule UGen.FaustFbbpnw.Kr do
   def name(_ugen_struct), do: "FaustFbbpnw"
   def rate(_ugen_struct), do: 1
   def number_of_outputs(_ugen_struct), do: 1

@@ -1,4 +1,4 @@
-defmodule Dswitch1.New do
+defmodule UGen.Dswitch1.New do
   def name(_ugen_struct), do: "Dswitch1"
   def rate(_ugen_struct), do: 0
   def number_of_outputs(_ugen_struct), do: 1

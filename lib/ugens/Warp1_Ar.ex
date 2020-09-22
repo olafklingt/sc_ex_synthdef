@@ -1,4 +1,4 @@
-defmodule Warp1.Ar do
+defmodule UGen.Warp1.Ar do
   def name(_ugen_struct), do: "Warp1"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

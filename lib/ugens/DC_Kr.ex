@@ -1,4 +1,4 @@
-defmodule DC.Kr do
+defmodule UGen.DC.Kr do
   def name(_ugen_struct), do: "DC"
   def rate(_ugen_struct), do: 1
   def number_of_outputs(_ugen_struct), do: 1

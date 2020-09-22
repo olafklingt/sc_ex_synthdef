@@ -1,4 +1,4 @@
-defmodule Ball.Ar do
+defmodule UGen.Ball.Ar do
   def name(_ugen_struct), do: "Ball"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

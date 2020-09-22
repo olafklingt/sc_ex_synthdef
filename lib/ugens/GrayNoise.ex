@@ -1,9 +1,9 @@
 defmodule GrayNoise do
   def ar() do
-  %GrayNoise.Ar{}
+  %UGen.GrayNoise.Ar{}
 end
     def kr() do
-  %GrayNoise.Kr{}
+  %UGen.GrayNoise.Kr{}
 end
 
 end

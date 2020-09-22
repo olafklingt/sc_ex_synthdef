@@ -1,9 +1,9 @@
 defmodule PinkNoise do
   def ar() do
-  %PinkNoise.Ar{}
+  %UGen.PinkNoise.Ar{}
 end
     def kr() do
-  %PinkNoise.Kr{}
+  %UGen.PinkNoise.Kr{}
 end
 
 end

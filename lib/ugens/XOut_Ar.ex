@@ -1,4 +1,4 @@
-defmodule XOut.Ar do
+defmodule UGen.XOut.Ar do
   def name(_ugen_struct), do: "XOut"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 0

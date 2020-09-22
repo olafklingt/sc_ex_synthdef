@@ -1,6 +1,6 @@
 defmodule NumBuffers do
   def ir() do
-  %NumBuffers.Ir{}
+  %UGen.NumBuffers.Ir{}
 end
 
 end

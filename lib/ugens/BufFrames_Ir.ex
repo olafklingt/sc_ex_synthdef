@@ -1,4 +1,4 @@
-defmodule BufFrames.Ir do
+defmodule UGen.BufFrames.Ir do
   def name(_ugen_struct), do: "BufFrames"
   def rate(_ugen_struct), do: 0
   def number_of_outputs(_ugen_struct), do: 1

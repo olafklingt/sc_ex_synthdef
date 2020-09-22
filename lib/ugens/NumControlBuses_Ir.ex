@@ -1,4 +1,4 @@
-defmodule NumControlBuses.Ir do
+defmodule UGen.NumControlBuses.Ir do
   def name(_ugen_struct), do: "NumControlBuses"
   def rate(_ugen_struct), do: 0
   def number_of_outputs(_ugen_struct), do: 1

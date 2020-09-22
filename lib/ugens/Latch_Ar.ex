@@ -1,4 +1,4 @@
-defmodule Latch.Ar do
+defmodule UGen.Latch.Ar do
   def name(_ugen_struct), do: "Latch"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

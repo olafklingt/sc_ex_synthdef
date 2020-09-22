@@ -1,6 +1,6 @@
 defmodule RadiansPerSample do
   def ir() do
-  %RadiansPerSample.Ir{}
+  %UGen.RadiansPerSample.Ir{}
 end
 
 end

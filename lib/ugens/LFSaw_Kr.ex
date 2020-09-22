@@ -1,4 +1,4 @@
-defmodule LFSaw.Kr do
+defmodule UGen.LFSaw.Kr do
   def name(_ugen_struct), do: "LFSaw"
   def rate(_ugen_struct), do: 1
   def number_of_outputs(_ugen_struct), do: 1

@@ -1,4 +1,4 @@
-defmodule Sweep.Kr do
+defmodule UGen.Sweep.Kr do
   def name(_ugen_struct), do: "Sweep"
   def rate(_ugen_struct), do: 1
   def number_of_outputs(_ugen_struct), do: 1

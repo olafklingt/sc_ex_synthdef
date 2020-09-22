@@ -1,4 +1,4 @@
-defmodule Impulse.Ar do
+defmodule UGen.Impulse.Ar do
   def name(_ugen_struct), do: "Impulse"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

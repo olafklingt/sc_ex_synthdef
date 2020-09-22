@@ -1,4 +1,4 @@
-defmodule PV_MagSmear.New do
+defmodule UGen.PV_MagSmear.New do
   def name(_ugen_struct), do: "PV_MagSmear"
   def rate(_ugen_struct), do: 0
   def number_of_outputs(_ugen_struct), do: 1

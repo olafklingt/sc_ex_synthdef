@@ -1,4 +1,4 @@
-defmodule Resonz.Ar do
+defmodule UGen.Resonz.Ar do
   def name(_ugen_struct), do: "Resonz"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

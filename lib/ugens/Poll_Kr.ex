@@ -1,4 +1,4 @@
-defmodule Poll.Kr do
+defmodule UGen.Poll.Kr do
   def name(_ugen_struct), do: "Poll"
   def rate(_ugen_struct), do: 1
   def number_of_outputs(_ugen_struct), do: 1

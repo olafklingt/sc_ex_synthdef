@@ -1,4 +1,4 @@
-defmodule LinRand.New do
+defmodule UGen.LinRand.New do
   def name(_ugen_struct), do: "LinRand"
   def rate(_ugen_struct), do: 0
   def number_of_outputs(_ugen_struct), do: 1

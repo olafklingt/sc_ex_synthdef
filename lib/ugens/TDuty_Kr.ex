@@ -1,4 +1,4 @@
-defmodule TDuty.Kr do
+defmodule UGen.TDuty.Kr do
   def name(_ugen_struct), do: "TDuty"
   def rate(_ugen_struct), do: 1
   def number_of_outputs(_ugen_struct), do: 1

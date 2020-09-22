@@ -1,4 +1,4 @@
-defmodule T2A.Ar do
+defmodule UGen.T2A.Ar do
   def name(_ugen_struct), do: "T2A"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

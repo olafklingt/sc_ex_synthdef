@@ -1,4 +1,4 @@
-defmodule A2K.Kr do
+defmodule UGen.A2K.Kr do
   def name(_ugen_struct), do: "A2K"
   def rate(_ugen_struct), do: 1
   def number_of_outputs(_ugen_struct), do: 1

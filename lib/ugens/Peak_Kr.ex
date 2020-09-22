@@ -1,4 +1,4 @@
-defmodule Peak.Kr do
+defmodule UGen.Peak.Kr do
   def name(_ugen_struct), do: "Peak"
   def rate(_ugen_struct), do: 1
   def number_of_outputs(_ugen_struct), do: 1

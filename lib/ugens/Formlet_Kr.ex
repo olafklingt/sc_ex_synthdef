@@ -1,4 +1,4 @@
-defmodule Formlet.Kr do
+defmodule UGen.Formlet.Kr do
   def name(_ugen_struct), do: "Formlet"
   def rate(_ugen_struct), do: 1
   def number_of_outputs(_ugen_struct), do: 1

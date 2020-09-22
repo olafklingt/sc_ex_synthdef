@@ -1,4 +1,4 @@
-defmodule PV_HainsworthFoote.Ar do
+defmodule UGen.PV_HainsworthFoote.Ar do
   def name(_ugen_struct), do: "PV_HainsworthFoote"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

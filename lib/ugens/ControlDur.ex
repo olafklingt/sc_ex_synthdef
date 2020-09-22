@@ -1,6 +1,6 @@
 defmodule ControlDur do
   def ir() do
-  %ControlDur.Ir{}
+  %UGen.ControlDur.Ir{}
 end
 
 end

@@ -1,4 +1,4 @@
-defmodule DelTapRd.Ar do
+defmodule UGen.DelTapRd.Ar do
   def name(_ugen_struct), do: "DelTapRd"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

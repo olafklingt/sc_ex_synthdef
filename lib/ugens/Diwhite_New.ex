@@ -1,4 +1,4 @@
-defmodule Diwhite.New do
+defmodule UGen.Diwhite.New do
   def name(_ugen_struct), do: "Diwhite"
   def rate(_ugen_struct), do: 0
   def number_of_outputs(_ugen_struct), do: 1

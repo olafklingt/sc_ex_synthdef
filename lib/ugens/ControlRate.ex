@@ -1,6 +1,6 @@
 defmodule ControlRate do
   def ir() do
-  %ControlRate.Ir{}
+  %UGen.ControlRate.Ir{}
 end
 
 end

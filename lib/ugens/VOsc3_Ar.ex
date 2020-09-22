@@ -1,4 +1,4 @@
-defmodule VOsc3.Ar do
+defmodule UGen.VOsc3.Ar do
   def name(_ugen_struct), do: "VOsc3"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

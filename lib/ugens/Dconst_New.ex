@@ -1,4 +1,4 @@
-defmodule Dconst.New do
+defmodule UGen.Dconst.New do
   def name(_ugen_struct), do: "Dconst"
   def rate(_ugen_struct), do: 0
   def number_of_outputs(_ugen_struct), do: 1

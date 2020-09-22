@@ -1,4 +1,4 @@
-defmodule Crackle.Kr do
+defmodule UGen.Crackle.Kr do
   def name(_ugen_struct), do: "Crackle"
   def rate(_ugen_struct), do: 1
   def number_of_outputs(_ugen_struct), do: 1

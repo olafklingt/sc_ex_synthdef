@@ -1,6 +1,6 @@
 defmodule SpecCentroid do
   def kr(buffer \\ nil) do
-  %SpecCentroid.Kr{buffer: buffer}
+  %UGen.SpecCentroid.Kr{buffer: buffer}
 end
 
 end

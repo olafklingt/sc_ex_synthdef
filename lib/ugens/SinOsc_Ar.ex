@@ -1,4 +1,4 @@
-defmodule SinOsc.Ar do
+defmodule UGen.SinOsc.Ar do
   def name(_ugen_struct), do: "SinOsc"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

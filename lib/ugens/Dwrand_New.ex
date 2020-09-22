@@ -1,4 +1,4 @@
-defmodule Dwrand.New do
+defmodule UGen.Dwrand.New do
   def name(_ugen_struct), do: "Dwrand"
   def rate(_ugen_struct), do: 0
   def number_of_outputs(_ugen_struct), do: 1

@@ -1,4 +1,4 @@
-defmodule SubsampleOffset.Ir do
+defmodule UGen.SubsampleOffset.Ir do
   def name(_ugen_struct), do: "SubsampleOffset"
   def rate(_ugen_struct), do: 0
   def number_of_outputs(_ugen_struct), do: 1

@@ -1,6 +1,6 @@
 defmodule SubsampleOffset do
   def ir() do
-  %SubsampleOffset.Ir{}
+  %UGen.SubsampleOffset.Ir{}
 end
 
 end

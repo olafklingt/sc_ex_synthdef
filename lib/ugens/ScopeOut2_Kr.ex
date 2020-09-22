@@ -1,4 +1,4 @@
-defmodule ScopeOut2.Kr do
+defmodule UGen.ScopeOut2.Kr do
   def name(_ugen_struct), do: "ScopeOut2"
   def rate(_ugen_struct), do: 1
   def number_of_outputs(_ugen_struct), do: 0

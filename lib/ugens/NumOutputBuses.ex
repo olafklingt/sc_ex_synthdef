@@ -1,6 +1,6 @@
 defmodule NumOutputBuses do
   def ir() do
-  %NumOutputBuses.Ir{}
+  %UGen.NumOutputBuses.Ir{}
 end
 
 end

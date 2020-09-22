@@ -1,4 +1,4 @@
-defmodule PV_RectComb.New do
+defmodule UGen.PV_RectComb.New do
   def name(_ugen_struct), do: "PV_RectComb"
   def rate(_ugen_struct), do: 0
   def number_of_outputs(_ugen_struct), do: 1

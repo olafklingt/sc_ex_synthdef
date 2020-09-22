@@ -1,4 +1,4 @@
-defmodule Rotate2.Ar do
+defmodule UGen.Rotate2.Ar do
   def name(_ugen_struct), do: "Rotate2"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 2

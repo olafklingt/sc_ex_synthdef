@@ -1,4 +1,4 @@
-defmodule Ramp.Ar do
+defmodule UGen.Ramp.Ar do
   def name(_ugen_struct), do: "Ramp"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 0

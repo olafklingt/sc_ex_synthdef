@@ -1,4 +1,4 @@
-defmodule MostChange.Kr do
+defmodule UGen.MostChange.Kr do
   def name(_ugen_struct), do: "MostChange"
   def rate(_ugen_struct), do: 1
   def number_of_outputs(_ugen_struct), do: 1

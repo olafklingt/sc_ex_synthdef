@@ -1,4 +1,4 @@
-defmodule LeakDC.Ar do
+defmodule UGen.LeakDC.Ar do
   def name(_ugen_struct), do: "LeakDC"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

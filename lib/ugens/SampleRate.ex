@@ -1,6 +1,6 @@
 defmodule SampleRate do
   def ir() do
-  %SampleRate.Ir{}
+  %UGen.SampleRate.Ir{}
 end
 
 end

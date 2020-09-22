@@ -1,4 +1,4 @@
-defmodule Osc.Ar do
+defmodule UGen.Osc.Ar do
   def name(_ugen_struct), do: "Osc"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

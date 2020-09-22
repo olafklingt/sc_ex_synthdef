@@ -1,4 +1,4 @@
-defmodule BufChannels.Ir do
+defmodule UGen.BufChannels.Ir do
   def name(_ugen_struct), do: "BufChannels"
   def rate(_ugen_struct), do: 0
   def number_of_outputs(_ugen_struct), do: 1

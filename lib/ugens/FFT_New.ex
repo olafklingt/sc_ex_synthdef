@@ -1,4 +1,4 @@
-defmodule FFT.New do
+defmodule UGen.FFT.New do
   def name(_ugen_struct), do: "FFT"
   def rate(_ugen_struct), do: 0
   def number_of_outputs(_ugen_struct), do: 1

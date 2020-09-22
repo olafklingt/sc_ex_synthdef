@@ -1,4 +1,4 @@
-defmodule TIRand.Ar do
+defmodule UGen.TIRand.Ar do
   def name(_ugen_struct), do: "TIRand"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

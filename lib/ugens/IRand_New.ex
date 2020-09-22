@@ -1,4 +1,4 @@
-defmodule IRand.New do
+defmodule UGen.IRand.New do
   def name(_ugen_struct), do: "IRand"
   def rate(_ugen_struct), do: 0
   def number_of_outputs(_ugen_struct), do: 1

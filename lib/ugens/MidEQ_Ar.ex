@@ -1,4 +1,4 @@
-defmodule MidEQ.Ar do
+defmodule UGen.MidEQ.Ar do
   def name(_ugen_struct), do: "MidEQ"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

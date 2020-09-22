@@ -1,4 +1,4 @@
-defmodule PauseSelf.Kr do
+defmodule UGen.PauseSelf.Kr do
   def name(_ugen_struct), do: "PauseSelf"
   def rate(_ugen_struct), do: 1
   def number_of_outputs(_ugen_struct), do: 1

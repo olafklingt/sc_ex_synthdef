@@ -1,4 +1,4 @@
-defmodule Gendy3.Ar do
+defmodule UGen.Gendy3.Ar do
   def name(_ugen_struct), do: "Gendy3"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

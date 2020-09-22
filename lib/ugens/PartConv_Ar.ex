@@ -1,4 +1,4 @@
-defmodule PartConv.Ar do
+defmodule UGen.PartConv.Ar do
   def name(_ugen_struct), do: "PartConv"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

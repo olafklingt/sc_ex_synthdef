@@ -1,4 +1,4 @@
-defmodule SampleRate.Ir do
+defmodule UGen.SampleRate.Ir do
   def name(_ugen_struct), do: "SampleRate"
   def rate(_ugen_struct), do: 0
   def number_of_outputs(_ugen_struct), do: 1

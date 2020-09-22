@@ -1,4 +1,4 @@
-defmodule IndexL.Ar do
+defmodule UGen.IndexL.Ar do
   def name(_ugen_struct), do: "IndexL"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

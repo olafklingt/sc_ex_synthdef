@@ -1,4 +1,4 @@
-defmodule RandID.Ir do
+defmodule UGen.RandID.Ir do
   def name(_ugen_struct), do: "RandID"
   def rate(_ugen_struct), do: 0
   def number_of_outputs(_ugen_struct), do: 0

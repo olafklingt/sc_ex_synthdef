@@ -1,4 +1,4 @@
-defmodule DelTapWr.Ar do
+defmodule UGen.DelTapWr.Ar do
   def name(_ugen_struct), do: "DelTapWr"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

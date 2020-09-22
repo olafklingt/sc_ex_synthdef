@@ -1,4 +1,4 @@
-defmodule BufFrames.Kr do
+defmodule UGen.BufFrames.Kr do
   def name(_ugen_struct), do: "BufFrames"
   def rate(_ugen_struct), do: 1
   def number_of_outputs(_ugen_struct), do: 1

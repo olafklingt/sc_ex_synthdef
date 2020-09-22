@@ -1,4 +1,4 @@
-defmodule LFDClipNoise.Ar do
+defmodule UGen.LFDClipNoise.Ar do
   def name(_ugen_struct), do: "LFDClipNoise"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

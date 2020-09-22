@@ -1,4 +1,4 @@
-defmodule BLowShelf.Ar do
+defmodule UGen.BLowShelf.Ar do
   def name(_ugen_struct), do: "BLowShelf"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

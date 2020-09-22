@@ -1,9 +1,9 @@
 defmodule ClipNoise do
   def ar() do
-  %ClipNoise.Ar{}
+  %UGen.ClipNoise.Ar{}
 end
     def kr() do
-  %ClipNoise.Kr{}
+  %UGen.ClipNoise.Kr{}
 end
 
 end

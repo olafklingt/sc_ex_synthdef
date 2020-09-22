@@ -1,4 +1,4 @@
-defmodule DetectIndex.Ar do
+defmodule UGen.DetectIndex.Ar do
   def name(_ugen_struct), do: "DetectIndex"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

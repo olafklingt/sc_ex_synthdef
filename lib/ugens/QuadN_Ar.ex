@@ -1,4 +1,4 @@
-defmodule QuadN.Ar do
+defmodule UGen.QuadN.Ar do
   def name(_ugen_struct), do: "QuadN"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

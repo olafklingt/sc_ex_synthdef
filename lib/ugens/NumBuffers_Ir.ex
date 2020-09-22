@@ -1,4 +1,4 @@
-defmodule NumBuffers.Ir do
+defmodule UGen.NumBuffers.Ir do
   def name(_ugen_struct), do: "NumBuffers"
   def rate(_ugen_struct), do: 0
   def number_of_outputs(_ugen_struct), do: 1

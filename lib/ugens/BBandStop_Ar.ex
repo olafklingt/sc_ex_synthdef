@@ -1,4 +1,4 @@
-defmodule BBandStop.Ar do
+defmodule UGen.BBandStop.Ar do
   def name(_ugen_struct), do: "BBandStop"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

@@ -1,4 +1,4 @@
-defmodule PV_MagMul.New do
+defmodule UGen.PV_MagMul.New do
   def name(_ugen_struct), do: "PV_MagMul"
   def rate(_ugen_struct), do: 0
   def number_of_outputs(_ugen_struct), do: 1

@@ -1,4 +1,4 @@
-defmodule Dbufwr.New do
+defmodule UGen.Dbufwr.New do
   def name(_ugen_struct), do: "Dbufwr"
   def rate(_ugen_struct), do: 0
   def number_of_outputs(_ugen_struct), do: 1

@@ -1,4 +1,4 @@
-defmodule TExpRand.Ar do
+defmodule UGen.TExpRand.Ar do
   def name(_ugen_struct), do: "TExpRand"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

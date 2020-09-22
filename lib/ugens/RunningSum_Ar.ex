@@ -1,4 +1,4 @@
-defmodule RunningSum.Ar do
+defmodule UGen.RunningSum.Ar do
   def name(_ugen_struct), do: "RunningSum"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

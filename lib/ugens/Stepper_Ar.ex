@@ -1,4 +1,4 @@
-defmodule Stepper.Ar do
+defmodule UGen.Stepper.Ar do
   def name(_ugen_struct), do: "Stepper"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

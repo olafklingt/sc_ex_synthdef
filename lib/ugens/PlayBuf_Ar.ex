@@ -1,4 +1,4 @@
-defmodule PlayBuf.Ar do
+defmodule UGen.PlayBuf.Ar do
   def name(_ugen_struct), do: "PlayBuf"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

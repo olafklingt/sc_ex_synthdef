@@ -1,4 +1,4 @@
-defmodule Lag3UD.Ar do
+defmodule UGen.Lag3UD.Ar do
   def name(_ugen_struct), do: "Lag3UD"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 0

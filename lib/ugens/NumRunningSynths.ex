@@ -1,9 +1,9 @@
 defmodule NumRunningSynths do
   def ir() do
-  %NumRunningSynths.Ir{}
+  %UGen.NumRunningSynths.Ir{}
 end
     def kr() do
-  %NumRunningSynths.Kr{}
+  %UGen.NumRunningSynths.Kr{}
 end
 
 end

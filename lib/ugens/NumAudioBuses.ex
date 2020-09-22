@@ -1,6 +1,6 @@
 defmodule NumAudioBuses do
   def ir() do
-  %NumAudioBuses.Ir{}
+  %UGen.NumAudioBuses.Ir{}
 end
 
 end

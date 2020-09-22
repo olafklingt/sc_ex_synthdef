@@ -1,4 +1,4 @@
-defmodule SendTrig.Kr do
+defmodule UGen.SendTrig.Kr do
   def name(_ugen_struct), do: "SendTrig"
   def rate(_ugen_struct), do: 1
   def number_of_outputs(_ugen_struct), do: 0

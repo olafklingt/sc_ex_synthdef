@@ -1,4 +1,4 @@
-defmodule AllpassC.Ar do
+defmodule UGen.AllpassC.Ar do
   def name(_ugen_struct), do: "AllpassC"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1

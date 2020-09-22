@@ -1,6 +1,6 @@
 defmodule NodeID do
   def ir() do
-  %NodeID.Ir{}
+  %UGen.NodeID.Ir{}
 end
 
 end
