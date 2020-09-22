@@ -1,27 +1,27 @@
 defmodule SCSynthDef.Maker do
   # second idea
 
-  def name(struct) do
+  defp name(struct) do
     apply(struct.__struct__, :name, [struct])
   end
 
-  def rate(struct) do
+  defp rate(struct) do
     apply(struct.__struct__, :rate, [struct])
   end
 
-  def number_of_outputs(struct) do
+  defp number_of_outputs(struct) do
     apply(struct.__struct__, :number_of_outputs, [struct])
   end
 
-  def outputs(struct) do
+  defp outputs(struct) do
     apply(struct.__struct__, :outputs, [struct])
   end
 
-  def args(struct) do
+  defp args(struct) do
     apply(struct.__struct__, :args, [struct])
   end
 
-  def special_index(struct) do
+  defp special_index(struct) do
     apply(struct.__struct__, :special_index, [struct])
   end
 
@@ -36,20 +36,29 @@ defmodule SCSynthDef.Maker do
     def
   end
 
-  def add_ugengraph_to_def(def, ugen = %Control.Kr{key: key, value: val}) do
+  defp add_ugengraph_to_def(def, ugen = %Control.Kr{key: key, value: val, spec: spec}) do
     id = Enum.find_index(def.parameter_names, fn x -> x.name == key end)
+
+    if !is_nil(def.metadata[key]) && def.metadata[key] != spec do
+      raise "could not add Control.Kr because a control of the same name had been added with a different spec"
+    end
+
+    def = put_in(def.metadata[key], spec)
 
     {def, id} =
       if(is_nil(id)) do
         id = Kernel.length(def.parameters)
         def = add_parameter_to_def(def, val)
-        def = add_parameter_name_to_def(def, %SCSynthDef.SCSDParameterName{id: id, name: key})
+
+        def =
+          add_parameter_name_to_def(def, %SCSynthDef.Struct.SCSDParameterName{id: id, name: key})
+
         {def, id}
       else
         {def, id}
       end
 
-    add_ugen_to_def(def, %SCSynthDef.SCSDUGen{
+    add_ugen_to_def(def, %SCSynthDef.Struct.SCSDUGen{
       name: name(ugen),
       rate: rate(ugen),
       number_of_inputs: 0,
@@ -60,7 +69,7 @@ defmodule SCSynthDef.Maker do
     })
   end
 
-  def add_ugengraph_to_def(def, ugen) do
+  defp add_ugengraph_to_def(def, ugen) do
     {def, inputs} =
       Enum.reduce(args(ugen), {def, []}, fn key, {def, inputs} ->
         val = Map.get(ugen, key)
@@ -89,24 +98,29 @@ defmodule SCSynthDef.Maker do
             {def,
              inputs ++
                [
-                 %SCSynthDef.SCSDInput{
+                 %SCSynthDef.Struct.SCSDInput{
                    index_of_ugen: -1,
                    index_of_output: index
                  }
                ]}
 
           is_map(val) ->
-            # IO.puts("ugen input: #{key}: #{inspect(val)}")
+            # IO.puts(
+            #   "ugen input: #{key}: name #{inspect(name(val))}   number of outputs #{
+            #     inspect(number_of_outputs(val))
+            #   }"
+            # )
+
             {def, index} = add_ugengraph_to_def(def, val)
 
             {def,
              inputs ++
-               [
-                 %SCSynthDef.SCSDInput{
+               Enum.map(0..(number_of_outputs(val) - 1), fn x ->
+                 %SCSynthDef.Struct.SCSDInput{
                    index_of_ugen: index,
-                   index_of_output: 0
+                   index_of_output: x
                  }
-               ]}
+               end)}
 
           is_list(val) ->
             # IO.puts("list input: #{key}: #{inspect(val)}")
@@ -116,12 +130,12 @@ defmodule SCSynthDef.Maker do
 
               {def,
                inputs ++
-                 [
-                   %SCSynthDef.SCSDInput{
+                 Enum.map(0..(number_of_outputs(val) - 1), fn x ->
+                   %SCSynthDef.Struct.SCSDInput{
                      index_of_ugen: index,
-                     index_of_output: 0
+                     index_of_output: x
                    }
-                 ]}
+                 end)}
             end)
 
           true ->
@@ -130,7 +144,7 @@ defmodule SCSynthDef.Maker do
         end
       end)
 
-    add_ugen_to_def(def, %SCSynthDef.SCSDUGen{
+    add_ugen_to_def(def, %SCSynthDef.Struct.SCSDUGen{
       name: name(ugen),
       rate: rate(ugen),
       number_of_inputs: Kernel.length(inputs),
@@ -141,7 +155,7 @@ defmodule SCSynthDef.Maker do
     })
   end
 
-  def add_constant_to_constants_set(constants, val) do
+  defp add_constant_to_constants_set(constants, val) do
     if Enum.member?(constants, val) do
       {constants, Enum.find_index(constants, fn x -> x == val end)}
     else
@@ -151,7 +165,7 @@ defmodule SCSynthDef.Maker do
     end
   end
 
-  def add_constant_to_def(def, val) do
+  defp add_constant_to_def(def, val) do
     val = val / 1
     {nc, index} = add_constant_to_constants_set(def.constants, val)
     {%{def | constants: nc, number_of_constants: Kernel.length(nc)}, index}
@@ -167,7 +181,7 @@ defmodule SCSynthDef.Maker do
   #   end
   # end
 
-  def add_parameter_to_def(def, val) do
+  defp add_parameter_to_def(def, val) do
     val = val / 1
     nc = def.parameters ++ [val]
     # index = Kernel.length(nc) - 1
@@ -176,7 +190,7 @@ defmodule SCSynthDef.Maker do
     %{def | parameters: nc, number_of_parameters: Kernel.length(nc)}
   end
 
-  def add_parameter_name_to_parameter_names_set(parameter_names, key) do
+  defp add_parameter_name_to_parameter_names_set(parameter_names, key) do
     if Enum.member?(parameter_names, key) do
       {parameter_names, Enum.find_index(parameter_names, fn x -> x == key end)}
     else
@@ -186,12 +200,12 @@ defmodule SCSynthDef.Maker do
     end
   end
 
-  def add_parameter_name_to_def(def, key) do
+  defp add_parameter_name_to_def(def, key) do
     {nc, _index} = add_parameter_name_to_parameter_names_set(def.parameter_names, key)
     %{def | parameter_names: nc, number_of_parameter_names: Kernel.length(nc)}
   end
 
-  def add_ugen_to_ugens_set(ugens, ugen) do
+  defp add_ugen_to_ugens_set(ugens, ugen) do
     if Enum.member?(ugens, ugen) do
       {ugens, Enum.find_index(ugens, fn x -> x == ugen end)}
     else
@@ -201,13 +215,13 @@ defmodule SCSynthDef.Maker do
     end
   end
 
-  def add_ugen_to_def(def, ugen) do
+  defp add_ugen_to_def(def, ugen) do
     {nug, index} = add_ugen_to_ugens_set(def.ugens, ugen)
     {%{def | ugens: nug, number_of_ugens: Kernel.length(nug)}, index}
   end
 
   # def test_too() do
-  #   def = %SCSynthDef{name: "test"}
+  #   def = %SCSynthDef.Struct{name: "test"}
   #   sig = %SinOsc.Ar{freq: 440}
   #
   #   out = %ReplaceOut.Ar{

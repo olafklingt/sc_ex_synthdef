@@ -19,7 +19,7 @@ var ignoring = [
     /* count input */
     'MaxLocalBufs',
     /* locally defined*/
-    'Sum3','BinaryOpUGen','UnaryOpUGen',
+    'Sum3','Sum4','BinaryOpUGen','UnaryOpUGen',
     /* other conflicts*/
     'Logger'
 ];

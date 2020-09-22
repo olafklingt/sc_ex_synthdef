@@ -3,16 +3,16 @@ defmodule SCSynthDef.Writer do
   @version 2
   @number_of_defs_in_file 1
 
-  def from_pstring(string) do
+  defp from_pstring(string) do
     len = Kernel.byte_size(string)
     <<len::8-unsigned-big>> <> string
   end
 
-  def from_input(input) do
+  defp from_input(input) do
     <<input.index_of_ugen::32-signed-big, input.index_of_output::32-signed-big>>
   end
 
-  def from_ugen(ugen) do
+  defp from_ugen(ugen) do
     head =
       from_pstring(ugen.name) <>
         <<ugen.rate::8-signed-big>> <>
@@ -33,7 +33,7 @@ defmodule SCSynthDef.Writer do
     head
   end
 
-  def from_variant(variant) do
+  defp from_variant(variant) do
     head = from_pstring(variant.name)
 
     Enum.reduce(variant.parameters, head, fn parameter, head ->
@@ -41,7 +41,7 @@ defmodule SCSynthDef.Writer do
     end)
   end
 
-  def print_byte_at_pos(head, f, code_pos) do
+  defp print_byte_at_pos(head, f, code_pos) do
     n = byte_size(head) - 1
     a = :binary.at(head, n)
     b = :binary.at(f, n)

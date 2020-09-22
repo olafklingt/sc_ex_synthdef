@@ -5345,20 +5345,6 @@
     "parent" :"InfoUGenBase",
     "nOuts" :1
 },
-"Sum4": {
-    "ratenew" :0,
-    "methods":{
-        "new" :[
-          ["in0",null],
-          ["in1",null],
-          ["in2",null],
-          ["in3",null]
-        ]
-    },
-    "description" :"Sum four signals",
-    "parent" :"UGen",
-    "nOuts" :1
-},
 "Sweep": {
     "methods":{
         "kr" :[

@@ -3,29 +3,33 @@ defmodule SCSynthDef.Reader do
   @version 2
   @number_of_defs_in_file 1
 
-  def parse_string([bins, struct], pos) do
+  defp do_n_times(n, what, fun) do
+    Enum.reduce(1..n, what, fn _n, what -> fun.(what) end)
+  end
+
+  defp parse_string([bins, struct], pos) do
     <<stringlength::8-unsigned-big, bins::binary>> = bins
     <<name::binary-size(stringlength), bins::binary>> = bins
     [bins, Map.put(struct, pos, name)]
   end
 
-  def parse_string_as_atom([bins, struct], pos) do
+  defp parse_string_as_atom([bins, struct], pos) do
     <<stringlength::8-unsigned-big, bins::binary>> = bins
     <<name::binary-size(stringlength), bins::binary>> = bins
     [bins, Map.put(struct, pos, String.to_atom(name))]
   end
 
-  def parse_int32([bins, struct], pos) do
+  defp parse_int32([bins, struct], pos) do
     <<number::32-signed-big, bins::binary>> = bins
     [bins, Map.put(struct, pos, number)]
   end
 
-  def parse_int16([bins, struct], pos) do
+  defp parse_int16([bins, struct], pos) do
     <<number::16-signed-big, bins::binary>> = bins
     [bins, Map.put(struct, pos, number)]
   end
 
-  def parse_float_array([bins, struct], size_ref, pos) do
+  defp parse_float_array([bins, struct], size_ref, pos) do
     bnc = Map.get(struct, size_ref) * 4
     <<bc::binary-size(bnc), bins::binary>> = bins
 
@@ -37,19 +41,19 @@ defmodule SCSynthDef.Reader do
     [bins, Map.put(struct, pos, array)]
   end
 
-  def parse_parameter_name(bins) do
-    [bins, %SCSynthDef.SCSDParameterName{}]
+  defp parse_parameter_name(bins) do
+    [bins, %SCSynthDef.Struct.SCSDParameterName{}]
     |> parse_string_as_atom(:name)
     |> parse_int32(:id)
   end
 
-  def parse_parameter_names([bins, struct = %{number_of_parameter_names: 0}]) do
+  defp parse_parameter_names([bins, struct = %{number_of_parameter_names: 0}]) do
     [bins, struct]
   end
 
-  def parse_parameter_names([bins, struct = %{number_of_parameter_names: np}]) do
+  defp parse_parameter_names([bins, struct = %{number_of_parameter_names: np}]) do
     [bins, parameter_names] =
-      SCSynthDef.Helper.do_n_times(
+      do_n_times(
         np,
         [bins, []],
         fn [bins, pn] ->
@@ -62,19 +66,19 @@ defmodule SCSynthDef.Reader do
   end
 
   # ugen_input
-  def parse_input([bins, _ugen_struct]) do
-    [bins, %SCSynthDef.SCSDInput{}]
+  defp parse_input([bins, _ugen_struct]) do
+    [bins, %SCSynthDef.Struct.SCSDInput{}]
     |> parse_int32(:index_of_ugen)
     |> parse_int32(:index_of_output)
   end
 
-  def parse_inputs([bins, ugen_struct = %{number_of_inputs: 0}]) do
+  defp parse_inputs([bins, ugen_struct = %{number_of_inputs: 0}]) do
     [bins, ugen_struct]
   end
 
-  def parse_inputs([bins, ugen_struct = %{number_of_inputs: ni}]) do
+  defp parse_inputs([bins, ugen_struct = %{number_of_inputs: ni}]) do
     [bins, inputs] =
-      SCSynthDef.Helper.do_n_times(
+      do_n_times(
         ni,
         [bins, ugen_struct.inputs],
         fn [bins, inputs] ->
@@ -90,12 +94,12 @@ defmodule SCSynthDef.Reader do
   end
 
   # ugen
-  def parse_rate([bins, ugen_struct]) do
+  defp parse_rate([bins, ugen_struct]) do
     <<rate_id::8-unsigned-big, bins::binary>> = bins
     [bins, Map.put(ugen_struct, :rate, rate_id)]
   end
 
-  def parse_outputs([bins, ugen_struct]) do
+  defp parse_outputs([bins, ugen_struct]) do
     bnc = ugen_struct.number_of_outputs * 1
     <<bc::binary-size(bnc), bins::binary>> = bins
 
@@ -109,8 +113,8 @@ defmodule SCSynthDef.Reader do
     [bins, Map.put(ugen_struct, :outputs, outputs)]
   end
 
-  def parse_ugen([bins, _struct]) do
-    [bins, %SCSynthDef.SCSDUGen{}]
+  defp parse_ugen([bins, _struct]) do
+    [bins, %SCSynthDef.Struct.SCSDUGen{}]
     |> parse_string(:name)
     |> IO.inspect()
     |> parse_rate()
@@ -127,13 +131,13 @@ defmodule SCSynthDef.Reader do
     |> IO.inspect()
   end
 
-  def parse_ugens([bins, struct = %{number_of_ugens: 0}]) do
+  defp parse_ugens([bins, struct = %{number_of_ugens: 0}]) do
     [bins, struct]
   end
 
-  def parse_ugens([bins, struct = %{number_of_ugens: nu}]) do
+  defp parse_ugens([bins, struct = %{number_of_ugens: nu}]) do
     [bins, ugens] =
-      SCSynthDef.Helper.do_n_times(
+      do_n_times(
         nu,
         [bins, struct.ugens],
         fn [bins, ugens] ->
@@ -146,7 +150,7 @@ defmodule SCSynthDef.Reader do
     [bins, Map.put(struct, :ugens, ugens)]
   end
 
-  def parse_variant([bins, struct]) do
+  defp parse_variant([bins, struct]) do
     [bins, map] =
       [bins, %{n: struct.number_of_parameters}]
       |> parse_string(:name)
@@ -155,13 +159,13 @@ defmodule SCSynthDef.Reader do
     [bins, struct(SCSynthDef.SCSDVariant, map)]
   end
 
-  def parse_variants([bins, struct = %{number_of_variants: 0}]) do
+  defp parse_variants([bins, struct = %{number_of_variants: 0}]) do
     [bins, struct]
   end
 
-  def parse_variants([bins, struct = %{number_of_variants: nv}]) do
+  defp parse_variants([bins, struct = %{number_of_variants: nv}]) do
     [bins, variants] =
-      SCSynthDef.Helper.do_n_times(
+      do_n_times(
         nv,
         [bins, struct.variants],
         fn [bins, variants] ->
@@ -174,7 +178,7 @@ defmodule SCSynthDef.Reader do
     [bins, Map.put(struct, :variants, variants)]
   end
 
-  def parse_valid_beginning(bins) do
+  defp parse_valid_beginning(bins) do
     <<@magic_string, bins::binary>> = bins
     <<@version::32-unsigned-big, bins::binary>> = bins
     <<@number_of_defs_in_file::16-unsigned-big, bins::binary>> = bins
@@ -190,7 +194,7 @@ defmodule SCSynthDef.Reader do
     bins = parse_valid_beginning(bins)
 
     ["", map] =
-      [bins, %SCSynthDef{}]
+      [bins, %SCSynthDef.Struct{}]
       |> parse_string(:name)
       |> parse_int32(:number_of_constants)
       |> parse_float_array(:number_of_constants, :constants)
