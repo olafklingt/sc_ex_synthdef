@@ -1,6 +1,7 @@
 defmodule SCSynthDef do
-  def new() do
-    %SCSynthDef.Struct{}
+  @spec new(String.t()) :: SCSynthDef.Struct.t()
+  def new(name) do
+    %SCSynthDef.Struct{name: name}
   end
 
   # here I could also add some default output variants
@@ -8,6 +9,7 @@ defmodule SCSynthDef do
   # def gateEnvEnd(ugen) do end
   # def gateEnv(ugen) do end
 
+  @spec new(String.t(), any) :: SCSynthDef.Struct.t()
   def new(name, ugen) do
     SCSynthDef.Maker.add_ugen(%SCSynthDef.Struct{name: name}, ugen)
   end
@@ -24,6 +26,7 @@ defmodule SCSynthDef do
     SCSynthDef.Reader.byte_decode(bytes)
   end
 
+  @spec encode_to_bytes(map) :: binary
   def encode_to_bytes(def) do
     SCSynthDef.Writer.byte_encode(def)
   end

@@ -77,11 +77,12 @@ defmodule Control do
     %Control.Kr{key: key, value: value, spec: spec}
   end
 
-  @spec kr({atom, number}) :: Control.Kr.t()
-  def kr({key, value}) do
-    kr(key, value, key)
-  end
+  # @spec kr({atom, number}) :: Control.Kr.t()
+  # def kr({key, value}) do
+  #   kr(key, value, key)
+  # end
 
+  @spec kr([{atom, number}]) :: Control.Kr.t()
   def kr([{key, value}]) do
     kr(key, value, key)
   end
@@ -91,9 +92,9 @@ defmodule Control do
     kr(key, value, spec)
   end
 
-  def kr([{key, value}], spec) do
-    kr(key, value, spec)
-  end
+  # def kr([{key, value}], spec) do
+  #   kr(key, value, spec)
+  # end
 
   @spec ir({atom, number}) :: Control.Ir.t()
   def ir({key, value}) do
@@ -116,7 +117,7 @@ defmodule Control do
     %Control.Ir{key: key, value: value, spec: spec}
   end
 
-  @spec ir({atom, number}, atom | SuperCollider.WarpSpec.t()) :: Control.Ir.t()
+  @spec ir([{atom, number}], atom | SuperCollider.WarpSpec.t()) :: Control.Ir.t()
   def ir({key, value}, spec) do
     ir(key, value, spec)
   end
@@ -129,7 +130,8 @@ defmodule Control do
     %Control.Ar{key: key, value: value}
   end
 
-  @spec ar({atom, number}) :: Control.Ir.t()
+  @spec ar([{atom, number}]) :: Control.Ar.t()
+
   def ar({key, value}) do
     ar(key, value)
   end
@@ -142,7 +144,8 @@ defmodule Control do
     %Control.Tr{key: key, value: value}
   end
 
-  @spec tr({atom, number}) :: Control.Ir.t()
+  @spec tr([{atom, number}]) :: Control.Tr.t()
+
   def tr({key, value}) do
     tr(key, value)
   end

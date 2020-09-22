@@ -48,6 +48,7 @@ defmodule SCSynthDef.Writer do
     IO.puts("at #{code_pos} byte #{n} is #{a} == #{b}? #{a == b}")
   end
 
+  @spec byte_encode(map) :: binary
   def byte_encode(sdef) do
     head =
       <<@magic_string, @version::32-signed-big, @number_of_defs_in_file::16-signed-big>> <>

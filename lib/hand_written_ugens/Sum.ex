@@ -6,7 +6,7 @@ defmodule UGen.Sum do
 
   # sum2
   def sum([a, b]) do
-    UGen.BOp.add(a, b)
+    UGen.add(a, b)
   end
 
   # sum3
