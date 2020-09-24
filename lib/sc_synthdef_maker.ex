@@ -33,6 +33,9 @@ defmodule SCSynthDef.Maker do
 
   def add_ugen(def, ugen) do
     {def, _n} = add_ugengraph_to_def(def, ugen)
+
+    validate_out_parameters!(def)
+
     def
   end
 
@@ -194,6 +197,7 @@ defmodule SCSynthDef.Maker do
 
   defp add_constant_to_def(def, val) do
     val = val / 1
+
     {nc, index} = add_constant_to_constants_set(def.constants, val)
     {%{def | constants: nc, number_of_constants: Kernel.length(nc)}, index}
   end
@@ -210,6 +214,7 @@ defmodule SCSynthDef.Maker do
 
   defp add_parameter_to_def(def, val) do
     val = val / 1
+
     nc = def.parameters ++ [val]
     # index = Kernel.length(nc) - 1
     # {nc, index} = add_parameter_to_parameters_set(def.parameters, val)
@@ -258,4 +263,68 @@ defmodule SCSynthDef.Maker do
   #
   #   SCSynthDef.Maker.add_ugen(def, out)
   # end
+
+  def get_out_ugens(def) do
+    {def,
+     Enum.filter(def.ugens, fn x ->
+       Enum.member?(["Out", "ReplaceOut", "OffsetOut", "XOut"], x.name)
+     end)}
+  end
+
+  defp find_first_parameter_input_spec({def, ugen}) do
+    input = Enum.at(ugen.inputs, 0)
+
+    if(input.index_of_ugen == -1) do
+      %SCSynthDef.Info.InputSpec{
+        name: :out,
+        init_value: Enum.at(def.constants, input.index_of_output),
+        rate: 0,
+        id: -1,
+        rate_name: :ir
+      }
+    else
+      ugen = Enum.at(def.ugens, input.index_of_ugen)
+
+      case ugen.name do
+        "Control" -> SCSynthDef.Info.InputSpec.make_input_spec(def, ugen)
+        "AudioControl" -> SCSynthDef.Info.InputSpec.make_input_spec(def, ugen)
+        "TrigControl" -> SCSynthDef.Info.InputSpec.make_input_spec(def, ugen)
+        _ -> find_first_parameter_input_spec({def, ugen})
+      end
+    end
+  end
+
+  def find_out_bus_input_specs({def, ugens}) do
+    Enum.map(ugens, fn ugen ->
+      n_channels =
+        case ugen.name do
+          "Out" -> length(ugen.inputs) - 1
+          "ReplaceOut" -> length(ugen.inputs) - 1
+          "OffsetOut" -> length(ugen.inputs) - 1
+          "XOut" -> length(ugen.inputs) - 2
+          _ -> raise "find_out_bus_input_specs appied on not out ugen: #{inspect(ugen)}"
+        end
+
+      ininfo = find_first_parameter_input_spec({def, ugen})
+      ininfomap = ininfo |> Map.from_struct()
+      outinfo = struct(SCSynthDef.Info.OutputSpec, ininfomap)
+      %{outinfo | n_channels: n_channels}
+    end)
+  end
+
+  defp validate_out_parameters!(def) do
+    input_specs = get_out_ugens(def) |> find_out_bus_input_specs()
+
+    Enum.map(input_specs, fn input_spec ->
+      if !String.starts_with?(Atom.to_string(input_spec.name), "out") do
+        raise "out ugens should always use constants or parameter names that start with \"out\"."
+      end
+
+      if input_spec.rate == 2 do
+        raise "out ugens should never have a audio rate input"
+      end
+
+      true
+    end)
+  end
 end

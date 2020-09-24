@@ -2093,6 +2093,75 @@
     "parent" :"UGen",
     "nOuts" :1
 },
+"FaustFbhlpsnw3chan4": {
+    "methods":{
+        "kr" :[
+          ["in1",null],
+          ["in2",null],
+          ["in3",null],
+          ["in4",null],
+          ["in5",null],
+          ["in6",null],
+          ["in7",null],
+          ["in8",null],
+          ["in9",null],
+          ["in10",null],
+          ["in11",null],
+          ["in12",null],
+          ["in13",null],
+          ["in14",null],
+          ["in15",null],
+          ["in16",null],
+          ["in17",null],
+          ["in18",null],
+          ["in19",null],
+          ["in20",null],
+          ["in21",null],
+          ["in22",null],
+          ["in23",null],
+          ["att",0.01],
+          ["feedbacksize",0.0],
+          ["outmix",0.0],
+          ["ratio",10.0],
+          ["rel",0.1],
+          ["thresh",0.9]
+        ],
+        "ar" :[
+          ["in1",null],
+          ["in2",null],
+          ["in3",null],
+          ["in4",null],
+          ["in5",null],
+          ["in6",null],
+          ["in7",null],
+          ["in8",null],
+          ["in9",null],
+          ["in10",null],
+          ["in11",null],
+          ["in12",null],
+          ["in13",null],
+          ["in14",null],
+          ["in15",null],
+          ["in16",null],
+          ["in17",null],
+          ["in18",null],
+          ["in19",null],
+          ["in20",null],
+          ["in21",null],
+          ["in22",null],
+          ["in23",null],
+          ["att",0.01],
+          ["feedbacksize",0.0],
+          ["outmix",0.0],
+          ["ratio",10.0],
+          ["rel",0.1],
+          ["thresh",0.9]
+        ]
+    },
+    "description" :"(Undocumented class)",
+    "parent" :"UGen",
+    "nOuts" :1
+},
 "Fold": {
     "methods":{
         "kr" :[
@@ -5592,20 +5661,6 @@
     },
     "description" :"Timed trigger.",
     "parent" :"UGen",
-    "nOuts" :1
-},
-"TrigControl": {
-    "methods":{
-        "kr" :[
-          ["values",null]
-        ],
-        "ir" :[
-          ["values",null]
-        ]
-    },
-    "description" :"FIXME: TrigControl purpose.",
-    "parent" :"Control",
-    "isMultiOut" :true,
     "nOuts" :1
 },
 "TwoPole": {

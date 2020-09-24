@@ -9,7 +9,7 @@ var ignoring = [
     /* composite & derived */
     'Changed','DynKlang','DynKlank','HilbertFIR','InBus','LagControl','Splay','SplayAz','Tap',
     /* non-user & implicit */
-	 'Control',
+	 'Control','TrigControl',
     /* text label */
 	'SendPeakRMS','SendReply',
     'FFTTrigger','PackFFT','Unpack1FFT','UnpackFFT',

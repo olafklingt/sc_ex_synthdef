@@ -1,3 +1,42 @@
+defmodule SCSynthDef.Info.OutputSpec do
+  use TypedStruct
+
+  typedstruct do
+    field(:id, integer, enforce: true)
+    field(:init_value, float, enforce: true)
+    field(:name, charlist(), enforce: true)
+    field(:rate, integer, enforce: true)
+    field(:rate_name, atom, enforce: true)
+    field(:n_channels, integer, enforce: false)
+  end
+end
+
+defmodule SCSynthDef.Info.InputSpec do
+  use TypedStruct
+
+  typedstruct do
+    field(:id, integer, enforce: true)
+    field(:init_value, float, enforce: true)
+    field(:name, charlist(), enforce: true)
+    field(:rate, integer, enforce: true)
+    field(:rate_name, atom, enforce: true)
+  end
+
+  def make_input_spec(def, control_ugen) do
+    name = Enum.at(def.parameter_names, control_ugen.special_index).name
+    init_value = Enum.at(def.parameters, control_ugen.special_index)
+    rate_name = Enum.at([:ir, :kr, :ar], control_ugen.rate)
+
+    %SCSynthDef.Info.InputSpec{
+      name: name,
+      init_value: init_value,
+      rate: control_ugen.rate,
+      id: control_ugen.special_index,
+      rate_name: rate_name
+    }
+  end
+end
+
 defmodule SCSynthDef.Struct do
   use TypedStruct
 

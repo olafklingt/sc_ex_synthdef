@@ -175,7 +175,7 @@ defmodule Control do
 
     if(strict) do
       control = %Control.Tr{key: key, value: value, spec: spec}
-      Clip.tr(control, spec.minval, spec.maxval)
+      Clip.kr(control, spec.minval, spec.maxval)
     else
       %Control.Tr{key: key, value: value, spec: spec}
     end
