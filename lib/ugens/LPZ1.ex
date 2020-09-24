@@ -6,4 +6,8 @@ end
   %UGen.LPZ1.Kr{in: inv}
 end
 
+  def description do
+    "Two point average filter"
+  end
+
 end

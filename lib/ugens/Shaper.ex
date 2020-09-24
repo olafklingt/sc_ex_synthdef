@@ -6,4 +6,8 @@ end
   %UGen.Shaper.Kr{bufnum: bufnum, in: inv}
 end
 
+  def description do
+    "Wave shaper."
+  end
+
 end

@@ -3,4 +3,8 @@ defmodule KeyTrack do
   %UGen.KeyTrack.Kr{chain: chain, keydecay: keydecay, chromaleak: chromaleak}
 end
 
+  def description do
+    "Key tracker"
+  end
+
 end

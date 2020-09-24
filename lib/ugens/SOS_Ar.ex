@@ -5,6 +5,9 @@ defmodule UGen.SOS.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:in, :a0, :a1, :a2, :b1, :b2]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Second order filter section (biquad)."
+  end
 
   use TypedStruct
 

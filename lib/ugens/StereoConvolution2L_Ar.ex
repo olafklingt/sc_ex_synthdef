@@ -5,6 +5,9 @@ defmodule UGen.StereoConvolution2L.Ar do
   def outputs(_ugen_struct), do: [2, 2]
   def args(_ugen_struct), do: [:in, :kernelL, :kernelR, :trigger, :framesize, :crossfade]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Stereo real-time convolver with linear interpolation"
+  end
 
   use TypedStruct
 

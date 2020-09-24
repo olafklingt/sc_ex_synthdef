@@ -6,4 +6,8 @@ end
   %UGen.Decay.Kr{in: inv, decayTime: decayTime}
 end
 
+  def description do
+    "Exponential decay"
+  end
+
 end

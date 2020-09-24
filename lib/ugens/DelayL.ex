@@ -6,4 +6,8 @@ end
   %UGen.DelayL.Kr{in: inv, maxdelaytime: maxdelaytime, delaytime: delaytime}
 end
 
+  def description do
+    "Simple delay line with linear interpolation."
+  end
+
 end

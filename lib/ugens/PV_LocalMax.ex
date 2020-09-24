@@ -3,4 +3,8 @@ defmodule PV_LocalMax do
   %UGen.PV_LocalMax.New{buffer: buffer, threshold: threshold}
 end
 
+  def description do
+    "Pass bins which are a local maximum."
+  end
+
 end

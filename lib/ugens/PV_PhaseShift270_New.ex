@@ -5,6 +5,9 @@ defmodule UGen.PV_PhaseShift270.New do
   def outputs(_ugen_struct), do: [0]
   def args(_ugen_struct), do: [:buffer]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Shift phase by 270 degrees."
+  end
 
   use TypedStruct
 

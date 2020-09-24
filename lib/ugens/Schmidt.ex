@@ -9,4 +9,8 @@ end
   %UGen.Schmidt.Kr{in: inv, lo: lo, hi: hi}
 end
 
+  def description do
+    "Schmidt trigger."
+  end
+
 end

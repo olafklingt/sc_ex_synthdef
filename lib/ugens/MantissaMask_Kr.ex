@@ -5,6 +5,9 @@ defmodule UGen.MantissaMask.Kr do
   def outputs(_ugen_struct), do: [1]
   def args(_ugen_struct), do: [:in, :bits]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Reduce precision."
+  end
 
   use TypedStruct
 

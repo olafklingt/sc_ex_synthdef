@@ -3,4 +3,8 @@ defmodule MFCC do
   %UGen.MFCC.Kr{chain: chain, numcoeff: numcoeff}
 end
 
+  def description do
+    "Mel frequency cepstral coefficients"
+  end
+
 end

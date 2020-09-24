@@ -3,4 +3,8 @@ defmodule PV_BinShift do
   %UGen.PV_BinShift.New{buffer: buffer, stretch: stretch, shift: shift, interp: interp}
 end
 
+  def description do
+    "Shift and stretch bin position."
+  end
+
 end

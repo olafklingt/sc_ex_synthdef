@@ -6,4 +6,8 @@ end
   %UGen.BPZ2.Kr{in: inv}
 end
 
+  def description do
+    "Two zero fixed midpass."
+  end
+
 end

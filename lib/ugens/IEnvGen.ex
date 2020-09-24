@@ -6,4 +6,8 @@ end
   %UGen.IEnvGen.Kr{envelope: envelope, index: index}
 end
 
+  def description do
+    "Envelope generator for polling values from an Env"
+  end
+
 end

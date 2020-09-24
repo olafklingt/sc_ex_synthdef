@@ -6,4 +6,8 @@ end
   %UGen.MoogFF.Kr{in: inv, freq: freq, gain: gain, reset: reset}
 end
 
+  def description do
+    "Moog VCF implementation, designed by Federico Fontana"
+  end
+
 end

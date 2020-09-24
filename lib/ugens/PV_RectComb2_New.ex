@@ -5,6 +5,9 @@ defmodule UGen.PV_RectComb2.New do
   def outputs(_ugen_struct), do: [0]
   def args(_ugen_struct), do: [:bufferA, :bufferB, :numTeeth, :phase, :width]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Make gaps in spectrum."
+  end
 
   use TypedStruct
 

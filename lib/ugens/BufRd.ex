@@ -6,4 +6,8 @@ end
   %UGen.BufRd.Kr{numChannels: numChannels, bufnum: bufnum, phase: phase, loop: loop, interpolation: interpolation}
 end
 
+  def description do
+    "Buffer reading oscillator."
+  end
+
 end

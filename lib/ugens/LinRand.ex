@@ -3,4 +3,8 @@ defmodule LinRand do
   %UGen.LinRand.New{lo: lo, hi: hi, minmax: minmax}
 end
 
+  def description do
+    "Skewed random number generator."
+  end
+
 end

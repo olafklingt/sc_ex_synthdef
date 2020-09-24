@@ -3,4 +3,8 @@ defmodule BAllPass do
   %UGen.BAllPass.Ar{in: inv, freq: freq, rq: rq}
 end
 
+  def description do
+    "All Pass Filter"
+  end
+
 end

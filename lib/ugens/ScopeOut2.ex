@@ -6,4 +6,8 @@ end
   %UGen.ScopeOut2.Kr{inputArray: inputArray, scopeNum: scopeNum, maxFrames: maxFrames, scopeFrames: scopeFrames}
 end
 
+  def description do
+    "(Undocumented class)"
+  end
+
 end

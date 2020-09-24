@@ -5,6 +5,9 @@ defmodule UGen.PV_BinScramble.New do
   def outputs(_ugen_struct), do: [0]
   def args(_ugen_struct), do: [:buffer, :wipe, :width, :trig]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Scramble bins."
+  end
 
   use TypedStruct
 

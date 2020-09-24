@@ -5,6 +5,9 @@ defmodule UGen.ToggleFF.Kr do
   def outputs(_ugen_struct), do: [1]
   def args(_ugen_struct), do: [:trig]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Toggle flip flop."
+  end
 
   use TypedStruct
 

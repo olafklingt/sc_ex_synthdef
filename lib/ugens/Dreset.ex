@@ -3,4 +3,8 @@ defmodule Dreset do
   %UGen.Dreset.New{in: inv, reset: reset}
 end
 
+  def description do
+    "demand rate reset"
+  end
+
 end

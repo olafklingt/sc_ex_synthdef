@@ -6,4 +6,8 @@ end
   %UGen.LastValue.Kr{in: inv, diff: diff}
 end
 
+  def description do
+    "Output the last value before the input changed"
+  end
+
 end

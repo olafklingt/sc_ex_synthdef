@@ -5,6 +5,9 @@ defmodule UGen.LFGauss.Kr do
   def outputs(_ugen_struct), do: [1]
   def args(_ugen_struct), do: [:duration, :width, :iphase, :loop, :doneAction]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Gaussian function oscillator"
+  end
 
   use TypedStruct
 

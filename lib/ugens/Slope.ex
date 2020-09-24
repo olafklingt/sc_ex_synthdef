@@ -6,4 +6,8 @@ end
   %UGen.Slope.Kr{in: inv}
 end
 
+  def description do
+    "Slope of signal"
+  end
+
 end

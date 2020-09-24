@@ -6,4 +6,8 @@ end
   %UGen.TDelay.Kr{in: inv, dur: dur}
 end
 
+  def description do
+    "Trigger delay."
+  end
+
 end

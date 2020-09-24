@@ -5,6 +5,9 @@ defmodule UGen.TIRand.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:lo, :hi, :trig]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Triggered integer random number generator."
+  end
 
   use TypedStruct
 

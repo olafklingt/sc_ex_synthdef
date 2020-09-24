@@ -5,6 +5,9 @@ defmodule UGen.CheckBadValues.Kr do
   def outputs(_ugen_struct), do: [1]
   def args(_ugen_struct), do: [:in, :id, :post]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Test for infinity, not-a-number, and denormals"
+  end
 
   use TypedStruct
 

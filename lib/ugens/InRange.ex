@@ -9,4 +9,8 @@ end
   %UGen.InRange.Kr{in: inv, lo: lo, hi: hi}
 end
 
+  def description do
+    "Tests if a signal is within a given range."
+  end
+
 end

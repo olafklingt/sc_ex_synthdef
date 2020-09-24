@@ -6,4 +6,8 @@ end
   %UGen.SinOscFB.Kr{freq: freq, feedback: feedback}
 end
 
+  def description do
+    "Feedback FM oscillator"
+  end
+
 end

@@ -5,6 +5,9 @@ defmodule UGen.Rotate2.Kr do
   def outputs(_ugen_struct), do: [1, 1]
   def args(_ugen_struct), do: [:x, :y, :pos]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Rotate a sound field."
+  end
 
   use TypedStruct
 

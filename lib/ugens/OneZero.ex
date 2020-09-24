@@ -6,4 +6,8 @@ end
   %UGen.OneZero.Kr{in: inv, coef: coef}
 end
 
+  def description do
+    "One zero filter."
+  end
+
 end

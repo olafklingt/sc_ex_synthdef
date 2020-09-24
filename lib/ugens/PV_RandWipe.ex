@@ -3,4 +3,8 @@ defmodule PV_RandWipe do
   %UGen.PV_RandWipe.New{bufferA: bufferA, bufferB: bufferB, wipe: wipe, trig: trig}
 end
 
+  def description do
+    "Crossfade in random bin order."
+  end
+
 end

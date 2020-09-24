@@ -5,6 +5,9 @@ defmodule UGen.PV_ChainUGen.New do
   def outputs(_ugen_struct), do: [0]
   def args(_ugen_struct), do: [:maxSize]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Base class for UGens that operate on FFT chains"
+  end
 
   use TypedStruct
 

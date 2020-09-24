@@ -5,6 +5,9 @@ defmodule UGen.OffsetOut.Kr do
   def outputs(_ugen_struct), do: []
   def args(_ugen_struct), do: []
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Write a signal to a bus with sample accurate timing."
+  end
 
   use TypedStruct
 

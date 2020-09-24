@@ -9,4 +9,8 @@ end
   %UGen.Clip.Kr{in: inv, lo: lo, hi: hi}
 end
 
+  def description do
+    "Clip a signal outside given thresholds."
+  end
+
 end

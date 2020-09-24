@@ -6,4 +6,8 @@ end
   %UGen.LPF.Kr{in: inv, freq: freq}
 end
 
+  def description do
+    "2nd order Butterworth lowpass filter"
+  end
+
 end

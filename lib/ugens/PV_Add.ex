@@ -3,4 +3,8 @@ defmodule PV_Add do
   %UGen.PV_Add.New{bufferA: bufferA, bufferB: bufferB}
 end
 
+  def description do
+    "Complex addition."
+  end
+
 end

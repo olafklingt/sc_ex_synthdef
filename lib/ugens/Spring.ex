@@ -6,4 +6,8 @@ end
   %UGen.Spring.Kr{in: inv, spring: spring, damp: damp}
 end
 
+  def description do
+    "physical model of resonating spring"
+  end
+
 end

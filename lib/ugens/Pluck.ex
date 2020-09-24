@@ -3,4 +3,8 @@ defmodule Pluck do
   %UGen.Pluck.Ar{in: inv, trig: trig, maxdelaytime: maxdelaytime, delaytime: delaytime, decaytime: decaytime, coef: coef}
 end
 
+  def description do
+    "A Karplus-Strong UGen"
+  end
+
 end

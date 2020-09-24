@@ -5,6 +5,9 @@ defmodule UGen.Warp1.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:numChannels, :bufnum, :pointer, :freqScale, :windowSize, :envbufnum, :overlaps, :windowRandRatio, :interp]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Warp a buffer with a time pointer"
+  end
 
   use TypedStruct
 

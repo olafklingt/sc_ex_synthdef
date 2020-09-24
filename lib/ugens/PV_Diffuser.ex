@@ -3,4 +3,8 @@ defmodule PV_Diffuser do
   %UGen.PV_Diffuser.New{buffer: buffer, trig: trig}
 end
 
+  def description do
+    "Random phase shifting."
+  end
+
 end

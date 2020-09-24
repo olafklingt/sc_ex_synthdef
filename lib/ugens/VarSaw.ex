@@ -6,4 +6,8 @@ end
   %UGen.VarSaw.Kr{freq: freq, iphase: iphase, width: width}
 end
 
+  def description do
+    "Variable duty saw"
+  end
+
 end

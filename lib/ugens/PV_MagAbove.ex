@@ -3,4 +3,8 @@ defmodule PV_MagAbove do
   %UGen.PV_MagAbove.New{buffer: buffer, threshold: threshold}
 end
 
+  def description do
+    "Pass bins above a threshold."
+  end
+
 end

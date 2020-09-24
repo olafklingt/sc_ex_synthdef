@@ -6,4 +6,8 @@ end
   %UGen.SOS.Kr{in: inv, a0: a0, a1: a1, a2: a2, b1: b1, b2: b2}
 end
 
+  def description do
+    "Second order filter section (biquad)."
+  end
+
 end

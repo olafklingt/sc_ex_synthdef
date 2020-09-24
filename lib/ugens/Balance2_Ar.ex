@@ -5,6 +5,9 @@ defmodule UGen.Balance2.Ar do
   def outputs(_ugen_struct), do: [2, 2]
   def args(_ugen_struct), do: [:left, :right, :pos, :level]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Stereo signal balancer"
+  end
 
   use TypedStruct
 

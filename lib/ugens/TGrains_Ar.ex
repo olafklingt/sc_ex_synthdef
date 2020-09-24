@@ -5,6 +5,9 @@ defmodule UGen.TGrains.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:numChannels, :trigger, :bufnum, :rate, :centerPos, :dur, :pan, :amp, :interp]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Buffer granulator."
+  end
 
   use TypedStruct
 

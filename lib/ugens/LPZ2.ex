@@ -6,4 +6,8 @@ end
   %UGen.LPZ2.Kr{in: inv}
 end
 
+  def description do
+    "Two zero fixed lowpass"
+  end
+
 end

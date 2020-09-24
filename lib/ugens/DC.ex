@@ -6,4 +6,8 @@ end
   %UGen.DC.Kr{in: inv}
 end
 
+  def description do
+    "Create a constant amplitude signal"
+  end
+
 end

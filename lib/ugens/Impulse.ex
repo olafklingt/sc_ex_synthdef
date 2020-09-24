@@ -6,4 +6,8 @@ end
   %UGen.Impulse.Kr{freq: freq, phase: phase}
 end
 
+  def description do
+    "Impulse oscillator."
+  end
+
 end

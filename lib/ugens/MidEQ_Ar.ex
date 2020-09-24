@@ -5,6 +5,9 @@ defmodule UGen.MidEQ.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:in, :freq, :rq, :db]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Parametric filter."
+  end
 
   use TypedStruct
 

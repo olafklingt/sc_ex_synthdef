@@ -3,4 +3,8 @@ defmodule Dbufrd do
   %UGen.Dbufrd.New{bufnum: bufnum, phase: phase, loop: loop}
 end
 
+  def description do
+    "Buffer read demand ugen"
+  end
+
 end

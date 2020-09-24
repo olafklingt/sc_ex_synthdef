@@ -5,6 +5,9 @@ defmodule UGen.Ringz.Kr do
   def outputs(_ugen_struct), do: [1]
   def args(_ugen_struct), do: [:in, :freq, :decaytime]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Ringing filter."
+  end
 
   use TypedStruct
 

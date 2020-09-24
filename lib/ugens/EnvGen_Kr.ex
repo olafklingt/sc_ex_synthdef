@@ -5,6 +5,9 @@ defmodule UGen.EnvGen.Kr do
   def outputs(_ugen_struct), do: [1]
   def args(_ugen_struct), do: [:envelope, :gate, :levelScale, :levelBias, :timeScale, :doneAction]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Envelope generator"
+  end
 
   use TypedStruct
 

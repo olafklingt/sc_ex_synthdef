@@ -5,6 +5,9 @@ defmodule UGen.BiPanB2.Kr do
   def outputs(_ugen_struct), do: [1, 1, 1]
   def args(_ugen_struct), do: [:inA, :inB, :azimuth, :gain]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "2D Ambisonic B-format panner."
+  end
 
   use TypedStruct
 

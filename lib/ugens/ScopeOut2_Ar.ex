@@ -5,6 +5,9 @@ defmodule UGen.ScopeOut2.Ar do
   def outputs(_ugen_struct), do: []
   def args(_ugen_struct), do: [:inputArray, :scopeNum, :maxFrames, :scopeFrames]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "(Undocumented class)"
+  end
 
   use TypedStruct
 

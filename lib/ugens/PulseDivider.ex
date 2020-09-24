@@ -6,4 +6,8 @@ end
   %UGen.PulseDivider.Kr{trig: trig, div: div, start: start}
 end
 
+  def description do
+    "Pulse divider."
+  end
+
 end

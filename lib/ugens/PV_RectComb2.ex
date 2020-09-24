@@ -3,4 +3,8 @@ defmodule PV_RectComb2 do
   %UGen.PV_RectComb2.New{bufferA: bufferA, bufferB: bufferB, numTeeth: numTeeth, phase: phase, width: width}
 end
 
+  def description do
+    "Make gaps in spectrum."
+  end
+
 end

@@ -6,4 +6,8 @@ end
   %UGen.TExpRand.Kr{lo: lo, hi: hi, trig: trig}
 end
 
+  def description do
+    "Triggered exponential random number generator."
+  end
+
 end

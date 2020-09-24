@@ -6,4 +6,8 @@ end
   %UGen.SendTrig.Kr{in: inv, id: id, value: value}
 end
 
+  def description do
+    "Send a trigger message from the server back to the client."
+  end
+
 end

@@ -5,6 +5,9 @@ defmodule UGen.HenonL.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:freq, :a, :b, :x0, :x1]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Henon map chaotic generator"
+  end
 
   use TypedStruct
 

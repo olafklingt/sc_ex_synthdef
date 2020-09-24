@@ -3,4 +3,8 @@ defmodule BHiShelf do
   %UGen.BHiShelf.Ar{in: inv, freq: freq, rs: rs, db: db}
 end
 
+  def description do
+    "Hi Shelf"
+  end
+
 end

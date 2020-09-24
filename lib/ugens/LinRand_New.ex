@@ -5,6 +5,9 @@ defmodule UGen.LinRand.New do
   def outputs(_ugen_struct), do: [0]
   def args(_ugen_struct), do: [:lo, :hi, :minmax]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Skewed random number generator."
+  end
 
   use TypedStruct
 

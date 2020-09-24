@@ -5,6 +5,9 @@ defmodule UGen.Slew.Kr do
   def outputs(_ugen_struct), do: []
   def args(_ugen_struct), do: [:in, :up, :dn]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Slew rate limiter."
+  end
 
   use TypedStruct
 

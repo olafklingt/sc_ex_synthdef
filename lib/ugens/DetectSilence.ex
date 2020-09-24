@@ -6,4 +6,8 @@ end
   %UGen.DetectSilence.Kr{in: inv, amp: amp, time: time, doneAction: doneAction}
 end
 
+  def description do
+    "Detect when input falls below an amplitude threshold"
+  end
+
 end

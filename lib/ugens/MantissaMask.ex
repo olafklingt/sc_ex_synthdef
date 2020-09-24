@@ -6,4 +6,8 @@ end
   %UGen.MantissaMask.Kr{in: inv, bits: bits}
 end
 
+  def description do
+    "Reduce precision."
+  end
+
 end

@@ -6,4 +6,8 @@ end
   %UGen.InRect.Kr{x: x, y: y, rect: rect}
 end
 
+  def description do
+    "Test if a point is within a given rectangle."
+  end
+
 end

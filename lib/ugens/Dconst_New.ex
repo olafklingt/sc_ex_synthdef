@@ -5,6 +5,9 @@ defmodule UGen.Dconst.New do
   def outputs(_ugen_struct), do: [0]
   def args(_ugen_struct), do: [:sum, :in, :tolerance]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Constrain a demand-rate stream to a given sum"
+  end
 
   use TypedStruct
 

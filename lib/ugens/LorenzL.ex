@@ -3,4 +3,8 @@ defmodule LorenzL do
   %UGen.LorenzL.Ar{freq: freq, s: s, r: r, b: b, h: h, xi: xi, yi: yi, zi: zi}
 end
 
+  def description do
+    "Lorenz chaotic generator"
+  end
+
 end

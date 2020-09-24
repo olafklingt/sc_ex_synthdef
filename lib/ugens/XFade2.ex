@@ -6,4 +6,8 @@ end
   %UGen.XFade2.Kr{inA: inA, inB: inB, pan: pan, level: level}
 end
 
+  def description do
+    "Equal power two channel cross fade."
+  end
+
 end

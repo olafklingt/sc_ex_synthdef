@@ -5,6 +5,9 @@ defmodule UGen.AllpassN.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:in, :maxdelaytime, :delaytime, :decaytime]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Schroeder allpass delay line with no interpolation."
+  end
 
   use TypedStruct
 

@@ -3,4 +3,8 @@ defmodule BBandPass do
   %UGen.BBandPass.Ar{in: inv, freq: freq, bw: bw}
 end
 
+  def description do
+    "Band Pass Filter"
+  end
+
 end

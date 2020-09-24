@@ -6,4 +6,8 @@ end
   %UGen.Pan2.Kr{in: inv, pos: pos, level: level}
 end
 
+  def description do
+    "Two channel equal power pan."
+  end
+
 end

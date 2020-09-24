@@ -5,6 +5,9 @@ defmodule UGen.Integrator.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:in, :coef]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "A leaky integrator."
+  end
 
   use TypedStruct
 

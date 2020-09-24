@@ -3,4 +3,8 @@ defmodule Normalizer do
   %UGen.Normalizer.Ar{in: inv, level: level, dur: dur}
 end
 
+  def description do
+    "Flattens dynamics."
+  end
+
 end

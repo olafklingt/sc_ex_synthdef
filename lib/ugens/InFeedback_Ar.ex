@@ -5,6 +5,9 @@ defmodule UGen.InFeedback.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:bus, :numChannels]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Read signal from a bus with a current or one cycle old timestamp."
+  end
 
   use TypedStruct
 

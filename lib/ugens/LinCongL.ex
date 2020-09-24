@@ -3,4 +3,8 @@ defmodule LinCongL do
   %UGen.LinCongL.Ar{freq: freq, a: a, c: c, m: m, xi: xi}
 end
 
+  def description do
+    "Linear congruential chaotic generator"
+  end
+
 end

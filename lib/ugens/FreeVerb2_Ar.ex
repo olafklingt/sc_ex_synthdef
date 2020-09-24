@@ -5,6 +5,9 @@ defmodule UGen.FreeVerb2.Ar do
   def outputs(_ugen_struct), do: [2, 2]
   def args(_ugen_struct), do: [:in, :in2, :mix, :room, :damp]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "A two-channel reverb"
+  end
 
   use TypedStruct
 

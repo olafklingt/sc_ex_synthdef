@@ -3,4 +3,8 @@ defmodule Warp1 do
   %UGen.Warp1.Ar{numChannels: numChannels, bufnum: bufnum, pointer: pointer, freqScale: freqScale, windowSize: windowSize, envbufnum: envbufnum, overlaps: overlaps, windowRandRatio: windowRandRatio, interp: interp}
 end
 
+  def description do
+    "Warp a buffer with a time pointer"
+  end
+
 end

@@ -3,4 +3,8 @@ defmodule Limiter do
   %UGen.Limiter.Ar{in: inv, level: level, dur: dur}
 end
 
+  def description do
+    "Peak limiter"
+  end
+
 end

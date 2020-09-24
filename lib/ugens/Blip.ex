@@ -6,4 +6,8 @@ end
   %UGen.Blip.Kr{freq: freq, numharm: numharm}
 end
 
+  def description do
+    "Band limited impulse oscillator."
+  end
+
 end

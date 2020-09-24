@@ -6,4 +6,8 @@ end
   %UGen.ToggleFF.Kr{trig: trig}
 end
 
+  def description do
+    "Toggle flip flop."
+  end
+
 end

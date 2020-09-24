@@ -3,4 +3,8 @@ defmodule StereoConvolution2L do
   %UGen.StereoConvolution2L.Ar{in: inv, kernelL: kernelL, kernelR: kernelR, trigger: trigger, framesize: framesize, crossfade: crossfade}
 end
 
+  def description do
+    "Stereo real-time convolver with linear interpolation"
+  end
+
 end

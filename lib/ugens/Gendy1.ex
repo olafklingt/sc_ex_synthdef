@@ -6,4 +6,8 @@ end
   %UGen.Gendy1.Kr{ampdist: ampdist, durdist: durdist, adparam: adparam, ddparam: ddparam, minfreq: minfreq, maxfreq: maxfreq, ampscale: ampscale, durscale: durscale, initCPs: initCPs, knum: knum}
 end
 
+  def description do
+    "Dynamic stochastic synthesis generator."
+  end
+
 end

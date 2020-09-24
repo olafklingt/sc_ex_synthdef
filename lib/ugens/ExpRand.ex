@@ -3,4 +3,8 @@ defmodule ExpRand do
   %UGen.ExpRand.New{lo: lo, hi: hi}
 end
 
+  def description do
+    "Exponential single random number generator."
+  end
+
 end

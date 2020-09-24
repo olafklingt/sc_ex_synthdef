@@ -6,4 +6,8 @@ end
   %UGen.AllpassC.Kr{in: inv, maxdelaytime: maxdelaytime, delaytime: delaytime, decaytime: decaytime}
 end
 
+  def description do
+    "Schroeder allpass delay line with cubic interpolation."
+  end
+
 end

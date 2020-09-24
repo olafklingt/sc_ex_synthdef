@@ -5,6 +5,9 @@ defmodule UGen.Dstutter.New do
   def outputs(_ugen_struct), do: [0]
   def args(_ugen_struct), do: [:n, :in]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Demand rate input replicator"
+  end
 
   use TypedStruct
 

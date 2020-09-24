@@ -5,6 +5,9 @@ defmodule UGen.LocalIn.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:numChannels, :default]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Define and read from buses local to a synth."
+  end
 
   use TypedStruct
 

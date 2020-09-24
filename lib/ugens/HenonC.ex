@@ -3,4 +3,8 @@ defmodule HenonC do
   %UGen.HenonC.Ar{freq: freq, a: a, b: b, x0: x0, x1: x1}
 end
 
+  def description do
+    "Henon map chaotic generator"
+  end
+
 end

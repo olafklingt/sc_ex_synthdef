@@ -3,4 +3,8 @@ defmodule GVerb do
   %UGen.GVerb.Ar{in: inv, roomsize: roomsize, revtime: revtime, damping: damping, inputbw: inputbw, spread: spread, drylevel: drylevel, earlyreflevel: earlyreflevel, taillevel: taillevel, maxroomsize: maxroomsize}
 end
 
+  def description do
+    "A two-channel reverb"
+  end
+
 end

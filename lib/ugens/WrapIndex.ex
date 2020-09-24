@@ -6,4 +6,8 @@ end
   %UGen.WrapIndex.Kr{bufnum: bufnum, in: inv}
 end
 
+  def description do
+    "Index into a table with a signal."
+  end
+
 end

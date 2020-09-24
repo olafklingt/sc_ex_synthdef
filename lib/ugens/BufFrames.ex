@@ -6,4 +6,8 @@ end
   %UGen.BufFrames.Kr{bufnum: bufnum}
 end
 
+  def description do
+    "Current number of frames allocated in the buffer."
+  end
+
 end

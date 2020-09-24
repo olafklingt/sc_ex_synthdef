@@ -3,4 +3,8 @@ defmodule BPeakEQ do
   %UGen.BPeakEQ.Ar{in: inv, freq: freq, rq: rq, db: db}
 end
 
+  def description do
+    "Parametric equalizer"
+  end
+
 end

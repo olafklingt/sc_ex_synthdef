@@ -6,4 +6,8 @@ end
   %UGen.PlayBuf.Kr{numChannels: numChannels, bufnum: bufnum, rate: rate, trigger: trigger, startPos: startPos, loop: loop, doneAction: doneAction}
 end
 
+  def description do
+    "Sample playback oscillator."
+  end
+
 end

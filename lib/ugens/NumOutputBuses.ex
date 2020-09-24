@@ -3,4 +3,8 @@ defmodule NumOutputBuses do
   %UGen.NumOutputBuses.Ir{}
 end
 
+  def description do
+    "Number of output busses."
+  end
+
 end

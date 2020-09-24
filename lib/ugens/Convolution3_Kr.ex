@@ -5,6 +5,9 @@ defmodule UGen.Convolution3.Kr do
   def outputs(_ugen_struct), do: [1]
   def args(_ugen_struct), do: [:in, :kernel, :trigger, :framesize]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Time based convolver."
+  end
 
   use TypedStruct
 

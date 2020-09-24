@@ -5,6 +5,9 @@ defmodule UGen.Linen.Kr do
   def outputs(_ugen_struct), do: [1]
   def args(_ugen_struct), do: [:gate, :attackTime, :susLevel, :releaseTime, :doneAction]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Simple linear envelope generator."
+  end
 
   use TypedStruct
 

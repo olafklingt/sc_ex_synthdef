@@ -5,6 +5,9 @@ defmodule UGen.DemandEnvGen.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:level, :dur, :shape, :curve, :gate, :reset, :levelScale, :levelBias, :timeScale, :doneAction]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Demand rate envelope generator"
+  end
 
   use TypedStruct
 

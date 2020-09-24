@@ -3,4 +3,8 @@ defmodule LagIn do
   %UGen.LagIn.Kr{bus: bus, numChannels: numChannels, lag: lag}
 end
 
+  def description do
+    "Read a control signal from a bus with a lag"
+  end
+
 end

@@ -3,4 +3,8 @@ defmodule PV_BinWipe do
   %UGen.PV_BinWipe.New{bufferA: bufferA, bufferB: bufferB, wipe: wipe}
 end
 
+  def description do
+    "Combine low and high bins from two inputs."
+  end
+
 end

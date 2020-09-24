@@ -6,4 +6,8 @@ end
   %UGen.Lag.Kr{in: inv, lagTime: lagTime}
 end
 
+  def description do
+    "Exponential lag"
+  end
+
 end

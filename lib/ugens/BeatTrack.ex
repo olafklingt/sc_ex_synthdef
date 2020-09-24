@@ -3,4 +3,8 @@ defmodule BeatTrack do
   %UGen.BeatTrack.Kr{chain: chain, lock: lock}
 end
 
+  def description do
+    "Autocorrelation beat tracker"
+  end
+
 end

@@ -6,4 +6,8 @@ end
   %UGen.DecodeB2.Kr{numChans: numChans, w: w, x: x, y: y, orientation: orientation}
 end
 
+  def description do
+    "2D Ambisonic B-format decoder."
+  end
+
 end

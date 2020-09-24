@@ -6,4 +6,8 @@ end
   %UGen.Median.Kr{length: length, in: inv}
 end
 
+  def description do
+    "Median filter."
+  end
+
 end

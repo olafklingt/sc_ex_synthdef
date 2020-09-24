@@ -6,4 +6,8 @@ end
   %UGen.SinOsc.Kr{freq: freq, phase: phase}
 end
 
+  def description do
+    "Interpolating sine wavetable oscillator."
+  end
+
 end

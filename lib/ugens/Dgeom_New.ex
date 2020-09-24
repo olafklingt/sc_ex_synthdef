@@ -5,6 +5,9 @@ defmodule UGen.Dgeom.New do
   def outputs(_ugen_struct), do: [0]
   def args(_ugen_struct), do: [:start, :grow, :length]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Demand rate geometric series UGen."
+  end
 
   use TypedStruct
 

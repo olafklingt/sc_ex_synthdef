@@ -6,4 +6,8 @@ end
   %UGen.Vibrato.Kr{freq: freq, rate: rate, depth: depth, delay: delay, onset: onset, rateVariation: rateVariation, depthVariation: depthVariation, iphase: iphase, trig: trig}
 end
 
+  def description do
+    "The Vibrato oscillator models a slow frequency modulation."
+  end
+
 end

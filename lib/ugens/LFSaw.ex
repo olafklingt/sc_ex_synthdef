@@ -6,4 +6,8 @@ end
   %UGen.LFSaw.Kr{freq: freq, iphase: iphase}
 end
 
+  def description do
+    "Sawtooth oscillator"
+  end
+
 end

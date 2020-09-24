@@ -3,4 +3,8 @@ defmodule Klank do
   %UGen.Klank.Ar{specificationsArrayRef: specificationsArrayRef, input: input, freqscale: freqscale, freqoffset: freqoffset, decayscale: decayscale}
 end
 
+  def description do
+    "Bank of resonators"
+  end
+
 end

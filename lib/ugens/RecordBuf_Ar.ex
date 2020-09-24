@@ -5,6 +5,9 @@ defmodule UGen.RecordBuf.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:inputArray, :bufnum, :offset, :recLevel, :preLevel, :run, :loop, :trigger, :doneAction]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Record or overdub into a Buffer."
+  end
 
   use TypedStruct
 

@@ -5,6 +5,9 @@ defmodule UGen.ScopeOut.Kr do
   def outputs(_ugen_struct), do: []
   def args(_ugen_struct), do: [:inputArray, :bufnum]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "FIXME: ScopeOut purpose."
+  end
 
   use TypedStruct
 

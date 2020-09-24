@@ -6,4 +6,8 @@ end
   %UGen.TWindex.Kr{in: inv, array: array, normalize: normalize}
 end
 
+  def description do
+    "Triggered windex."
+  end
+
 end

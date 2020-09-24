@@ -6,4 +6,8 @@ end
   %UGen.LinXFade2.Kr{inA: inA, inB: inB, pan: pan, level: level}
 end
 
+  def description do
+    "Two channel linear crossfade."
+  end
+
 end

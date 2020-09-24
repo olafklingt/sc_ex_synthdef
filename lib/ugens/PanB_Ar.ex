@@ -5,6 +5,9 @@ defmodule UGen.PanB.Ar do
   def outputs(_ugen_struct), do: [2, 2, 2, 2]
   def args(_ugen_struct), do: [:in, :azimuth, :elevation, :gain]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Ambisonic B-format panner."
+  end
 
   use TypedStruct
 

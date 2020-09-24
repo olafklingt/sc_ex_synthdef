@@ -3,4 +3,8 @@ defmodule Dxrand do
   %UGen.Dxrand.New{list: list, repeats: repeats}
 end
 
+  def description do
+    "Demand rate random sequence generator."
+  end
+
 end

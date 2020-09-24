@@ -6,4 +6,8 @@ end
   %UGen.BrownNoise.Kr{}
 end
 
+  def description do
+    "Brown Noise."
+  end
+
 end

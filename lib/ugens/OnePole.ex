@@ -6,4 +6,8 @@ end
   %UGen.OnePole.Kr{in: inv, coef: coef}
 end
 
+  def description do
+    "One pole filter."
+  end
+
 end

@@ -5,6 +5,9 @@ defmodule UGen.Loudness.Kr do
   def outputs(_ugen_struct), do: [1]
   def args(_ugen_struct), do: [:chain, :smask, :tmask]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Extraction of instantaneous loudness in sones"
+  end
 
   use TypedStruct
 

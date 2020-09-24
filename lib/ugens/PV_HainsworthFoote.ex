@@ -3,4 +3,8 @@ defmodule PV_HainsworthFoote do
   %UGen.PV_HainsworthFoote.Ar{buffer: buffer, proph: proph, propf: propf, threshold: threshold, waittime: waittime}
 end
 
+  def description do
+    "FFT onset detector."
+  end
+
 end

@@ -3,4 +3,8 @@ defmodule MouseY do
   %UGen.MouseY.Kr{minval: minval, maxval: maxval, warp: warp, lag: lag}
 end
 
+  def description do
+    "Cursor tracking UGen."
+  end
+
 end

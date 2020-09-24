@@ -5,6 +5,9 @@ defmodule UGen.PeakFollower.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:in, :decay]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Track peak signal amplitude."
+  end
 
   use TypedStruct
 

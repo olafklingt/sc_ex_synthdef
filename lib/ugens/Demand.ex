@@ -6,4 +6,8 @@ end
   %UGen.Demand.Kr{trig: trig, reset: reset, demandUGens: demandUGens}
 end
 
+  def description do
+    "Demand results from demand rate UGens."
+  end
+
 end

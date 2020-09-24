@@ -3,4 +3,8 @@ defmodule A2K do
   %UGen.A2K.Kr{in: inv}
 end
 
+  def description do
+    "Audio to control rate converter."
+  end
+
 end

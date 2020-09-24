@@ -3,4 +3,8 @@ defmodule Pitch do
   %UGen.Pitch.Kr{in: inv, initFreq: initFreq, minFreq: minFreq, maxFreq: maxFreq, execFreq: execFreq, maxBinsPerOctave: maxBinsPerOctave, median: median, ampThreshold: ampThreshold, peakThreshold: peakThreshold, downSample: downSample, clar: clar}
 end
 
+  def description do
+    "Autocorrelation pitch follower"
+  end
+
 end

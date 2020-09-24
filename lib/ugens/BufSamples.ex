@@ -6,4 +6,8 @@ end
   %UGen.BufSamples.Kr{bufnum: bufnum}
 end
 
+  def description do
+    "Current number of samples in buffer."
+  end
+
 end

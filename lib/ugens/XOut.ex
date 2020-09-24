@@ -6,4 +6,8 @@ end
   %UGen.XOut.Kr{bus: bus, xfade: xfade, channelsArray: channelsArray}
 end
 
+  def description do
+    "Send signal to a bus, crossfading with previous contents."
+  end
+
 end

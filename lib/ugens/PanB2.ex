@@ -6,4 +6,8 @@ end
   %UGen.PanB2.Kr{in: inv, azimuth: azimuth, gain: gain}
 end
 
+  def description do
+    "2D Ambisonic B-format panner."
+  end
+
 end

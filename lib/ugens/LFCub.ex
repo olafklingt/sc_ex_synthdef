@@ -6,4 +6,8 @@ end
   %UGen.LFCub.Kr{freq: freq, iphase: iphase}
 end
 
+  def description do
+    "A sine like shape made of two cubic pieces"
+  end
+
 end

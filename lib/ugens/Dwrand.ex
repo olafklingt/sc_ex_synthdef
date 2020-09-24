@@ -3,4 +3,8 @@ defmodule Dwrand do
   %UGen.Dwrand.New{list: list, weights: weights, repeats: repeats}
 end
 
+  def description do
+    "Demand rate weighted random sequence generator"
+  end
+
 end

@@ -6,4 +6,8 @@ end
   %UGen.LFClipNoise.Kr{freq: freq}
 end
 
+  def description do
+    "Clipped noise"
+  end
+
 end

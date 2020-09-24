@@ -5,6 +5,9 @@ defmodule UGen.SendTrig.Kr do
   def outputs(_ugen_struct), do: []
   def args(_ugen_struct), do: [:in, :id, :value]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Send a trigger message from the server back to the client."
+  end
 
   use TypedStruct
 

@@ -5,6 +5,9 @@ defmodule UGen.Klang.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:specificationsArrayRef, :freqscale, :freqoffset]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Sine oscillator bank"
+  end
 
   use TypedStruct
 

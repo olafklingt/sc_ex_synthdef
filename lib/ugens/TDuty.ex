@@ -6,4 +6,8 @@ end
   %UGen.TDuty.Kr{dur: dur, reset: reset, level: level, doneAction: doneAction, gapFirst: gapFirst}
 end
 
+  def description do
+    "Demand results as trigger from demand rate UGens."
+  end
+
 end

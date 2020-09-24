@@ -3,4 +3,8 @@ defmodule Convolution2L do
   %UGen.Convolution2L.Ar{in: inv, kernel: kernel, trigger: trigger, framesize: framesize, crossfade: crossfade}
 end
 
+  def description do
+    "Real-time convolver with linear interpolation"
+  end
+
 end

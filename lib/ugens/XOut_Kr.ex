@@ -5,6 +5,9 @@ defmodule UGen.XOut.Kr do
   def outputs(_ugen_struct), do: []
   def args(_ugen_struct), do: [:bus, :xfade, :channelsArray]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Send signal to a bus, crossfading with previous contents."
+  end
 
   use TypedStruct
 

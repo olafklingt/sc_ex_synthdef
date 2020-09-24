@@ -3,4 +3,8 @@ defmodule PV_ConformalMap do
   %UGen.PV_ConformalMap.New{buffer: buffer, areal: areal, aimag: aimag}
 end
 
+  def description do
+    "Complex plane attack."
+  end
+
 end

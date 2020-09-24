@@ -5,6 +5,9 @@ defmodule UGen.Slope.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:in]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Slope of signal"
+  end
 
   use TypedStruct
 

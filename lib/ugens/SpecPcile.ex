@@ -3,4 +3,8 @@ defmodule SpecPcile do
   %UGen.SpecPcile.Kr{buffer: buffer, fraction: fraction, interpolate: interpolate}
 end
 
+  def description do
+    "Find a percentile of FFT magnitude spectrum"
+  end
+
 end

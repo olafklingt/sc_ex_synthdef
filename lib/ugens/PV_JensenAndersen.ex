@@ -3,4 +3,8 @@ defmodule PV_JensenAndersen do
   %UGen.PV_JensenAndersen.Ar{buffer: buffer, propsc: propsc, prophfe: prophfe, prophfc: prophfc, propsf: propsf, threshold: threshold, waittime: waittime}
 end
 
+  def description do
+    "FFT feature detector for onset detection."
+  end
+
 end

@@ -6,4 +6,8 @@ end
   %UGen.PeakFollower.Kr{in: inv, decay: decay}
 end
 
+  def description do
+    "Track peak signal amplitude."
+  end
+
 end

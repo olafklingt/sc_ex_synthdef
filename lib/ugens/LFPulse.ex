@@ -6,4 +6,8 @@ end
   %UGen.LFPulse.Kr{freq: freq, iphase: iphase, width: width}
 end
 
+  def description do
+    "pulse oscillator"
+  end
+
 end

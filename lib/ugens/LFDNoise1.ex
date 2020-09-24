@@ -6,4 +6,8 @@ end
   %UGen.LFDNoise1.Kr{freq: freq}
 end
 
+  def description do
+    "Dynamic ramp noise"
+  end
+
 end

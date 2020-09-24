@@ -5,6 +5,9 @@ defmodule UGen.RandID.Ir do
   def outputs(_ugen_struct), do: []
   def args(_ugen_struct), do: [:id]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Set the synth's random generator ID."
+  end
 
   use TypedStruct
 

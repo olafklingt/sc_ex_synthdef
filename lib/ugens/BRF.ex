@@ -6,4 +6,8 @@ end
   %UGen.BRF.Kr{in: inv, freq: freq, rq: rq}
 end
 
+  def description do
+    "2nd order Butterworth band reject filter."
+  end
+
 end

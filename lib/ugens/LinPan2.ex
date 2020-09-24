@@ -6,4 +6,8 @@ end
   %UGen.LinPan2.Kr{in: inv, pos: pos, level: level}
 end
 
+  def description do
+    "Two channel linear pan."
+  end
+
 end

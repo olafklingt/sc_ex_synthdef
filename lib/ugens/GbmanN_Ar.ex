@@ -5,6 +5,9 @@ defmodule UGen.GbmanN.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:freq, :xi, :yi]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Gingerbreadman map chaotic generator"
+  end
 
   use TypedStruct
 

@@ -5,6 +5,9 @@ defmodule UGen.MoogFF.Kr do
   def outputs(_ugen_struct), do: [1]
   def args(_ugen_struct), do: [:in, :freq, :gain, :reset]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Moog VCF implementation, designed by Federico Fontana"
+  end
 
   use TypedStruct
 

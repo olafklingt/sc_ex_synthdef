@@ -3,4 +3,8 @@ defmodule BHiPass do
   %UGen.BHiPass.Ar{in: inv, freq: freq, rq: rq}
 end
 
+  def description do
+    "12db/oct rolloff - 2nd order resonant  Hi Pass Filter"
+  end
+
 end

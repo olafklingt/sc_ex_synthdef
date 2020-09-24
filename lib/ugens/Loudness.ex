@@ -3,4 +3,8 @@ defmodule Loudness do
   %UGen.Loudness.Kr{chain: chain, smask: smask, tmask: tmask}
 end
 
+  def description do
+    "Extraction of instantaneous loudness in sones"
+  end
+
 end

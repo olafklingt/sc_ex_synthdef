@@ -3,4 +3,8 @@ defmodule QuadC do
   %UGen.QuadC.Ar{freq: freq, a: a, b: b, c: c, xi: xi}
 end
 
+  def description do
+    "General quadratic map chaotic generator"
+  end
+
 end

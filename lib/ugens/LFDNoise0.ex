@@ -6,4 +6,8 @@ end
   %UGen.LFDNoise0.Kr{freq: freq}
 end
 
+  def description do
+    "Dynamic step noise"
+  end
+
 end

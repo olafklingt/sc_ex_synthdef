@@ -5,6 +5,9 @@ defmodule UGen.LorenzL.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:freq, :s, :r, :b, :h, :xi, :yi, :zi]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Lorenz chaotic generator"
+  end
 
   use TypedStruct
 

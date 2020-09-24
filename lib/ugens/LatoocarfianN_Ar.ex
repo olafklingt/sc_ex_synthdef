@@ -5,6 +5,9 @@ defmodule UGen.LatoocarfianN.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:freq, :a, :b, :c, :d, :xi, :yi]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Latoocarfian chaotic generator"
+  end
 
   use TypedStruct
 

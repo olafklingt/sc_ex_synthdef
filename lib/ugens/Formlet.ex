@@ -6,4 +6,8 @@ end
   %UGen.Formlet.Kr{in: inv, freq: freq, attacktime: attacktime, decaytime: decaytime}
 end
 
+  def description do
+    "FOF-like filter."
+  end
+
 end

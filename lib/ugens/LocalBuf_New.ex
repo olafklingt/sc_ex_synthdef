@@ -5,6 +5,9 @@ defmodule UGen.LocalBuf.New do
   def outputs(_ugen_struct), do: [0]
   def args(_ugen_struct), do: [:numFrames, :numChannels]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Allocate a buffer local to the synth"
+  end
 
   use TypedStruct
 

@@ -5,6 +5,9 @@ defmodule UGen.Ramp.Ar do
   def outputs(_ugen_struct), do: []
   def args(_ugen_struct), do: [:in, :lagTime]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Break a continuous signal into line segments"
+  end
 
   use TypedStruct
 

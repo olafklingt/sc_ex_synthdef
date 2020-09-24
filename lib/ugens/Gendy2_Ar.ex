@@ -5,6 +5,9 @@ defmodule UGen.Gendy2.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:ampdist, :durdist, :adparam, :ddparam, :minfreq, :maxfreq, :ampscale, :durscale, :initCPs, :knum, :a, :c]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Dynamic stochastic synthesis generator."
+  end
 
   use TypedStruct
 

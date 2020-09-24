@@ -6,4 +6,8 @@ end
   %UGen.Ringz.Kr{in: inv, freq: freq, decaytime: decaytime}
 end
 
+  def description do
+    "Ringing filter."
+  end
+
 end

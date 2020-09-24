@@ -5,6 +5,9 @@ defmodule UGen.RandSeed.Ar do
   def outputs(_ugen_struct), do: []
   def args(_ugen_struct), do: [:trig, :seed]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Sets the synth's random generator seed."
+  end
 
   use TypedStruct
 

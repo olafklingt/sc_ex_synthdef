@@ -6,4 +6,8 @@ end
   %UGen.HPF.Kr{in: inv, freq: freq}
 end
 
+  def description do
+    "2nd order Butterworth highpass filter."
+  end
+
 end

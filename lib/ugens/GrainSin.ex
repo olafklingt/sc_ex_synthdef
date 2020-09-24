@@ -3,4 +3,8 @@ defmodule GrainSin do
   %UGen.GrainSin.Ar{numChannels: numChannels, trigger: trigger, dur: dur, freq: freq, pan: pan, envbufnum: envbufnum, maxGrains: maxGrains}
 end
 
+  def description do
+    "Granular synthesis with sine tones"
+  end
+
 end

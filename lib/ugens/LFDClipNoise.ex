@@ -6,4 +6,8 @@ end
   %UGen.LFDClipNoise.Kr{freq: freq}
 end
 
+  def description do
+    "Dynamic clipped noise"
+  end
+
 end

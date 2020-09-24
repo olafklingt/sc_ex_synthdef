@@ -6,4 +6,8 @@ end
   %UGen.XLine.Kr{start: start, end: endv, dur: dur, doneAction: doneAction}
 end
 
+  def description do
+    "Exponential line generator."
+  end
+
 end

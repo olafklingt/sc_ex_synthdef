@@ -6,4 +6,8 @@ end
   %UGen.Integrator.Kr{in: inv, coef: coef}
 end
 
+  def description do
+    "A leaky integrator."
+  end
+
 end

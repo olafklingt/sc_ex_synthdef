@@ -3,4 +3,8 @@ defmodule Dgeom do
   %UGen.Dgeom.New{start: start, grow: grow, length: length}
 end
 
+  def description do
+    "Demand rate geometric series UGen."
+  end
+
 end

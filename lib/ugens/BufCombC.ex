@@ -3,4 +3,8 @@ defmodule BufCombC do
   %UGen.BufCombC.Ar{buf: buf, in: inv, delaytime: delaytime, decaytime: decaytime}
 end
 
+  def description do
+    "Buffer based comb delay line with cubic interpolation."
+  end
+
 end

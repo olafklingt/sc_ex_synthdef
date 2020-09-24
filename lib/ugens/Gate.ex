@@ -6,4 +6,8 @@ end
   %UGen.Gate.Kr{in: inv, trig: trig}
 end
 
+  def description do
+    "Gate or hold."
+  end
+
 end

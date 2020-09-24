@@ -6,4 +6,8 @@ end
   %UGen.Duty.Kr{dur: dur, reset: reset, level: level, doneAction: doneAction}
 end
 
+  def description do
+    "Demand results from demand rate UGens."
+  end
+
 end

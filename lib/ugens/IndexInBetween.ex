@@ -6,4 +6,8 @@ end
   %UGen.IndexInBetween.Kr{bufnum: bufnum, in: inv}
 end
 
+  def description do
+    "Finds the (lowest) point in the Buffer at which the input signal lies in-between the two values"
+  end
+
 end

@@ -3,4 +3,8 @@ defmodule GrainBuf do
   %UGen.GrainBuf.Ar{numChannels: numChannels, trigger: trigger, dur: dur, sndbuf: sndbuf, rate: rate, pos: pos, interp: interp, pan: pan, envbufnum: envbufnum, maxGrains: maxGrains}
 end
 
+  def description do
+    "Granular synthesis with sound stored in a buffer"
+  end
+
 end

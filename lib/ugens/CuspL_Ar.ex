@@ -5,6 +5,9 @@ defmodule UGen.CuspL.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:freq, :a, :b, :xi]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Cusp map chaotic generator"
+  end
 
   use TypedStruct
 

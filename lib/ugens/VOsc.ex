@@ -6,4 +6,8 @@ end
   %UGen.VOsc.Kr{bufpos: bufpos, freq: freq, phase: phase}
 end
 
+  def description do
+    "Variable wavetable oscillator."
+  end
+
 end

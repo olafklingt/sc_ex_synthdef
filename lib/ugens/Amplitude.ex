@@ -6,4 +6,8 @@ end
   %UGen.Amplitude.Kr{in: inv, attackTime: attackTime, releaseTime: releaseTime}
 end
 
+  def description do
+    "Amplitude follower"
+  end
+
 end

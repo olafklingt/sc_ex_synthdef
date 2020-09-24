@@ -5,6 +5,9 @@ defmodule UGen.LFPar.Kr do
   def outputs(_ugen_struct), do: [1]
   def args(_ugen_struct), do: [:freq, :iphase]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Parabolic oscillator"
+  end
 
   use TypedStruct
 

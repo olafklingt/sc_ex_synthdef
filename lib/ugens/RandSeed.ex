@@ -9,4 +9,8 @@ end
   %UGen.RandSeed.Kr{trig: trig, seed: seed}
 end
 
+  def description do
+    "Sets the synth's random generator seed."
+  end
+
 end

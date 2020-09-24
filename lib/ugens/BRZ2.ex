@@ -6,4 +6,8 @@ end
   %UGen.BRZ2.Kr{in: inv}
 end
 
+  def description do
+    "Two zero fixed midcut."
+  end
+
 end

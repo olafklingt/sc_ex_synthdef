@@ -3,4 +3,8 @@ defmodule VDiskIn do
   %UGen.VDiskIn.Ar{numChannels: numChannels, bufnum: bufnum, rate: rate, loop: loop, sendID: sendID}
 end
 
+  def description do
+    "Stream in audio from a file, with variable rate"
+  end
+
 end

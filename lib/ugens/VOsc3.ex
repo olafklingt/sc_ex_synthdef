@@ -6,4 +6,8 @@ end
   %UGen.VOsc3.Kr{bufpos: bufpos, freq1: freq1, freq2: freq2, freq3: freq3}
 end
 
+  def description do
+    "Three variable wavetable oscillators."
+  end
+
 end

@@ -3,4 +3,8 @@ defmodule LatoocarfianL do
   %UGen.LatoocarfianL.Ar{freq: freq, a: a, b: b, c: c, d: d, xi: xi, yi: yi}
 end
 
+  def description do
+    "Latoocarfian chaotic generator"
+  end
+
 end

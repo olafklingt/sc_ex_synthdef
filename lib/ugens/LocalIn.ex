@@ -6,4 +6,8 @@ end
   %UGen.LocalIn.Kr{numChannels: numChannels, default: default}
 end
 
+  def description do
+    "Define and read from buses local to a synth."
+  end
+
 end

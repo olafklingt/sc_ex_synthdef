@@ -3,4 +3,8 @@ defmodule PauseSelf do
   %UGen.PauseSelf.Kr{in: inv}
 end
 
+  def description do
+    "When triggered, pause enclosing synth."
+  end
+
 end

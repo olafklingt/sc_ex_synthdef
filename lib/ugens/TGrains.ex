@@ -3,4 +3,8 @@ defmodule TGrains do
   %UGen.TGrains.Ar{numChannels: numChannels, trigger: trigger, bufnum: bufnum, rate: rate, centerPos: centerPos, dur: dur, pan: pan, amp: amp, interp: interp}
 end
 
+  def description do
+    "Buffer granulator."
+  end
+
 end

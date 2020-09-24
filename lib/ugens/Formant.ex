@@ -3,4 +3,8 @@ defmodule Formant do
   %UGen.Formant.Ar{fundfreq: fundfreq, formfreq: formfreq, bwfreq: bwfreq}
 end
 
+  def description do
+    "Formant oscillator"
+  end
+
 end

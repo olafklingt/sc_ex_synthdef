@@ -3,4 +3,8 @@ defmodule NumAudioBuses do
   %UGen.NumAudioBuses.Ir{}
 end
 
+  def description do
+    "Number of audio busses."
+  end
+
 end

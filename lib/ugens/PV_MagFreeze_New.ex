@@ -5,6 +5,9 @@ defmodule UGen.PV_MagFreeze.New do
   def outputs(_ugen_struct), do: [0]
   def args(_ugen_struct), do: [:buffer, :freeze]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Freeze magnitudes."
+  end
 
   use TypedStruct
 

@@ -3,4 +3,8 @@ defmodule Free do
   %UGen.Free.Kr{trig: trig, id: id}
 end
 
+  def description do
+    "When triggered, frees a node."
+  end
+
 end

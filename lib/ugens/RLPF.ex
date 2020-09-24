@@ -6,4 +6,8 @@ end
   %UGen.RLPF.Kr{in: inv, freq: freq, rq: rq}
 end
 
+  def description do
+    "A resonant low pass filter."
+  end
+
 end

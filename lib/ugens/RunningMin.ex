@@ -6,4 +6,8 @@ end
   %UGen.RunningMin.Kr{in: inv, trig: trig}
 end
 
+  def description do
+    "Track minimum level."
+  end
+
 end

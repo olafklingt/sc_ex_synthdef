@@ -5,6 +5,9 @@ defmodule UGen.Formant.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:fundfreq, :formfreq, :bwfreq]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Formant oscillator"
+  end
 
   use TypedStruct
 

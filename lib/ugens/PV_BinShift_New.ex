@@ -5,6 +5,9 @@ defmodule UGen.PV_BinShift.New do
   def outputs(_ugen_struct), do: [0]
   def args(_ugen_struct), do: [:buffer, :stretch, :shift, :interp]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Shift and stretch bin position."
+  end
 
   use TypedStruct
 

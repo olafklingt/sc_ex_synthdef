@@ -5,6 +5,9 @@ defmodule UGen.CompanderD.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:in, :thresh, :slopeBelow, :slopeAbove, :clampTime, :relaxTime]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Compressor, expander, limiter, gate, ducker."
+  end
 
   use TypedStruct
 

@@ -5,6 +5,9 @@ defmodule UGen.SinOscFB.Kr do
   def outputs(_ugen_struct), do: [1]
   def args(_ugen_struct), do: [:freq, :feedback]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Feedback FM oscillator"
+  end
 
   use TypedStruct
 

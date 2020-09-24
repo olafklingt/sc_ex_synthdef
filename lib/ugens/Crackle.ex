@@ -6,4 +6,8 @@ end
   %UGen.Crackle.Kr{chaosParam: chaosParam}
 end
 
+  def description do
+    "Chaotic noise function."
+  end
+
 end

@@ -6,4 +6,8 @@ end
   %UGen.Logistic.Kr{chaosParam: chaosParam, freq: freq, init: init}
 end
 
+  def description do
+    "Chaotic noise function"
+  end
+
 end

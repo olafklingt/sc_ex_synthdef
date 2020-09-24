@@ -5,6 +5,9 @@ defmodule UGen.AmpCompA.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:freq, :root, :minAmp, :rootAmp]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Basic psychoacoustic amplitude compensation (ANSI A-weighting curve)."
+  end
 
   use TypedStruct
 

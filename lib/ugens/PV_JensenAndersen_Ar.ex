@@ -5,6 +5,9 @@ defmodule UGen.PV_JensenAndersen.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:buffer, :propsc, :prophfe, :prophfc, :propsf, :threshold, :waittime]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "FFT feature detector for onset detection."
+  end
 
   use TypedStruct
 

@@ -6,4 +6,8 @@ end
   %UGen.DegreeToKey.Kr{bufnum: bufnum, in: inv, octave: octave}
 end
 
+  def description do
+    "Convert signal to modal pitch."
+  end
+
 end

@@ -3,4 +3,8 @@ defmodule Rand do
   %UGen.Rand.New{lo: lo, hi: hi}
 end
 
+  def description do
+    "Single random number generator."
+  end
+
 end

@@ -5,6 +5,9 @@ defmodule UGen.FFT.New do
   def outputs(_ugen_struct), do: [0]
   def args(_ugen_struct), do: [:buffer, :in, :hop, :wintype, :active, :winsize]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Fast Fourier Transform"
+  end
 
   use TypedStruct
 

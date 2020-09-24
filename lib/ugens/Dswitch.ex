@@ -3,4 +3,8 @@ defmodule Dswitch do
   %UGen.Dswitch.New{list: list, index: index}
 end
 
+  def description do
+    "Demand rate generator for embedding different inputs"
+  end
+
 end

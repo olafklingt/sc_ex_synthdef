@@ -6,4 +6,8 @@ end
   %UGen.LFNoise1.Kr{freq: freq}
 end
 
+  def description do
+    "Ramp noise"
+  end
+
 end

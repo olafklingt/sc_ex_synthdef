@@ -5,6 +5,9 @@ defmodule UGen.VDiskIn.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:numChannels, :bufnum, :rate, :loop, :sendID]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Stream in audio from a file, with variable rate"
+  end
 
   use TypedStruct
 

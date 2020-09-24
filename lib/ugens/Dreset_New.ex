@@ -5,6 +5,9 @@ defmodule UGen.Dreset.New do
   def outputs(_ugen_struct), do: [0]
   def args(_ugen_struct), do: [:in, :reset]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "demand rate reset"
+  end
 
   use TypedStruct
 

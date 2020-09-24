@@ -6,4 +6,8 @@ end
   %UGen.Hasher.Kr{in: inv}
 end
 
+  def description do
+    "Scrambled value with a hash function."
+  end
+
 end

@@ -3,4 +3,8 @@ defmodule GrainFM do
   %UGen.GrainFM.Ar{numChannels: numChannels, trigger: trigger, dur: dur, carfreq: carfreq, modfreq: modfreq, index: index, pan: pan, envbufnum: envbufnum, maxGrains: maxGrains}
 end
 
+  def description do
+    "Granular synthesis with frequency modulated sine tones"
+  end
+
 end

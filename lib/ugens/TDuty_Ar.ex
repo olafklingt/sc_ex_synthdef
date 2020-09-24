@@ -5,6 +5,9 @@ defmodule UGen.TDuty.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:dur, :reset, :level, :doneAction, :gapFirst]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Demand results as trigger from demand rate UGens."
+  end
 
   use TypedStruct
 

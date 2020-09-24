@@ -6,4 +6,8 @@ end
   %UGen.LinExp.Kr{in: inv, srclo: srclo, srchi: srchi, dstlo: dstlo, dsthi: dsthi}
 end
 
+  def description do
+    "Map a linear range to an exponential range"
+  end
+
 end

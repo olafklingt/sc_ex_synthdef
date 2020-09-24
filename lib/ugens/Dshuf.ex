@@ -3,4 +3,8 @@ defmodule Dshuf do
   %UGen.Dshuf.New{list: list, repeats: repeats}
 end
 
+  def description do
+    "Demand rate random sequence generator"
+  end
+
 end

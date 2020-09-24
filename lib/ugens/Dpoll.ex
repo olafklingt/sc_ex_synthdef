@@ -3,4 +3,8 @@ defmodule Dpoll do
   %UGen.Dpoll.New{in: inv, label: label, run: run, trigid: trigid}
 end
 
+  def description do
+    "Print the current output value of a demand rate UGen"
+  end
+
 end

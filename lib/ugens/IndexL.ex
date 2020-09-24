@@ -6,4 +6,8 @@ end
   %UGen.IndexL.Kr{bufnum: bufnum, in: inv}
 end
 
+  def description do
+    "Index into a table with a signal, linear interpolated"
+  end
+
 end

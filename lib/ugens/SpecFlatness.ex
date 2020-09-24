@@ -3,4 +3,8 @@ defmodule SpecFlatness do
   %UGen.SpecFlatness.Kr{buffer: buffer}
 end
 
+  def description do
+    "Spectral Flatness measure"
+  end
+
 end

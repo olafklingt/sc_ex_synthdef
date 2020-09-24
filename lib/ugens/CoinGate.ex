@@ -6,4 +6,8 @@ end
   %UGen.CoinGate.Kr{prob: prob, in: inv}
 end
 
+  def description do
+    "Statistical gate."
+  end
+
 end

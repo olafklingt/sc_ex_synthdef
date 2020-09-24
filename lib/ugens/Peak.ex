@@ -6,4 +6,8 @@ end
   %UGen.Peak.Kr{in: inv, trig: trig}
 end
 
+  def description do
+    "Track peak signal amplitude."
+  end
+
 end

@@ -3,4 +3,8 @@ defmodule FreqShift do
   %UGen.FreqShift.Ar{in: inv, freq: freq, phase: phase}
 end
 
+  def description do
+    "Frequency Shifter."
+  end
+
 end

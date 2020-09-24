@@ -5,6 +5,9 @@ defmodule UGen.BBandStop.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:in, :freq, :bw]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Band reject filter"
+  end
 
   use TypedStruct
 

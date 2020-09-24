@@ -3,4 +3,8 @@ defmodule PV_MagSmear do
   %UGen.PV_MagSmear.New{buffer: buffer, bins: bins}
 end
 
+  def description do
+    "Average magnitudes across bins."
+  end
+
 end

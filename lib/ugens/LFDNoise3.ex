@@ -6,4 +6,8 @@ end
   %UGen.LFDNoise3.Kr{freq: freq}
 end
 
+  def description do
+    "Dynamic cubic noise"
+  end
+
 end

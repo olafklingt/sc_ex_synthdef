@@ -6,4 +6,8 @@ end
   %UGen.TwoZero.Kr{in: inv, freq: freq, radius: radius}
 end
 
+  def description do
+    "Two zero filter."
+  end
+
 end

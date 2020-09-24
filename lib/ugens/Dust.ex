@@ -6,4 +6,8 @@ end
   %UGen.Dust.Kr{density: density}
 end
 
+  def description do
+    "Random impulses."
+  end
+
 end

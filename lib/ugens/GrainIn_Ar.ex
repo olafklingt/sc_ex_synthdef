@@ -5,6 +5,9 @@ defmodule UGen.GrainIn.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:numChannels, :trigger, :dur, :in, :pan, :envbufnum, :maxGrains]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Granulate an input signal"
+  end
 
   use TypedStruct
 

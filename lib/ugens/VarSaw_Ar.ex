@@ -5,6 +5,9 @@ defmodule UGen.VarSaw.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:freq, :iphase, :width]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Variable duty saw"
+  end
 
   use TypedStruct
 

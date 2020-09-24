@@ -6,4 +6,8 @@ end
   %UGen.MidEQ.Kr{in: inv, freq: freq, rq: rq, db: db}
 end
 
+  def description do
+    "Parametric filter."
+  end
+
 end

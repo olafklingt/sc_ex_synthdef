@@ -6,4 +6,8 @@ end
   %UGen.OffsetOut.Kr{}
 end
 
+  def description do
+    "Write a signal to a bus with sample accurate timing."
+  end
+
 end

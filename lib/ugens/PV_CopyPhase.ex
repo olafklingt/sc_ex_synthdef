@@ -3,4 +3,8 @@ defmodule PV_CopyPhase do
   %UGen.PV_CopyPhase.New{bufferA: bufferA, bufferB: bufferB}
 end
 
+  def description do
+    "Copy magnitudes and phases."
+  end
+
 end

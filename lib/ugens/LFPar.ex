@@ -6,4 +6,8 @@ end
   %UGen.LFPar.Kr{freq: freq, iphase: iphase}
 end
 
+  def description do
+    "Parabolic oscillator"
+  end
+
 end

@@ -3,4 +3,8 @@ defmodule Dunique do
   %UGen.Dunique.New{source: source, maxBufferSize: maxBufferSize, protected: protected}
 end
 
+  def description do
+    "Return the same unique series of values for several demand streams"
+  end
+
 end

@@ -6,4 +6,8 @@ end
   %UGen.In.Kr{bus: bus, numChannels: numChannels}
 end
 
+  def description do
+    "Read a signal from a bus."
+  end
+
 end

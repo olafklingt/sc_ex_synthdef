@@ -6,4 +6,8 @@ end
   %UGen.BufDelayL.Kr{buf: buf, in: inv, delaytime: delaytime}
 end
 
+  def description do
+    "Buffer based simple delay line with linear interpolation."
+  end
+
 end

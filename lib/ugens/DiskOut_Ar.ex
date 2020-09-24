@@ -5,6 +5,9 @@ defmodule UGen.DiskOut.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:bufnum, :channelsArray]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Record to a soundfile to disk."
+  end
 
   use TypedStruct
 

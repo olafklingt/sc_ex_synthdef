@@ -6,4 +6,8 @@ end
   %UGen.COsc.Kr{bufnum: bufnum, freq: freq, beats: beats}
 end
 
+  def description do
+    "Chorusing wavetable oscillator."
+  end
+
 end

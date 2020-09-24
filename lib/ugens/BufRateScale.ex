@@ -6,4 +6,8 @@ end
   %UGen.BufRateScale.Kr{bufnum: bufnum}
 end
 
+  def description do
+    "Buffer rate scaling in respect to server samplerate."
+  end
+
 end

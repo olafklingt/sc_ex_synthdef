@@ -6,4 +6,8 @@ end
   %UGen.ZeroCrossing.Kr{in: inv}
 end
 
+  def description do
+    "Zero crossing frequency follower"
+  end
+
 end

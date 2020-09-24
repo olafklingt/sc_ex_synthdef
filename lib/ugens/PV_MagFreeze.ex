@@ -3,4 +3,8 @@ defmodule PV_MagFreeze do
   %UGen.PV_MagFreeze.New{buffer: buffer, freeze: freeze}
 end
 
+  def description do
+    "Freeze magnitudes."
+  end
+
 end

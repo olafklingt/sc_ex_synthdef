@@ -6,4 +6,8 @@ end
   %UGen.Sweep.Kr{trig: trig, rate: rate}
 end
 
+  def description do
+    "Triggered linear ramp"
+  end
+
 end

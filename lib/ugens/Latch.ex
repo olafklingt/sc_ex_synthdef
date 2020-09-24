@@ -6,4 +6,8 @@ end
   %UGen.Latch.Kr{in: inv, trig: trig}
 end
 
+  def description do
+    "Sample and hold"
+  end
+
 end

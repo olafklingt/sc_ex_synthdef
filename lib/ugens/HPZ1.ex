@@ -6,4 +6,8 @@ end
   %UGen.HPZ1.Kr{in: inv}
 end
 
+  def description do
+    "Two point difference filter"
+  end
+
 end

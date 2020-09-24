@@ -5,6 +5,9 @@ defmodule UGen.RLPF.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:in, :freq, :rq]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "A resonant low pass filter."
+  end
 
   use TypedStruct
 

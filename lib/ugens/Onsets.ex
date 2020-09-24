@@ -3,4 +3,8 @@ defmodule Onsets do
   %UGen.Onsets.Kr{chain: chain, threshold: threshold, odftype: odftype, relaxtime: relaxtime, floor: floor, mingap: mingap, medianspan: medianspan, whtype: whtype, rawodf: rawodf}
 end
 
+  def description do
+    "Onset detector"
+  end
+
 end

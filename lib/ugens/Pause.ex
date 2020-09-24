@@ -3,4 +3,8 @@ defmodule Pause do
   %UGen.Pause.Kr{gate: gate, id: id}
 end
 
+  def description do
+    "When triggered, pauses a node."
+  end
+
 end

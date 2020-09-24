@@ -5,6 +5,9 @@ defmodule UGen.IEnvGen.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:envelope, :index]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Envelope generator for polling values from an Env"
+  end
 
   use TypedStruct
 

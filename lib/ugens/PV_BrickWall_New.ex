@@ -5,6 +5,9 @@ defmodule UGen.PV_BrickWall.New do
   def outputs(_ugen_struct), do: [0]
   def args(_ugen_struct), do: [:buffer, :wipe]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Zero bins."
+  end
 
   use TypedStruct
 

@@ -5,6 +5,9 @@ defmodule UGen.APF.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:in, :freq, :radius]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "FIXME: APF purpose."
+  end
 
   use TypedStruct
 

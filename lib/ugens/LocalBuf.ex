@@ -3,4 +3,8 @@ defmodule LocalBuf do
   %UGen.LocalBuf.New{numFrames: numFrames, numChannels: numChannels}
 end
 
+  def description do
+    "Allocate a buffer local to the synth"
+  end
+
 end

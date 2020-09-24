@@ -6,4 +6,8 @@ end
   %UGen.Poll.Kr{trig: trig, in: inv, label: label, trigid: trigid}
 end
 
+  def description do
+    "Print the current output value of a UGen"
+  end
+
 end

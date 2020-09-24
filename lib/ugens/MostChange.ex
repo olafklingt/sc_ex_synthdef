@@ -6,4 +6,8 @@ end
   %UGen.MostChange.Kr{a: a, b: b}
 end
 
+  def description do
+    "Output most changed."
+  end
+
 end

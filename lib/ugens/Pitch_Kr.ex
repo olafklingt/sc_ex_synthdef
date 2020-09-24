@@ -5,6 +5,9 @@ defmodule UGen.Pitch.Kr do
   def outputs(_ugen_struct), do: [1, 1]
   def args(_ugen_struct), do: [:in, :initFreq, :minFreq, :maxFreq, :execFreq, :maxBinsPerOctave, :median, :ampThreshold, :peakThreshold, :downSample, :clar]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Autocorrelation pitch follower"
+  end
 
   use TypedStruct
 

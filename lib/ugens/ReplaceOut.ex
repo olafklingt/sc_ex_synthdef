@@ -6,4 +6,8 @@ end
   %UGen.ReplaceOut.Kr{bus: bus, channelsArray: channelsArray}
 end
 
+  def description do
+    "Send signal to a bus, overwriting previous contents."
+  end
+
 end

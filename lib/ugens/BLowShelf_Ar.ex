@@ -5,6 +5,9 @@ defmodule UGen.BLowShelf.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:in, :freq, :rs, :db]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Low Shelf"
+  end
 
   use TypedStruct
 

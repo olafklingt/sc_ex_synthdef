@@ -5,6 +5,9 @@ defmodule UGen.Dbufrd.New do
   def outputs(_ugen_struct), do: [0]
   def args(_ugen_struct), do: [:bufnum, :phase, :loop]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Buffer read demand ugen"
+  end
 
   use TypedStruct
 

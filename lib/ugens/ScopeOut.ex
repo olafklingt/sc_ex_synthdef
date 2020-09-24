@@ -6,4 +6,8 @@ end
   %UGen.ScopeOut.Kr{inputArray: inputArray, bufnum: bufnum}
 end
 
+  def description do
+    "FIXME: ScopeOut purpose."
+  end
+
 end

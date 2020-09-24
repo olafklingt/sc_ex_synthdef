@@ -3,4 +3,8 @@ defmodule Klang do
   %UGen.Klang.Ar{specificationsArrayRef: specificationsArrayRef, freqscale: freqscale, freqoffset: freqoffset}
 end
 
+  def description do
+    "Sine oscillator bank"
+  end
+
 end

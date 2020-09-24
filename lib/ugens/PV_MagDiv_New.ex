@@ -5,6 +5,9 @@ defmodule UGen.PV_MagDiv.New do
   def outputs(_ugen_struct), do: [0]
   def args(_ugen_struct), do: [:bufferA, :bufferB, :zeroed]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Division of magnitudes"
+  end
 
   use TypedStruct
 

@@ -5,6 +5,9 @@ defmodule UGen.Spring.Kr do
   def outputs(_ugen_struct), do: [1]
   def args(_ugen_struct), do: [:in, :spring, :damp]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "physical model of resonating spring"
+  end
 
   use TypedStruct
 

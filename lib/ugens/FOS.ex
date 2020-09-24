@@ -6,4 +6,8 @@ end
   %UGen.FOS.Kr{in: inv, a0: a0, a1: a1, b1: b1}
 end
 
+  def description do
+    "First order filter section."
+  end
+
 end

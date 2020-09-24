@@ -6,4 +6,8 @@ end
   %UGen.CombN.Kr{in: inv, maxdelaytime: maxdelaytime, delaytime: delaytime, decaytime: decaytime}
 end
 
+  def description do
+    "Comb delay line with no interpolation."
+  end
+
 end

@@ -3,4 +3,8 @@ defmodule BeatTrack2 do
   %UGen.BeatTrack2.Kr{busindex: busindex, numfeatures: numfeatures, windowsize: windowsize, phaseaccuracy: phaseaccuracy, lock: lock, weightingscheme: weightingscheme}
 end
 
+  def description do
+    "Template matching beat tracker"
+  end
+
 end

@@ -6,4 +6,8 @@ end
   %UGen.LFNoise2.Kr{freq: freq}
 end
 
+  def description do
+    "Quadratic noise."
+  end
+
 end

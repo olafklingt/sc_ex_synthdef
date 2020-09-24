@@ -6,4 +6,8 @@ end
   %UGen.ClipNoise.Kr{}
 end
 
+  def description do
+    "Clip Noise."
+  end
+
 end

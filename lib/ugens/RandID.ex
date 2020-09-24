@@ -6,4 +6,8 @@ end
   %UGen.RandID.Kr{id: id}
 end
 
+  def description do
+    "Set the synth's random generator ID."
+  end
+
 end

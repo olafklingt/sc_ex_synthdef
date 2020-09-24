@@ -3,4 +3,8 @@ defmodule Dbufwr do
   %UGen.Dbufwr.New{input: input, bufnum: bufnum, phase: phase, loop: loop}
 end
 
+  def description do
+    "Buffer write demand ugen"
+  end
+
 end

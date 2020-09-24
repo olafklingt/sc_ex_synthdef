@@ -6,4 +6,8 @@ end
   %UGen.Resonz.Kr{in: inv, freq: freq, bwr: bwr}
 end
 
+  def description do
+    "Resonant filter."
+  end
+
 end

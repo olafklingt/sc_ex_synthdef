@@ -3,4 +3,8 @@ defmodule GrainIn do
   %UGen.GrainIn.Ar{numChannels: numChannels, trigger: trigger, dur: dur, in: inv, pan: pan, envbufnum: envbufnum, maxGrains: maxGrains}
 end
 
+  def description do
+    "Granulate an input signal"
+  end
+
 end

@@ -6,4 +6,8 @@ end
   %UGen.Rotate2.Kr{x: x, y: y, pos: pos}
 end
 
+  def description do
+    "Rotate a sound field."
+  end
+
 end

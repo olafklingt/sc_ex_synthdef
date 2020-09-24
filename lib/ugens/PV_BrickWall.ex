@@ -3,4 +3,8 @@ defmodule PV_BrickWall do
   %UGen.PV_BrickWall.New{buffer: buffer, wipe: wipe}
 end
 
+  def description do
+    "Zero bins."
+  end
+
 end

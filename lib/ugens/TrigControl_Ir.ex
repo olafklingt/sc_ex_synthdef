@@ -5,6 +5,9 @@ defmodule UGen.TrigControl.Ir do
   def outputs(_ugen_struct), do: [0]
   def args(_ugen_struct), do: [:values]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "FIXME: TrigControl purpose."
+  end
 
   use TypedStruct
 

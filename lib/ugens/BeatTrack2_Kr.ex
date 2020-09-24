@@ -5,6 +5,9 @@ defmodule UGen.BeatTrack2.Kr do
   def outputs(_ugen_struct), do: [1, 1, 1, 1, 1, 1]
   def args(_ugen_struct), do: [:busindex, :numfeatures, :windowsize, :phaseaccuracy, :lock, :weightingscheme]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Template matching beat tracker"
+  end
 
   use TypedStruct
 

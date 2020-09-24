@@ -5,6 +5,9 @@ defmodule UGen.BufDelayC.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:buf, :in, :delaytime]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Buffer based simple delay line with cubic interpolation."
+  end
 
   use TypedStruct
 

@@ -6,4 +6,8 @@ end
   %UGen.LFTri.Kr{freq: freq, iphase: iphase}
 end
 
+  def description do
+    "Triangle oscillator"
+  end
+
 end

@@ -5,6 +5,9 @@ defmodule UGen.T2K.Kr do
   def outputs(_ugen_struct), do: [1]
   def args(_ugen_struct), do: [:in]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Audio rate trigger to control rate trigger converter"
+  end
 
   use TypedStruct
 

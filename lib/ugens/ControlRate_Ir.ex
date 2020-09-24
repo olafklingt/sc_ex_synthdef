@@ -5,6 +5,9 @@ defmodule UGen.ControlRate.Ir do
   def outputs(_ugen_struct), do: [0]
   def args(_ugen_struct), do: []
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Server control rate."
+  end
 
   use TypedStruct
 

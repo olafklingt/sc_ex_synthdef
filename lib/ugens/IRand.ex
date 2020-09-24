@@ -3,4 +3,8 @@ defmodule IRand do
   %UGen.IRand.New{lo: lo, hi: hi}
 end
 
+  def description do
+    "Single integer random number generator."
+  end
+
 end

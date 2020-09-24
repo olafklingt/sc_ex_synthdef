@@ -9,4 +9,8 @@ end
   %UGen.AmpCompA.Kr{freq: freq, root: root, minAmp: minAmp, rootAmp: rootAmp}
 end
 
+  def description do
+    "Basic psychoacoustic amplitude compensation (ANSI A-weighting curve)."
+  end
+
 end

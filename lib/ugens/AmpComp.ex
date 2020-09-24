@@ -9,4 +9,8 @@ end
   %UGen.AmpComp.Kr{freq: freq, root: root, exp: exp}
 end
 
+  def description do
+    "Basic psychoacoustic amplitude compensation."
+  end
+
 end

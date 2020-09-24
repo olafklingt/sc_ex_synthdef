@@ -5,6 +5,9 @@ defmodule UGen.SetResetFF.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:trig, :reset]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Set-reset flip flop."
+  end
 
   use TypedStruct
 

@@ -5,6 +5,9 @@ defmodule UGen.LocalOut.Kr do
   def outputs(_ugen_struct), do: []
   def args(_ugen_struct), do: [:channelsArray]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Write to buses local to a synth."
+  end
 
   use TypedStruct
 

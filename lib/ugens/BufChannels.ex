@@ -6,4 +6,8 @@ end
   %UGen.BufChannels.Kr{bufnum: bufnum}
 end
 
+  def description do
+    "Current number of channels of soundfile in buffer."
+  end
+
 end

@@ -6,4 +6,8 @@ end
   %UGen.SetResetFF.Kr{trig: trig, reset: reset}
 end
 
+  def description do
+    "Set-reset flip flop."
+  end
+
 end

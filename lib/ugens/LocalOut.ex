@@ -6,4 +6,8 @@ end
   %UGen.LocalOut.Kr{channelsArray: channelsArray}
 end
 
+  def description do
+    "Write to buses local to a synth."
+  end
+
 end

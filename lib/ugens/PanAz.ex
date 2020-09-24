@@ -6,4 +6,8 @@ end
   %UGen.PanAz.Kr{numChans: numChans, in: inv, pos: pos, level: level, width: width, orientation: orientation}
 end
 
+  def description do
+    "Azimuth panner"
+  end
+
 end

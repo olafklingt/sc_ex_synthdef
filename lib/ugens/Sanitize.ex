@@ -6,4 +6,8 @@ end
   %UGen.Sanitize.Kr{in: inv, replace: replace}
 end
 
+  def description do
+    "Remove infinity, NaN, and denormals"
+  end
+
 end

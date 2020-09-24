@@ -6,4 +6,8 @@ end
   %UGen.PulseCount.Kr{trig: trig, reset: reset}
 end
 
+  def description do
+    "Pulse counter."
+  end
+
 end

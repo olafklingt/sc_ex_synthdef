@@ -6,4 +6,8 @@ end
   %UGen.DelTapRd.Kr{buffer: buffer, phase: phase, delTime: delTime, interp: interp}
 end
 
+  def description do
+    "Tap a delay line from a DelTapWr UGen"
+  end
+
 end

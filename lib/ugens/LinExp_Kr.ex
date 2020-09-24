@@ -5,6 +5,9 @@ defmodule UGen.LinExp.Kr do
   def outputs(_ugen_struct), do: [1]
   def args(_ugen_struct), do: [:in, :srclo, :srchi, :dstlo, :dsthi]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Map a linear range to an exponential range"
+  end
 
   use TypedStruct
 

@@ -3,4 +3,8 @@ defmodule BLowPass do
   %UGen.BLowPass.Ar{in: inv, freq: freq, rq: rq}
 end
 
+  def description do
+    "12db/oct rolloff - 2nd order resonant Low Pass Filter"
+  end
+
 end

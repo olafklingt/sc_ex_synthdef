@@ -6,4 +6,8 @@ end
   %UGen.RecordBuf.Kr{inputArray: inputArray, bufnum: bufnum, offset: offset, recLevel: recLevel, preLevel: preLevel, run: run, loop: loop, trigger: trigger, doneAction: doneAction}
 end
 
+  def description do
+    "Record or overdub into a Buffer."
+  end
+
 end

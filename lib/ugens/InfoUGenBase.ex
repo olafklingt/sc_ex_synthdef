@@ -3,4 +3,8 @@ defmodule InfoUGenBase do
   %UGen.InfoUGenBase.Ir{}
 end
 
+  def description do
+    "Base class for info ugens"
+  end
+
 end

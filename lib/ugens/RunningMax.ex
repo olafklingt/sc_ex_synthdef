@@ -6,4 +6,8 @@ end
   %UGen.RunningMax.Kr{in: inv, trig: trig}
 end
 
+  def description do
+    "Track maximum level."
+  end
+
 end

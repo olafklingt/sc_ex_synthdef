@@ -5,6 +5,9 @@ defmodule UGen.Vibrato.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:freq, :rate, :depth, :delay, :onset, :rateVariation, :depthVariation, :iphase, :trig]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "The Vibrato oscillator models a slow frequency modulation."
+  end
 
   use TypedStruct
 

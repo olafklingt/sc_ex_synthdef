@@ -3,4 +3,8 @@ defmodule PV_Max do
   %UGen.PV_Max.New{bufferA: bufferA, bufferB: bufferB}
 end
 
+  def description do
+    "Maximum magnitude."
+  end
+
 end

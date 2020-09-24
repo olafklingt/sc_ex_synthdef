@@ -6,4 +6,8 @@ end
   %UGen.Line.Kr{start: start, end: endv, dur: dur, doneAction: doneAction}
 end
 
+  def description do
+    "Line generator."
+  end
+
 end

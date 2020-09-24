@@ -5,6 +5,9 @@ defmodule UGen.DetectIndex.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:bufnum, :in]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Search a buffer for a value"
+  end
 
   use TypedStruct
 

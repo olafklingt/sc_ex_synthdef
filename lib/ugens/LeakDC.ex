@@ -6,4 +6,8 @@ end
   %UGen.LeakDC.Kr{in: inv, coef: coef}
 end
 
+  def description do
+    "Remove DC"
+  end
+
 end

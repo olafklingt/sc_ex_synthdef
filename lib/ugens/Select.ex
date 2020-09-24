@@ -6,4 +6,8 @@ end
   %UGen.Select.Kr{which: which, array: array}
 end
 
+  def description do
+    "Select output from an array of inputs."
+  end
+
 end

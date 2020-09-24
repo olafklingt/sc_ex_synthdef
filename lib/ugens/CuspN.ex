@@ -3,4 +3,8 @@ defmodule CuspN do
   %UGen.CuspN.Ar{freq: freq, a: a, b: b, xi: xi}
 end
 
+  def description do
+    "Cusp map chaotic generator"
+  end
+
 end

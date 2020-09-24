@@ -5,6 +5,9 @@ defmodule UGen.FBSineC.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:freq, :im, :fb, :a, :c, :xi, :yi]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Feedback sine with chaotic phase indexing"
+  end
 
   use TypedStruct
 

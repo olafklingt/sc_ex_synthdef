@@ -5,6 +5,9 @@ defmodule UGen.PV_Diffuser.New do
   def outputs(_ugen_struct), do: [0]
   def args(_ugen_struct), do: [:buffer, :trig]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Random phase shifting."
+  end
 
   use TypedStruct
 

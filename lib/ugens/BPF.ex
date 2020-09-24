@@ -6,4 +6,8 @@ end
   %UGen.BPF.Kr{in: inv, freq: freq, rq: rq}
 end
 
+  def description do
+    "2nd order Butterworth bandpass filter."
+  end
+
 end

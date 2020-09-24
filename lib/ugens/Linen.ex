@@ -3,4 +3,8 @@ defmodule Linen do
   %UGen.Linen.Kr{gate: gate, attackTime: attackTime, susLevel: susLevel, releaseTime: releaseTime, doneAction: doneAction}
 end
 
+  def description do
+    "Simple linear envelope generator."
+  end
+
 end

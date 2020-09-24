@@ -6,4 +6,8 @@ end
   %UGen.Pulse.Kr{freq: freq, width: width}
 end
 
+  def description do
+    "Band limited pulse wave."
+  end
+
 end

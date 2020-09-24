@@ -3,4 +3,8 @@ defmodule FFT do
   %UGen.FFT.New{buffer: buffer, in: inv, hop: hop, wintype: wintype, active: active, winsize: winsize}
 end
 
+  def description do
+    "Fast Fourier Transform"
+  end
+
 end

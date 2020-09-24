@@ -5,6 +5,9 @@ defmodule UGen.SpecPcile.Kr do
   def outputs(_ugen_struct), do: [1]
   def args(_ugen_struct), do: [:buffer, :fraction, :interpolate]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Find a percentile of FFT magnitude spectrum"
+  end
 
   use TypedStruct
 

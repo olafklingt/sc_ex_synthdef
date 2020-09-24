@@ -5,6 +5,9 @@ defmodule UGen.DecodeB2.Ar do
   def outputs(_ugen_struct), do: []
   def args(_ugen_struct), do: [:numChans, :w, :x, :y, :orientation]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "2D Ambisonic B-format decoder."
+  end
 
   use TypedStruct
 

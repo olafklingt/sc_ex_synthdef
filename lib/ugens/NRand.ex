@@ -3,4 +3,8 @@ defmodule NRand do
   %UGen.NRand.New{lo: lo, hi: hi, n: n}
 end
 
+  def description do
+    "Sum of uniform distributions."
+  end
+
 end

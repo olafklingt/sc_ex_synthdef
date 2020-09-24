@@ -6,4 +6,8 @@ end
   %UGen.DetectIndex.Kr{bufnum: bufnum, in: inv}
 end
 
+  def description do
+    "Search a buffer for a value"
+  end
+
 end

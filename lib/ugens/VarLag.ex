@@ -6,4 +6,8 @@ end
   %UGen.VarLag.Kr{in: inv, time: time, curvature: curvature, warp: warp, start: start}
 end
 
+  def description do
+    "Variable shaped lag"
+  end
+
 end

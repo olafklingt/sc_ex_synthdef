@@ -6,4 +6,8 @@ end
   %UGen.Convolution3.Kr{in: inv, kernel: kernel, trigger: trigger, framesize: framesize}
 end
 
+  def description do
+    "Time based convolver."
+  end
+
 end

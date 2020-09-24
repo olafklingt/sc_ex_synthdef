@@ -3,4 +3,8 @@ defmodule PV_Div do
   %UGen.PV_Div.New{bufferA: bufferA, bufferB: bufferB}
 end
 
+  def description do
+    "Complex division"
+  end
+
 end

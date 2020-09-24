@@ -3,4 +3,8 @@ defmodule SpecCentroid do
   %UGen.SpecCentroid.Kr{buffer: buffer}
 end
 
+  def description do
+    "Spectral centroid"
+  end
+
 end

@@ -3,4 +3,8 @@ defmodule FBSineN do
   %UGen.FBSineN.Ar{freq: freq, im: im, fb: fb, a: a, c: c, xi: xi, yi: yi}
 end
 
+  def description do
+    "Feedback sine with chaotic phase indexing"
+  end
+
 end

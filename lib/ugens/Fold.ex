@@ -9,4 +9,8 @@ end
   %UGen.Fold.Kr{in: inv, lo: lo, hi: hi}
 end
 
+  def description do
+    "Fold a signal outside given thresholds."
+  end
+
 end

@@ -3,4 +3,8 @@ defmodule PSinGrain do
   %UGen.PSinGrain.Ar{freq: freq, dur: dur, amp: amp}
 end
 
+  def description do
+    "Very fast sine grain with a parabolic envelope"
+  end
+
 end

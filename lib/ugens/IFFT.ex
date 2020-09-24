@@ -6,4 +6,8 @@ end
   %UGen.IFFT.Kr{buffer: buffer, wintype: wintype, winsize: winsize}
 end
 
+  def description do
+    "Inverse Fast Fourier Transform"
+  end
+
 end

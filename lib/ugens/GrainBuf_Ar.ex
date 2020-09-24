@@ -5,6 +5,9 @@ defmodule UGen.GrainBuf.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:numChannels, :trigger, :dur, :sndbuf, :rate, :pos, :interp, :pan, :envbufnum, :maxGrains]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Granular synthesis with sound stored in a buffer"
+  end
 
   use TypedStruct
 

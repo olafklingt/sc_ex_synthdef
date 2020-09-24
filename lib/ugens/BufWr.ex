@@ -6,4 +6,8 @@ end
   %UGen.BufWr.Kr{inputArray: inputArray, bufnum: bufnum, phase: phase, loop: loop}
 end
 
+  def description do
+    "Buffer writing oscillator."
+  end
+
 end

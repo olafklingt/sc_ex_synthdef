@@ -5,6 +5,9 @@ defmodule UGen.PV_Min.New do
   def outputs(_ugen_struct), do: [0]
   def args(_ugen_struct), do: [:bufferA, :bufferB]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Minimum magnitude."
+  end
 
   use TypedStruct
 

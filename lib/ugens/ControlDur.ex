@@ -3,4 +3,8 @@ defmodule ControlDur do
   %UGen.ControlDur.Ir{}
 end
 
+  def description do
+    "Duration of one block"
+  end
+
 end

@@ -9,4 +9,8 @@ end
   %UGen.Wrap.Kr{in: inv, lo: lo, hi: hi}
 end
 
+  def description do
+    "Wrap a signal outside given thresholds."
+  end
+
 end

@@ -6,4 +6,8 @@ end
   %UGen.Delay1.Kr{in: inv}
 end
 
+  def description do
+    "Single sample delay."
+  end
+
 end

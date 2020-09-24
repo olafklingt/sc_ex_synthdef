@@ -3,4 +3,8 @@ defmodule PV_BinScramble do
   %UGen.PV_BinScramble.New{buffer: buffer, wipe: wipe, width: width, trig: trig}
 end
 
+  def description do
+    "Scramble bins."
+  end
+
 end

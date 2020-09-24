@@ -9,4 +9,8 @@ end
   %UGen.ModDif.Kr{x: x, y: y, mod: mod}
 end
 
+  def description do
+    "Minimum difference of two values in modulo arithmetics"
+  end
+
 end

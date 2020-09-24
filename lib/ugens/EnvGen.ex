@@ -6,4 +6,8 @@ end
   %UGen.EnvGen.Kr{envelope: envelope, gate: gate, levelScale: levelScale, levelBias: levelBias, timeScale: timeScale, doneAction: doneAction}
 end
 
+  def description do
+    "Envelope generator"
+  end
+
 end

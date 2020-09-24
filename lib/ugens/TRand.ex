@@ -6,4 +6,8 @@ end
   %UGen.TRand.Kr{lo: lo, hi: hi, trig: trig}
 end
 
+  def description do
+    "Triggered random number generator."
+  end
+
 end

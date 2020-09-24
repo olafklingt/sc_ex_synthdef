@@ -6,4 +6,8 @@ end
   %UGen.Ramp.Kr{in: inv, lagTime: lagTime}
 end
 
+  def description do
+    "Break a continuous signal into line segments"
+  end
+
 end

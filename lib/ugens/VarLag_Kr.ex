@@ -5,6 +5,9 @@ defmodule UGen.VarLag.Kr do
   def outputs(_ugen_struct), do: []
   def args(_ugen_struct), do: [:in, :time, :curvature, :warp, :start]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Variable shaped lag"
+  end
 
   use TypedStruct
 

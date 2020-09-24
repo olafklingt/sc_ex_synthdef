@@ -5,6 +5,9 @@ defmodule UGen.BufCombL.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:buf, :in, :delaytime, :decaytime]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Buffer based comb delay line with linear interpolation."
+  end
 
   use TypedStruct
 

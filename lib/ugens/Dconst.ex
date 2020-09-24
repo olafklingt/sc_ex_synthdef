@@ -3,4 +3,8 @@ defmodule Dconst do
   %UGen.Dconst.New{sum: sum, in: inv, tolerance: tolerance}
 end
 
+  def description do
+    "Constrain a demand-rate stream to a given sum"
+  end
+
 end

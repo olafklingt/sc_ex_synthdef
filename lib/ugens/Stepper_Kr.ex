@@ -5,6 +5,9 @@ defmodule UGen.Stepper.Kr do
   def outputs(_ugen_struct), do: [1]
   def args(_ugen_struct), do: [:trig, :reset, :min, :max, :step, :resetval]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Pulse counter."
+  end
 
   use TypedStruct
 

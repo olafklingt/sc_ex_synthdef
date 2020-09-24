@@ -5,6 +5,9 @@ defmodule UGen.GVerb.Ar do
   def outputs(_ugen_struct), do: [2, 2]
   def args(_ugen_struct), do: [:in, :roomsize, :revtime, :damping, :inputbw, :spread, :drylevel, :earlyreflevel, :taillevel, :maxroomsize]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "A two-channel reverb"
+  end
 
   use TypedStruct
 

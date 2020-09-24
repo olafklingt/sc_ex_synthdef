@@ -5,6 +5,9 @@ defmodule UGen.PSinGrain.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:freq, :dur, :amp]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Very fast sine grain with a parabolic envelope"
+  end
 
   use TypedStruct
 

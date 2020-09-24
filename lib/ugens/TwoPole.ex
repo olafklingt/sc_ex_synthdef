@@ -6,4 +6,8 @@ end
   %UGen.TwoPole.Kr{in: inv, freq: freq, radius: radius}
 end
 
+  def description do
+    "Two pole filter."
+  end
+
 end

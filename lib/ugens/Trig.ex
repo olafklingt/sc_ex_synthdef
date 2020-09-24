@@ -6,4 +6,8 @@ end
   %UGen.Trig.Kr{in: inv, dur: dur}
 end
 
+  def description do
+    "Timed trigger."
+  end
+
 end

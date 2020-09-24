@@ -3,4 +3,8 @@ defmodule PV_MagMul do
   %UGen.PV_MagMul.New{bufferA: bufferA, bufferB: bufferB}
 end
 
+  def description do
+    "Multiply magnitudes."
+  end
+
 end

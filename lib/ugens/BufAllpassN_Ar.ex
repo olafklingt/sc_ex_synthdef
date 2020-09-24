@@ -5,6 +5,9 @@ defmodule UGen.BufAllpassN.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:buf, :in, :delaytime, :decaytime]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Buffer based all pass delay line with no interpolation."
+  end
 
   use TypedStruct
 

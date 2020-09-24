@@ -6,4 +6,8 @@ end
   %UGen.Saw.Kr{freq: freq}
 end
 
+  def description do
+    "Band limited sawtooth."
+  end
+
 end

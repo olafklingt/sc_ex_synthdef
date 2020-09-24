@@ -6,4 +6,8 @@ end
   %UGen.RunningSum.Kr{in: inv, numsamp: numsamp}
 end
 
+  def description do
+    "Running sum over n frames"
+  end
+
 end

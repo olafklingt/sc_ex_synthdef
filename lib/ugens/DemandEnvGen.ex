@@ -6,4 +6,8 @@ end
   %UGen.DemandEnvGen.Kr{level: level, dur: dur, shape: shape, curve: curve, gate: gate, reset: reset, levelScale: levelScale, levelBias: levelBias, timeScale: timeScale, doneAction: doneAction}
 end
 
+  def description do
+    "Demand rate envelope generator"
+  end
+
 end

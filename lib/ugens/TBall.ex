@@ -6,4 +6,8 @@ end
   %UGen.TBall.Kr{in: inv, g: g, damp: damp, friction: friction}
 end
 
+  def description do
+    "physical model of bouncing object"
+  end
+
 end

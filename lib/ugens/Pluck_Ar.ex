@@ -5,6 +5,9 @@ defmodule UGen.Pluck.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:in, :trig, :maxdelaytime, :delaytime, :decaytime, :coef]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "A Karplus-Strong UGen"
+  end
 
   use TypedStruct
 

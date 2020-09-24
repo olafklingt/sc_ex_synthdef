@@ -6,4 +6,8 @@ end
   %UGen.Out.Kr{bus: bus, channelsArray: channelsArray}
 end
 
+  def description do
+    "Write a signal to a bus."
+  end
+
 end

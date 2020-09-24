@@ -3,4 +3,8 @@ defmodule PV_MagClip do
   %UGen.PV_MagClip.New{buffer: buffer, threshold: threshold}
 end
 
+  def description do
+    "Clip bins to a threshold."
+  end
+
 end

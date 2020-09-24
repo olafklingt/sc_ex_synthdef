@@ -6,4 +6,8 @@ end
   %UGen.Phasor.Kr{trig: trig, rate: rate, start: start, end: endv, resetPos: resetPos}
 end
 
+  def description do
+    "A resettable linear ramp between two levels."
+  end
+
 end

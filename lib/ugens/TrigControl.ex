@@ -6,4 +6,8 @@ end
   %UGen.TrigControl.Kr{values: values}
 end
 
+  def description do
+    "FIXME: TrigControl purpose."
+  end
+
 end

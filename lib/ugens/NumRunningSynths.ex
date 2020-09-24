@@ -6,4 +6,8 @@ end
   %UGen.NumRunningSynths.Kr{}
 end
 
+  def description do
+    "Number of currently running synths."
+  end
+
 end

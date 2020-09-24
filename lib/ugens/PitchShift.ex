@@ -3,4 +3,8 @@ defmodule PitchShift do
   %UGen.PitchShift.Ar{in: inv, windowSize: windowSize, pitchRatio: pitchRatio, pitchDispersion: pitchDispersion, timeDispersion: timeDispersion}
 end
 
+  def description do
+    "Time domain pitch shifter."
+  end
+
 end

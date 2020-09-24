@@ -5,6 +5,9 @@ defmodule UGen.Pan2.Kr do
   def outputs(_ugen_struct), do: [1, 1]
   def args(_ugen_struct), do: [:in, :pos, :level]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Two channel equal power pan."
+  end
 
   use TypedStruct
 

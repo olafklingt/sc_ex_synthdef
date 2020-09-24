@@ -3,4 +3,8 @@ defmodule Dseries do
   %UGen.Dseries.New{start: start, step: step, length: length}
 end
 
+  def description do
+    "Demand rate arithmetic series UGen."
+  end
+
 end

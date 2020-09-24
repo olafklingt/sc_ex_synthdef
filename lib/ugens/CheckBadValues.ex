@@ -6,4 +6,8 @@ end
   %UGen.CheckBadValues.Kr{in: inv, id: id, post: post}
 end
 
+  def description do
+    "Test for infinity, not-a-number, and denormals"
+  end
+
 end

@@ -6,4 +6,8 @@ end
   %UGen.LFGauss.Kr{duration: duration, width: width, iphase: iphase, loop: loop, doneAction: doneAction}
 end
 
+  def description do
+    "Gaussian function oscillator"
+  end
+
 end

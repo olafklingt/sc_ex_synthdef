@@ -6,4 +6,8 @@ end
   %UGen.LeastChange.Kr{a: a, b: b}
 end
 
+  def description do
+    "Output least changed"
+  end
+
 end

@@ -5,6 +5,9 @@ defmodule UGen.LeastChange.Kr do
   def outputs(_ugen_struct), do: [1]
   def args(_ugen_struct), do: [:a, :b]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Output least changed"
+  end
 
   use TypedStruct
 

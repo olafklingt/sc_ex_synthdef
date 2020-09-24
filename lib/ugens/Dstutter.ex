@@ -3,4 +3,8 @@ defmodule Dstutter do
   %UGen.Dstutter.New{n: n, in: inv}
 end
 
+  def description do
+    "Demand rate input replicator"
+  end
+
 end

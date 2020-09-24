@@ -3,4 +3,8 @@ defmodule PV_MagShift do
   %UGen.PV_MagShift.New{buffer: buffer, stretch: stretch, shift: shift}
 end
 
+  def description do
+    "shift and stretch magnitude bin position."
+  end
+
 end

@@ -6,4 +6,8 @@ end
   %UGen.SyncSaw.Kr{syncFreq: syncFreq, sawFreq: sawFreq}
 end
 
+  def description do
+    "Hard sync sawtooth wave."
+  end
+
 end

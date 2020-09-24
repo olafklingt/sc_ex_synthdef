@@ -3,4 +3,8 @@ defmodule FreeVerb do
   %UGen.FreeVerb.Ar{in: inv, mix: mix, room: room, damp: damp}
 end
 
+  def description do
+    "A reverb"
+  end
+
 end

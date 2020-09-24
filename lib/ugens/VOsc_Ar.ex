@@ -5,6 +5,9 @@ defmodule UGen.VOsc.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:bufpos, :freq, :phase]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Variable wavetable oscillator."
+  end
 
   use TypedStruct
 

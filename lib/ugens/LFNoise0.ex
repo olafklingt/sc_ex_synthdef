@@ -6,4 +6,8 @@ end
   %UGen.LFNoise0.Kr{freq: freq}
 end
 
+  def description do
+    "Step noise"
+  end
+
 end

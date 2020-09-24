@@ -5,6 +5,9 @@ defmodule UGen.PV_RandWipe.New do
   def outputs(_ugen_struct), do: [0]
   def args(_ugen_struct), do: [:bufferA, :bufferB, :wipe, :trig]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Crossfade in random bin order."
+  end
 
   use TypedStruct
 

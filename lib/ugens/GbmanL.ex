@@ -3,4 +3,8 @@ defmodule GbmanL do
   %UGen.GbmanL.Ar{freq: freq, xi: xi, yi: yi}
 end
 
+  def description do
+    "Gingerbreadman map chaotic generator"
+  end
+
 end

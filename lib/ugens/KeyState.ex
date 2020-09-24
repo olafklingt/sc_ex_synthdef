@@ -3,4 +3,8 @@ defmodule KeyState do
   %UGen.KeyState.Kr{keycode: keycode, minval: minval, maxval: maxval, lag: lag}
 end
 
+  def description do
+    "Respond to the state of a key"
+  end
+
 end

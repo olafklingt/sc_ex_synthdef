@@ -6,4 +6,8 @@ end
   %UGen.Timer.Kr{trig: trig}
 end
 
+  def description do
+    "Returns time since last triggered."
+  end
+
 end

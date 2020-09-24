@@ -6,4 +6,8 @@ end
   %UGen.OscN.Kr{bufnum: bufnum, freq: freq, phase: phase}
 end
 
+  def description do
+    "Noninterpolating wavetable oscillator."
+  end
+
 end

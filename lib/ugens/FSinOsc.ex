@@ -6,4 +6,8 @@ end
   %UGen.FSinOsc.Kr{freq: freq, iphase: iphase}
 end
 
+  def description do
+    "Fast sine oscillator."
+  end
+
 end

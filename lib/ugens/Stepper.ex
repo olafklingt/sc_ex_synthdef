@@ -6,4 +6,8 @@ end
   %UGen.Stepper.Kr{trig: trig, reset: reset, min: min, max: max, step: step, resetval: resetval}
 end
 
+  def description do
+    "Pulse counter."
+  end
+
 end

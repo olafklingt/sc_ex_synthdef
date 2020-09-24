@@ -6,4 +6,8 @@ end
   %UGen.BufSampleRate.Kr{bufnum: bufnum}
 end
 
+  def description do
+    "Buffer sample rate."
+  end
+
 end

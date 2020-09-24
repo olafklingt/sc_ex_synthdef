@@ -5,6 +5,9 @@ defmodule UGen.Trig.Kr do
   def outputs(_ugen_struct), do: [1]
   def args(_ugen_struct), do: [:in, :dur]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Timed trigger."
+  end
 
   use TypedStruct
 

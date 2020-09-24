@@ -5,6 +5,9 @@ defmodule UGen.Convolution2.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:in, :kernel, :trigger, :framesize]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Real-time fixed kernel convolver."
+  end
 
   use TypedStruct
 

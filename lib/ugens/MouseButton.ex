@@ -3,4 +3,8 @@ defmodule MouseButton do
   %UGen.MouseButton.Kr{minval: minval, maxval: maxval, lag: lag}
 end
 
+  def description do
+    "Mouse button UGen."
+  end
+
 end

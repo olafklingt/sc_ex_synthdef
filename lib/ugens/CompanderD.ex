@@ -3,4 +3,8 @@ defmodule CompanderD do
   %UGen.CompanderD.Ar{in: inv, thresh: thresh, slopeBelow: slopeBelow, slopeAbove: slopeAbove, clampTime: clampTime, relaxTime: relaxTime}
 end
 
+  def description do
+    "Compressor, expander, limiter, gate, ducker."
+  end
+
 end

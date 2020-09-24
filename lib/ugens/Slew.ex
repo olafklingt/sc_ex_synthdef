@@ -6,4 +6,8 @@ end
   %UGen.Slew.Kr{in: inv, up: up, dn: dn}
 end
 
+  def description do
+    "Slew rate limiter."
+  end
+
 end

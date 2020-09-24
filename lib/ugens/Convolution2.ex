@@ -3,4 +3,8 @@ defmodule Convolution2 do
   %UGen.Convolution2.Ar{in: inv, kernel: kernel, trigger: trigger, framesize: framesize}
 end
 
+  def description do
+    "Real-time fixed kernel convolver."
+  end
+
 end

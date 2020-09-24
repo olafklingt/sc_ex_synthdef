@@ -5,6 +5,9 @@ defmodule UGen.GrainFM.Ar do
   def outputs(_ugen_struct), do: [2]
   def args(_ugen_struct), do: [:numChannels, :trigger, :dur, :carfreq, :modfreq, :index, :pan, :envbufnum, :maxGrains]
   def special_index(_ugen_struct), do: 0
+  def description do
+    "Granular synthesis with frequency modulated sine tones"
+  end
 
   use TypedStruct
 

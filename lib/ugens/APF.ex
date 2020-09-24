@@ -6,4 +6,8 @@ end
   %UGen.APF.Kr{in: inv, freq: freq, radius: radius}
 end
 
+  def description do
+    "FIXME: APF purpose."
+  end
+
 end

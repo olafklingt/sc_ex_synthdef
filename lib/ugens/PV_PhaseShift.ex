@@ -3,4 +3,8 @@ defmodule PV_PhaseShift do
   %UGen.PV_PhaseShift.New{buffer: buffer, shift: shift, integrate: integrate}
 end
 
+  def description do
+    "Shift phase."
+  end
+
 end

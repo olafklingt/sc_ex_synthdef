@@ -6,4 +6,8 @@ end
   %UGen.Balance2.Kr{left: left, right: right, pos: pos, level: level}
 end
 
+  def description do
+    "Stereo signal balancer"
+  end
+
 end

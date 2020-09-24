@@ -6,4 +6,8 @@ end
   %UGen.RHPF.Kr{in: inv, freq: freq, rq: rq}
 end
 
+  def description do
+    "A resonant high pass filter."
+  end
+
 end

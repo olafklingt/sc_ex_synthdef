@@ -6,4 +6,8 @@ end
   %UGen.BufDur.Kr{bufnum: bufnum}
 end
 
+  def description do
+    "Current duration of soundfile in buffer."
+  end
+
 end
