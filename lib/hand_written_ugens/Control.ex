@@ -100,14 +100,14 @@ defmodule Control do
     end
   end
 
-  # @spec kr([{atom, number}]) :: Control.Kr.t()
-  def kr([{key, value}]) do
-    kr(key, value, key)
-  end
-
   # @spec kr([{atom, number}, {atom, boolean}]) :: Control.Kr.t()
   def kr([{key, value}, {:strict, strict}]) do
     kr(key, value, key, strict)
+  end
+
+  # @spec kr([{atom, number}]) :: Control.Kr.t()
+  def kr([{key, value}]) do
+    kr(key, value, key)
   end
 
   @spec ir(atom, number, atom | SuperCollider.WarpSpec.t(), boolean) :: Control.Ir.t()
