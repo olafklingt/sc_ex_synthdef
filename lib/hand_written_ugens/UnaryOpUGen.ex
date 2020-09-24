@@ -116,6 +116,10 @@ defmodule UGen.UOp do
     @special_index_map[ugen_struct.selector]
   end
 
+  def description do
+    "Apply a unary operation to the values of an input UGen."
+  end
+
   use TypedStruct
 
   typedstruct do

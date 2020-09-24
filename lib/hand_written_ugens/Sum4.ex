@@ -16,6 +16,10 @@ defmodule UGen.Sum4 do
   def args(_ugen_struct), do: [:in0, :in1, :in2, :in3]
   def special_index(_ugen_struct), do: 0
 
+  def description do
+    "Sum four signals."
+  end
+
   use TypedStruct
 
   typedstruct do

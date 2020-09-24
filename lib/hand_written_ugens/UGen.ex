@@ -387,4 +387,8 @@ defmodule UGen do
   def atan(a) do
     %UGen.UOp{selector: :atan, a: a}
   end
+
+  def description do
+    "easier access to functions provided by Unary and Binary opperators and sum."
+  end
 end
