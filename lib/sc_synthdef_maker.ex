@@ -36,6 +36,33 @@ defmodule SCSynthDef.Maker do
     def
   end
 
+  defp add_ugengraph_to_def(def, ugen = %Control.Ar{key: key, value: val}) do
+    id = Enum.find_index(def.parameter_names, fn x -> x.name == key end)
+
+    {def, id} =
+      if(is_nil(id)) do
+        id = Kernel.length(def.parameters)
+        def = add_parameter_to_def(def, val)
+
+        def =
+          add_parameter_name_to_def(def, %SCSynthDef.Struct.SCSDParameterName{id: id, name: key})
+
+        {def, id}
+      else
+        {def, id}
+      end
+
+    add_ugen_to_def(def, %SCSynthDef.Struct.SCSDUGen{
+      name: name(ugen),
+      rate: rate(ugen),
+      number_of_inputs: 0,
+      number_of_outputs: number_of_outputs(ugen),
+      special_index: id,
+      outputs: outputs(ugen),
+      inputs: []
+    })
+  end
+
   defp add_ugengraph_to_def(def, ugen = %Control.Kr{key: key, value: val, spec: spec}) do
     id = Enum.find_index(def.parameter_names, fn x -> x.name == key end)
 
@@ -85,9 +112,9 @@ defmodule SCSynthDef.Maker do
 
               _ ->
                 IO.puts(
-                  "atom inputs are dropped for now as they are only used for BOp and UOp: #{key}: #{
-                    inspect(val)
-                  }"
+                  "atom inputs are dropped for now as they are only used for BOp and UOp: #{
+                    name(ugen)
+                  } #{key}: #{inspect(val)}"
                 )
             end
 

@@ -19,6 +19,7 @@ defmodule SCSynthDef.UGen.Maker do
     for name <- Map.keys(json) do
       methods = json[name]["methods"]
       number_of_outputs = json[name]["nOuts"]
+      description = json[name]["description"]
 
       for method <- Map.keys(methods) do
         handle = String.capitalize(method)
@@ -34,10 +35,10 @@ defmodule SCSynthDef.UGen.Maker do
 
         arguments = methods[method]
 
-        make_def_file(name, handle, rate, number_of_outputs, arguments)
+        make_def_file(name, handle, rate, number_of_outputs, arguments, description)
       end
 
-      make_func_file(name, methods)
+      make_func_file(name, methods, description)
     end
   end
 
@@ -57,7 +58,7 @@ defmodule SCSynthDef.UGen.Maker do
     end
   end
 
-  defp make_func_file(name, methods) do
+  defp make_func_file(name, methods, description) do
     path = Path.dirname(__ENV__.file)
 
     func_list =
@@ -109,34 +110,38 @@ defmodule SCSynthDef.UGen.Maker do
       """
       defmodule #{name} do
         #{funcs}
+        def description do
+          "#{description}"
+        end
+
       end
       """
     )
   end
 
-  defp func_args_list(arguments) do
-    for x <- arguments do
-      n = Enum.at(x, 0)
-      v = Enum.at(x, 1)
-
-      cond do
-        is_number(v) ->
-          """
-          #{":" <> n}, float, default: #{v})
-          """
-
-        is_nil(v) ->
-          """
-          field(#{":" <> n}, float, default: #{inspect(nil)})
-          """
-
-        true ->
-          """
-          field(#{":" <> n}, float, default: #{inspect(nil)})
-          """
-      end
-    end
-  end
+  # defp func_args_list(arguments) do
+  #   for x <- arguments do
+  #     n = Enum.at(x, 0)
+  #     v = Enum.at(x, 1)
+  #
+  #     cond do
+  #       is_number(v) ->
+  #         """
+  #         #{":" <> n}, float, default: #{v})
+  #         """
+  #
+  #       is_nil(v) ->
+  #         """
+  #         field(#{":" <> n}, float, default: #{inspect(nil)})
+  #         """
+  #
+  #       true ->
+  #         """
+  #         field(#{":" <> n}, float, default: #{inspect(nil)})
+  #         """
+  #     end
+  #   end
+  # end
 
   defp args_list(arguments) do
     for x <- arguments do
@@ -168,7 +173,7 @@ defmodule SCSynthDef.UGen.Maker do
     end
   end
 
-  defp make_def_file(name, handle, rate, number_of_outputs, arguments) do
+  defp make_def_file(name, handle, rate, number_of_outputs, arguments, description) do
     path = Path.dirname(__ENV__.file)
 
     args = args_list(arguments)
@@ -187,6 +192,9 @@ defmodule SCSynthDef.UGen.Maker do
     }
       def args(_ugen_struct), do: #{Kernel.inspect(args, limit: :infinity)}
       def special_index(_ugen_struct), do: #{0}
+      def description do
+        "#{description}"
+      end
 
       use TypedStruct
 

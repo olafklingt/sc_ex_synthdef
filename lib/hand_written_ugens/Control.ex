@@ -2,8 +2,8 @@ defmodule Control.Ar do
   def name(_ugen_struct), do: "AudioControl"
   def rate(_ugen_struct), do: 2
   def number_of_outputs(_ugen_struct), do: 1
-  def outputs(_ugen_struct), do: [1]
-  def args(_ugen_struct), do: [:values]
+  def outputs(_ugen_struct), do: [2]
+  def args(_ugen_struct), do: [:value]
   def special_index(_ugen_struct), do: 0
 
   use TypedStruct
@@ -19,7 +19,7 @@ defmodule Control.Tr do
   def rate(_ugen_struct), do: 1
   def number_of_outputs(_ugen_struct), do: 1
   def outputs(_ugen_struct), do: [1]
-  def args(_ugen_struct), do: [:values]
+  def args(_ugen_struct), do: [:value]
   def special_index(_ugen_struct), do: 0
 
   use TypedStruct
@@ -34,8 +34,8 @@ defmodule Control.Ir do
   def name(_ugen_struct), do: "Control"
   def rate(_ugen_struct), do: 0
   def number_of_outputs(_ugen_struct), do: 1
-  def outputs(_ugen_struct), do: [1]
-  def args(_ugen_struct), do: [:values]
+  def outputs(_ugen_struct), do: [0]
+  def args(_ugen_struct), do: [:value]
   def special_index(_ugen_struct), do: 0
 
   use TypedStruct
