@@ -1,4 +1,23 @@
 defmodule UGen do
+  def shape_id(name) do
+    case name do
+      :step -> 0
+      :lin -> 1
+      :linear -> 1
+      :exp -> 2
+      :exponential -> 2
+      :sin -> 3
+      :sine -> 3
+      :wel -> 4
+      :welch -> 4
+      :sqr -> 6
+      :squared -> 6
+      :cub -> 7
+      :cubed -> 7
+      :hold -> 8
+    end
+  end
+
   def sum(array) do
     array =
       Enum.sort(array, fn a, b ->

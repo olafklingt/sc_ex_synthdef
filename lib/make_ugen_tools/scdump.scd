@@ -76,7 +76,13 @@ var input_default = {
 
 var number_of_outputs = {
     arg o, r;
-    try {var u = o.perform(r); if(u.isArray,{u.size},{if(u.isFloat,{0},{1})})} {arg err; 1};
+    try {
+    var args = switch(r,
+			\ar,[DC.ar(1)],
+			\kr,[DC.kr(1)],
+			[]);
+
+    var u = o.perform(r,args); if(u.isArray,{u.size},{if(u.isFloat,{0},{1})})} {arg err; 1};
 };
 
 

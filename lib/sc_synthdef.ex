@@ -14,6 +14,15 @@ defmodule SCSynthDef do
     SCSynthDef.Maker.add_ugen(%SCSynthDef.Struct{name: name}, ugen)
   end
 
+  def replace_fade_def(name, ugen) do
+    time = Control.kr(time: 0.0)
+    id = Control.kr(:replace_id, -2.0, :out)
+    freq = UGen.div(1.0, time)
+    env = Slew.kr(Delay2.kr(DC.kr(1.0)), freq, freq)
+    def = new(name, XOut.ar(Control.kr(out: 0), env, ugen))
+    add_ugen(def, Free.kr(UGen.sub(env, 0.999999), id))
+  end
+
   def add_ugen(def, ugen) do
     SCSynthDef.Maker.add_ugen(def, ugen)
   end

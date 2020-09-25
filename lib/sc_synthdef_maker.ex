@@ -39,38 +39,23 @@ defmodule SCSynthDef.Maker do
     def
   end
 
-  defp add_ugengraph_to_def(def, ugen = %Control.Ar{key: key, value: val}) do
-    id = Enum.find_index(def.parameter_names, fn x -> x.name == key end)
-
-    {def, id} =
-      if(is_nil(id)) do
-        id = Kernel.length(def.parameters)
-        def = add_parameter_to_def(def, val)
-
-        def =
-          add_parameter_name_to_def(def, %SCSynthDef.Struct.SCSDParameterName{id: id, name: key})
-
-        {def, id}
-      else
-        {def, id}
-      end
-
-    add_ugen_to_def(def, %SCSynthDef.Struct.SCSDUGen{
-      name: name(ugen),
-      rate: rate(ugen),
-      number_of_inputs: 0,
-      number_of_outputs: number_of_outputs(ugen),
-      special_index: id,
-      outputs: outputs(ugen),
-      inputs: []
-    })
+  defp add_ugengraph_to_def(def, ugen = %Control.Kr{}) do
+    add_ugengraph_to_def_control(def, ugen)
   end
 
-  defp add_ugengraph_to_def(def, ugen = %Control.Kr{key: key, value: val, spec: spec}) do
+  defp add_ugengraph_to_def(def, ugen = %Control.Ar{}) do
+    add_ugengraph_to_def_control(def, ugen)
+  end
+
+  defp add_ugengraph_to_def(def, ugen = %Control.Tr{}) do
+    add_ugengraph_to_def_control(def, ugen)
+  end
+
+  defp add_ugengraph_to_def_control(def, ugen = %{key: key, value: val, spec: spec}) do
     id = Enum.find_index(def.parameter_names, fn x -> x.name == key end)
 
     if !is_nil(def.metadata[key]) && def.metadata[key] != spec do
-      raise "could not add Control.Kr because a control of the same name had been added with a different spec"
+      raise "could not add Control because a control of the same name had been added with a different spec"
     end
 
     def = put_in(def.metadata[key], spec)
@@ -117,7 +102,7 @@ defmodule SCSynthDef.Maker do
                 IO.puts(
                   "atom inputs are dropped for now as they are only used for BOp and UOp: #{
                     name(ugen)
-                  } #{key}: #{inspect(val)}"
+                  } #{key}: #{inspect(val)} maybe you want to use UGen.shapeID"
                 )
             end
 
@@ -143,6 +128,10 @@ defmodule SCSynthDef.Maker do
 
             {def, index} = add_ugengraph_to_def(def, val)
 
+            if(number_of_outputs(val) < 1) do
+              raise "ugen is used as input but doesn't has output: #{inspect(val)} in def: #{def}"
+            end
+
             {def,
              inputs ++
                Enum.map(0..(number_of_outputs(val) - 1), fn x ->
@@ -157,6 +146,12 @@ defmodule SCSynthDef.Maker do
 
             Enum.reduce(val, {def, inputs}, fn val, {def, inputs} ->
               {def, index} = add_ugengraph_to_def(def, val)
+
+              if(number_of_outputs(val) < 1) do
+                raise "ugen is used as input but doesn't has output: #{inspect(val)} in def: #{
+                        def
+                      }"
+              end
 
               {def,
                inputs ++

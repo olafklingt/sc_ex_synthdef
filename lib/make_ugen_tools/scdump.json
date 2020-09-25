@@ -324,7 +324,7 @@
     "description" :"Stereo signal balancer",
     "parent" :"MultiOutUGen",
     "isMultiOut" :true,
-    "nOuts" :2
+    "nOuts" :1
 },
 "Ball": {
     "methods":{
@@ -371,7 +371,7 @@
     "description" :"Template matching beat tracker",
     "parent" :"MultiOutUGen",
     "isMultiOut" :true,
-    "nOuts" :6
+    "nOuts" :1
 },
 "BiPanB2": {
     "methods":{
@@ -391,7 +391,7 @@
     "description" :"2D Ambisonic B-format panner.",
     "parent" :"MultiOutUGen",
     "isMultiOut" :true,
-    "nOuts" :3
+    "nOuts" :1
 },
 "Blip": {
     "methods":{
@@ -1081,7 +1081,7 @@
     "description" :"2D Ambisonic B-format decoder.",
     "parent" :"MultiOutUGen",
     "isMultiOut" :true,
-    "nOuts" :0
+    "nOuts" :1
 },
 "DegreeToKey": {
     "methods":{
@@ -2272,7 +2272,7 @@
     "description" :"A two-channel reverb",
     "parent" :"MultiOutUGen",
     "isMultiOut" :true,
-    "nOuts" :2
+    "nOuts" :1
 },
 "FreqShift": {
     "methods":{
@@ -2304,7 +2304,7 @@
     "description" :"A two-channel reverb",
     "parent" :"MultiOutUGen",
     "isMultiOut" :true,
-    "nOuts" :2
+    "nOuts" :1
 },
 "Gate": {
     "methods":{
@@ -2629,7 +2629,7 @@
     "description" :"Applies the Hilbert transform to an input signal.",
     "parent" :"MultiOutUGen",
     "isMultiOut" :true,
-    "nOuts" :2
+    "nOuts" :1
 },
 "IEnvGen": {
     "methods":{
@@ -3155,7 +3155,7 @@
     },
     "description" :"Exponential lag",
     "parent" :"Filter",
-    "nOuts" :0
+    "nOuts" :1
 },
 "Lag2": {
     "methods":{
@@ -3170,7 +3170,7 @@
     },
     "description" :"Exponential lag",
     "parent" :"Lag",
-    "nOuts" :0
+    "nOuts" :1
 },
 "Lag2UD": {
     "methods":{
@@ -3187,7 +3187,7 @@
     },
     "description" :"Exponential lag",
     "parent" :"LagUD",
-    "nOuts" :0
+    "nOuts" :1
 },
 "Lag3": {
     "methods":{
@@ -3202,7 +3202,7 @@
     },
     "description" :"Exponential lag",
     "parent" :"Lag",
-    "nOuts" :0
+    "nOuts" :1
 },
 "Lag3UD": {
     "methods":{
@@ -3219,7 +3219,7 @@
     },
     "description" :"Exponential lag",
     "parent" :"LagUD",
-    "nOuts" :0
+    "nOuts" :1
 },
 "LagIn": {
     "methods":{
@@ -3249,7 +3249,7 @@
     },
     "description" :"Exponential lag",
     "parent" :"Filter",
-    "nOuts" :0
+    "nOuts" :1
 },
 "LastValue": {
     "methods":{
@@ -3450,7 +3450,7 @@
     "description" :"Two channel linear pan.",
     "parent" :"Pan2",
     "isMultiOut" :true,
-    "nOuts" :2
+    "nOuts" :1
 },
 "LinRand": {
     "ratenew" :0,
@@ -3615,7 +3615,7 @@
     "description" :"Mel frequency cepstral coefficients",
     "parent" :"MultiOutUGen",
     "isMultiOut" :true,
-    "nOuts" :13
+    "nOuts" :1
 },
 "MantissaMask": {
     "methods":{
@@ -4427,7 +4427,7 @@
     "description" :"Two channel equal power pan.",
     "parent" :"MultiOutUGen",
     "isMultiOut" :true,
-    "nOuts" :2
+    "nOuts" :1
 },
 "Pan4": {
     "methods":{
@@ -4447,7 +4447,7 @@
     "description" :"Four channel equal power pan.",
     "parent" :"MultiOutUGen",
     "isMultiOut" :true,
-    "nOuts" :4
+    "nOuts" :1
 },
 "PanAz": {
     "methods":{
@@ -4471,7 +4471,7 @@
     "description" :"Azimuth panner",
     "parent" :"MultiOutUGen",
     "isMultiOut" :true,
-    "nOuts" :0
+    "nOuts" :1
 },
 "PanB": {
     "methods":{
@@ -4491,7 +4491,7 @@
     "description" :"Ambisonic B-format panner.",
     "parent" :"MultiOutUGen",
     "isMultiOut" :true,
-    "nOuts" :4
+    "nOuts" :1
 },
 "PanB2": {
     "methods":{
@@ -4509,7 +4509,7 @@
     "description" :"2D Ambisonic B-format panner.",
     "parent" :"MultiOutUGen",
     "isMultiOut" :true,
-    "nOuts" :3
+    "nOuts" :1
 },
 "PartConv": {
     "methods":{
@@ -4635,7 +4635,7 @@
     "description" :"Autocorrelation pitch follower",
     "parent" :"MultiOutUGen",
     "isMultiOut" :true,
-    "nOuts" :2
+    "nOuts" :1
 },
 "PitchShift": {
     "methods":{
@@ -4856,7 +4856,7 @@
     },
     "description" :"Break a continuous signal into line segments",
     "parent" :"Lag",
-    "nOuts" :0
+    "nOuts" :1
 },
 "Rand": {
     "ratenew" :0,
@@ -4997,7 +4997,7 @@
     "description" :"Rotate a sound field.",
     "parent" :"MultiOutUGen",
     "isMultiOut" :true,
-    "nOuts" :2
+    "nOuts" :1
 },
 "RunningMax": {
     "methods":{
@@ -5276,7 +5276,7 @@
     },
     "description" :"Slew rate limiter.",
     "parent" :"Filter",
-    "nOuts" :0
+    "nOuts" :1
 },
 "Slope": {
     "methods":{
@@ -5403,7 +5403,7 @@
     "description" :"Stereo real-time convolver with linear interpolation",
     "parent" :"MultiOutUGen",
     "isMultiOut" :true,
-    "nOuts" :2
+    "nOuts" :1
 },
 "SubsampleOffset": {
     "methods":{
@@ -5767,7 +5767,7 @@
     },
     "description" :"Variable shaped lag",
     "parent" :"Filter",
-    "nOuts" :0
+    "nOuts" :1
 },
 "VarSaw": {
     "methods":{
