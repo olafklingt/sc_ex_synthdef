@@ -41,7 +41,7 @@ defmodule SCSynthDef.Struct do
   use TypedStruct
 
   typedstruct do
-    field(:name, charlist(), enforce: false)
+    field(:name, String.t(), default: "")
     field(:number_of_constants, integer, default: 0)
     field(:constants, list, default: [])
     field(:number_of_parameters, integer, default: 0)

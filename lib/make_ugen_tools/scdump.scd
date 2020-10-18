@@ -11,7 +11,7 @@ var ignoring = [
     /* non-user & implicit */
 	 'Control','TrigControl',
     /* text label */
-	'SendPeakRMS','SendReply',
+	'SendPeakRMS',/*'SendReply',*/
     'FFTTrigger','PackFFT','Unpack1FFT','UnpackFFT',
     'MulAdd',
     /* implicit length input */
@@ -77,12 +77,25 @@ var input_default = {
 var number_of_outputs = {
     arg o, r;
     try {
+    var un = o.perform(r);
+
+    if(un.isArray,{un.size},{
+    if(un.isFloat,{
     var args = switch(r,
 			\ar,[DC.ar(1)],
 			\kr,[DC.kr(1)],
-			[]);
-
-    var u = o.perform(r,args); if(u.isArray,{u.size},{if(u.isFloat,{0},{1})})} {arg err; 1};
+			[1]);
+    var ua = o.perform(r,args);
+    if(ua.isArray,{ua.size},{
+    if(ua.isFloat,{
+    0
+    },{
+    1
+    })})
+    },{
+    1
+    })})
+    }{arg err; 1};
 };
 
 

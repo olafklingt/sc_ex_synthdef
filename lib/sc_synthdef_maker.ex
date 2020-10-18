@@ -47,6 +47,10 @@ defmodule SCSynthDef.Maker do
     add_ugengraph_to_def_control(def, ugen)
   end
 
+  defp add_ugengraph_to_def(def, ugen = %Control.Ir{}) do
+    add_ugengraph_to_def_control(def, ugen)
+  end
+
   defp add_ugengraph_to_def(def, ugen = %Control.Tr{}) do
     add_ugengraph_to_def_control(def, ugen)
   end
@@ -84,89 +88,123 @@ defmodule SCSynthDef.Maker do
     })
   end
 
+  defp add_atom_ugen_input_to_def(def, ugen, inputs, key, val) do
+    case name(ugen) do
+      "BinaryOpUGen" ->
+        {def, inputs}
+
+      "UnaryOpUGen" ->
+        {def, inputs}
+
+      _ ->
+        IO.puts(
+          "atom inputs are dropped for now as they are only used for BOp and UOp: #{name(ugen)} #{
+            key
+          }: #{inspect(val)} maybe you want to use UGen.shapeID"
+        )
+    end
+  end
+
+  defp add_number_ugen_input_to_def(def, ugen, inputs, key, val) do
+    # IO.puts("constant input: #{key}: #{inspect(val)}")
+    {def, index} = add_constant_to_def(def, val)
+
+    {def,
+     inputs ++
+       [
+         %SCSynthDef.Struct.SCSDInput{
+           index_of_ugen: -1,
+           index_of_output: index
+         }
+       ]}
+  end
+
+  defp add_map_ugen_input_to_def(def, ugen, inputs, key, val) do
+    # IO.puts(
+    #   "ugen input: #{key}: name #{inspect(name(val))}   number of outputs #{
+    #     inspect(number_of_outputs(val))
+    #   }"
+    # )
+
+    {def, index} = add_ugengraph_to_def(def, val)
+
+    if(number_of_outputs(val) < 1) do
+      raise "ugen is used as input but doesn't has output: #{inspect(val)} in def: #{def}"
+    end
+
+    {def,
+     inputs ++
+       Enum.map(0..(number_of_outputs(val) - 1), fn x ->
+         %SCSynthDef.Struct.SCSDInput{
+           index_of_ugen: index,
+           index_of_output: x
+         }
+       end)}
+  end
+
+  defp add_list_ugen_input_to_def(def, ugen, inputs, key, val) do
+    # IO.puts("list input: #{key}: #{inspect(val)}")
+
+    Enum.reduce(val, {def, inputs}, fn val, {def, inputs} ->
+      if(is_number(val)) do
+        {def, inputs} = add_number_ugen_input_to_def(def, ugen, inputs, key, val)
+        # IO.inspect({key, inputs})
+        {def, inputs}
+      else
+        {def, index} = add_ugengraph_to_def(def, val)
+
+        if(number_of_outputs(val) < 1) do
+          raise "ugen is used as input but doesn't has output: #{inspect(val)} in def: #{def}"
+        end
+
+        {def,
+         inputs ++
+           Enum.map(0..(number_of_outputs(val) - 1), fn x ->
+             %SCSynthDef.Struct.SCSDInput{
+               index_of_ugen: index,
+               index_of_output: x
+             }
+           end)}
+      end
+    end)
+  end
+
+  defp add_ugen_input_to_def(def, ugen, inputs, key, val) do
+    cond do
+      is_atom(val) ->
+        add_atom_ugen_input_to_def(def, ugen, inputs, key, val)
+
+      is_number(val) ->
+        add_number_ugen_input_to_def(def, ugen, inputs, key, val)
+
+      is_map(val) ->
+        add_map_ugen_input_to_def(def, ugen, inputs, key, val)
+
+      is_list(val) ->
+        # IO.inspect(val)
+        add_list_ugen_input_to_def(def, ugen, inputs, key, val)
+
+      true ->
+        IO.puts("other input not implemented: #{key}: #{inspect(val)}")
+        {def, inputs}
+    end
+  end
+
   defp add_ugengraph_to_def(def, ugen) do
     {def, inputs} =
       Enum.reduce(args(ugen), {def, []}, fn key, {def, inputs} ->
         val = Map.get(ugen, key)
 
-        cond do
-          is_atom(val) ->
-            case name(ugen) do
-              "BinaryOpUGen" ->
-                {def, inputs}
+        val =
+          if(is_binary(val)) do
+            val = to_charlist(val)
+            val = [length(val) | val]
+            val
+          else
+            val
+          end
 
-              "UnaryOpUGen" ->
-                {def, inputs}
-
-              _ ->
-                IO.puts(
-                  "atom inputs are dropped for now as they are only used for BOp and UOp: #{
-                    name(ugen)
-                  } #{key}: #{inspect(val)} maybe you want to use UGen.shapeID"
-                )
-            end
-
-          is_number(val) ->
-            # IO.puts("constant input: #{key}: #{inspect(val)}")
-            {def, index} = add_constant_to_def(def, val)
-
-            {def,
-             inputs ++
-               [
-                 %SCSynthDef.Struct.SCSDInput{
-                   index_of_ugen: -1,
-                   index_of_output: index
-                 }
-               ]}
-
-          is_map(val) ->
-            # IO.puts(
-            #   "ugen input: #{key}: name #{inspect(name(val))}   number of outputs #{
-            #     inspect(number_of_outputs(val))
-            #   }"
-            # )
-
-            {def, index} = add_ugengraph_to_def(def, val)
-
-            if(number_of_outputs(val) < 1) do
-              raise "ugen is used as input but doesn't has output: #{inspect(val)} in def: #{def}"
-            end
-
-            {def,
-             inputs ++
-               Enum.map(0..(number_of_outputs(val) - 1), fn x ->
-                 %SCSynthDef.Struct.SCSDInput{
-                   index_of_ugen: index,
-                   index_of_output: x
-                 }
-               end)}
-
-          is_list(val) ->
-            # IO.puts("list input: #{key}: #{inspect(val)}")
-
-            Enum.reduce(val, {def, inputs}, fn val, {def, inputs} ->
-              {def, index} = add_ugengraph_to_def(def, val)
-
-              if(number_of_outputs(val) < 1) do
-                raise "ugen is used as input but doesn't has output: #{inspect(val)} in def: #{
-                        def
-                      }"
-              end
-
-              {def,
-               inputs ++
-                 Enum.map(0..(number_of_outputs(val) - 1), fn x ->
-                   %SCSynthDef.Struct.SCSDInput{
-                     index_of_ugen: index,
-                     index_of_output: x
-                   }
-                 end)}
-            end)
-
-          true ->
-            IO.puts("other input not implemented: #{key}: #{inspect(val)}")
-            {def, inputs}
-        end
+        add_ugen_input_to_def(def, ugen, inputs, key, val)
       end)
 
     add_ugen_to_def(def, %SCSynthDef.Struct.SCSDUGen{
@@ -309,6 +347,8 @@ defmodule SCSynthDef.Maker do
 
   defp validate_out_parameters!(def) do
     input_specs = get_out_ugens(def) |> find_out_bus_input_specs()
+
+    # IO.inspect(input_specs)
 
     Enum.map(input_specs, fn input_spec ->
       if !String.starts_with?(Atom.to_string(input_spec.name), "out") do

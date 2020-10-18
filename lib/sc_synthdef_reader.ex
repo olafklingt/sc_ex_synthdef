@@ -65,7 +65,6 @@ defmodule SCSynthDef.Reader do
     [bins, Map.put(struct, :parameter_names, parameter_names)]
   end
 
-  # ugen_input
   defp parse_input([bins, _ugen_struct]) do
     [bins, %SCSynthDef.Struct.SCSDInput{}]
     |> parse_int32(:index_of_ugen)
@@ -82,8 +81,6 @@ defmodule SCSynthDef.Reader do
         ni,
         [bins, ugen_struct.inputs],
         fn [bins, inputs] ->
-          # IO.inspect([bins, ugen_struct])
-          # IO.inspect(inputs)
           [bins, newinput] = parse_input([bins, ugen_struct])
           inputs = inputs ++ [newinput]
           [bins, inputs]
@@ -93,7 +90,6 @@ defmodule SCSynthDef.Reader do
     [bins, Map.put(ugen_struct, :inputs, inputs)]
   end
 
-  # ugen
   defp parse_rate([bins, ugen_struct]) do
     <<rate_id::8-unsigned-big, bins::binary>> = bins
     [bins, Map.put(ugen_struct, :rate, rate_id)]
@@ -114,20 +110,12 @@ defmodule SCSynthDef.Reader do
   defp parse_ugen([bins, _struct]) do
     [bins, %SCSynthDef.Struct.SCSDUGen{}]
     |> parse_string(:name)
-    # |> IO.inspect()
     |> parse_rate()
-    # |> IO.inspect()
     |> parse_int32(:number_of_inputs)
-    # |> IO.inspect()
     |> parse_int32(:number_of_outputs)
-    # |> IO.inspect()
     |> parse_int16(:special_index)
-    # |> IO.inspect()
     |> parse_inputs()
-    # |> IO.inspect()
     |> parse_outputs()
-
-    # |> IO.inspect()
   end
 
   defp parse_ugens([bins, struct = %{number_of_ugens: 0}]) do
