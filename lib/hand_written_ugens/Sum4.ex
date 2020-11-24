@@ -12,7 +12,7 @@ defmodule UGen.Sum4 do
   end
 
   def number_of_outputs(_ugen_struct), do: 1
-  def outputs(_ugen_struct), do: [0]
+  def outputs(ugen_struct), do: [rate(ugen_struct)]
   def args(_ugen_struct), do: [:in0, :in1, :in2, :in3]
   def special_index(_ugen_struct), do: 0
 

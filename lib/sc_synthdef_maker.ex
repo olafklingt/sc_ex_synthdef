@@ -105,7 +105,7 @@ defmodule SCSynthDef.Maker do
     end
   end
 
-  defp add_number_ugen_input_to_def(def, ugen, inputs, key, val) do
+  defp add_number_ugen_input_to_def(def, _ugen, inputs, _key, val) do
     # IO.puts("constant input: #{key}: #{inspect(val)}")
     {def, index} = add_constant_to_def(def, val)
 
@@ -119,7 +119,7 @@ defmodule SCSynthDef.Maker do
        ]}
   end
 
-  defp add_map_ugen_input_to_def(def, ugen, inputs, key, val) do
+  defp add_map_ugen_input_to_def(def, _ugen, inputs, _key, val) do
     # IO.puts(
     #   "ugen input: #{key}: name #{inspect(name(val))}   number of outputs #{
     #     inspect(number_of_outputs(val))

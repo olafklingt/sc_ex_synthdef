@@ -167,6 +167,10 @@ defmodule UGen do
     %UGen.BOp{selector: :bitAnd, a: a, b: b}
   end
 
+  def pow(a, b) do
+    %UGen.BOp{selector: :pow, a: a, b: b}
+  end
+
   def softclip(a) do
     %UGen.UOp{selector: :softclip, a: a}
   end
@@ -205,10 +209,6 @@ defmodule UGen do
 
   def midicps(a) do
     %UGen.UOp{selector: :midicps, a: a}
-  end
-
-  def pow(a) do
-    %UGen.UOp{selector: :pow, a: a}
   end
 
   def cpsoct(a) do

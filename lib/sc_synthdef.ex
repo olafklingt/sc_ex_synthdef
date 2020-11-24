@@ -4,9 +4,9 @@ defmodule SCSynthDef do
     %SCSynthDef.Struct{name: name}
   end
 
-  @spec new(String.t(), map) :: SCSynthDef.Struct.t()
-  def new(name, ugen) do
-    SCSynthDef.Maker.add_ugen(%SCSynthDef.Struct{name: name}, ugen)
+  @spec new(String.t(), map, keyword) :: SCSynthDef.Struct.t()
+  def new(name, ugen, metadata \\ []) do
+    SCSynthDef.Maker.add_ugen(%SCSynthDef.Struct{name: name, metadata: metadata}, ugen)
   end
 
   defp fade_in_env() do
@@ -45,14 +45,14 @@ defmodule SCSynthDef do
 
   def amp_wrapper(ugen) do
     ugen
-    |> UGen.mul(Control.kr(amp: 1))
+    |> UGen.mul(Control.kr(amp: 1.0))
   end
 
-  def linlin_wrapper(ugen) do
-    in_min = Control.kr(:in_min, 0, :any)
-    in_max = Control.kr(:in_max, 1, :any)
-    min = Control.kr(:min, 0, :any)
-    max = Control.kr(:max, 1, :any)
+  def linlin_wrapper(ugen, in_spec, out_spec) do
+    in_min = Control.kr(:in_min, 0.0, in_spec)
+    in_max = Control.kr(:in_max, 1.0, in_spec)
+    min = Control.kr(:min, 0.0, out_spec)
+    max = Control.kr(:max, 1.0, out_spec)
     in_range = UGen.sub(in_max, in_min)
     range = UGen.sub(max, min)
 
@@ -63,9 +63,16 @@ defmodule SCSynthDef do
     |> UGen.add(min)
   end
 
-  def cntrl_to_minmax_wrapper(ugen) do
-    min = Control.kr(:min, 0, :any)
-    max = Control.kr(:max, 1, :any)
+  def cntrl_to_minmax_wrapper(ugen, spec_or_atom) do
+    spec =
+      if is_atom(spec_or_atom) do
+        SuperCollider.WarpSpec.get_default(spec_or_atom)
+      else
+        spec_or_atom
+      end
+
+    min = Control.kr(:min, spec.minval, spec)
+    max = Control.kr(:max, spec.maxval, spec)
     range = UGen.sub(max, min)
 
     ugen
@@ -73,22 +80,17 @@ defmodule SCSynthDef do
     |> UGen.add(min)
   end
 
-  def sig_to_minmax_wrapper(ugen) do
-    min = Control.kr(:min, 0, :any)
-    max = Control.kr(:max, 1, :any)
-    range = UGen.sub(max, min)
-
+  def sig_to_minmax_wrapper(ugen, spec_or_atom) do
     ugen
     |> UGen.add(1)
     |> UGen.div(2)
-    |> UGen.mul(range)
-    |> UGen.add(min)
+    |> cntrl_to_minmax_wrapper(spec_or_atom)
   end
 
-  def muladd_wrapper(ugen) do
+  def muladd_wrapper(ugen, spec) do
     ugen
-    |> UGen.mul(Control.kr(:mul, 1, :any))
-    |> UGen.add(Control.kr(:add, 0, :any))
+    |> UGen.mul(Control.kr(:mul, 1.0, spec))
+    |> UGen.add(Control.kr(:add, 0.0, spec))
   end
 
   # def replace_fade_def(name, ugen) do
@@ -103,11 +105,22 @@ defmodule SCSynthDef do
     SCSynthDef.Maker.add_ugen(def, ugen)
   end
 
-  @spec send_def_to_server(String.t(), map, atom | nil) :: map
-  def send_def_to_server(name, ugen, server_name \\ nil) do
-    def = SCSynthDef.new(name, ugen)
+  @spec send_def_to_server(String.t(), map, keyword, atom | nil) :: map
+  def send_def_to_server(name, ugen, metadata \\ [], server_name \\ nil) do
+    def = SCSynthDef.new(name, ugen, metadata)
     bytes = SCSynthDef.encode_to_bytes(def)
-    SCSoundServer.send_synthdef_sync(bytes, server_name)
+
+    if(byte_size(bytes) > 16383) do
+      # if(byte_size(bytes) > 0) do
+      dir = System.tmp_dir!()
+      tmp_file = Path.join(dir, name)
+      File.write!(tmp_file, bytes)
+      IO.puts("send_def_to_server writes def file \"#{inspect(tmp_file)}\" and add that: #{name}")
+      SCSoundServer.load_synthdef_sync(tmp_file, server_name)
+    else
+      SCSoundServer.send_synthdef_sync(bytes, server_name)
+    end
+
     def
   end
 
