@@ -39,22 +39,6 @@ defmodule SCSynthDef.Maker do
     def
   end
 
-  defp add_ugengraph_to_def(def, ugen = %Control.Kr{}) do
-    add_ugengraph_to_def_control(def, ugen)
-  end
-
-  defp add_ugengraph_to_def(def, ugen = %Control.Ar{}) do
-    add_ugengraph_to_def_control(def, ugen)
-  end
-
-  defp add_ugengraph_to_def(def, ugen = %Control.Ir{}) do
-    add_ugengraph_to_def_control(def, ugen)
-  end
-
-  defp add_ugengraph_to_def(def, ugen = %Control.Tr{}) do
-    add_ugengraph_to_def_control(def, ugen)
-  end
-
   defp add_ugengraph_to_def_control(def, ugen = %{key: key, value: val, spec: spec}) do
     id = Enum.find_index(def.parameter_names, fn x -> x.name == key end)
 
@@ -106,7 +90,6 @@ defmodule SCSynthDef.Maker do
   end
 
   defp add_number_ugen_input_to_def(def, _ugen, inputs, _key, val) do
-    # IO.puts("constant input: #{key}: #{inspect(val)}")
     {def, index} = add_constant_to_def(def, val)
 
     {def,
@@ -188,6 +171,22 @@ defmodule SCSynthDef.Maker do
         IO.puts("other input not implemented: #{key}: #{inspect(val)}")
         {def, inputs}
     end
+  end
+
+  defp add_ugengraph_to_def(def, ugen = %Control.Kr{}) do
+    add_ugengraph_to_def_control(def, ugen)
+  end
+
+  defp add_ugengraph_to_def(def, ugen = %Control.Ar{}) do
+    add_ugengraph_to_def_control(def, ugen)
+  end
+
+  defp add_ugengraph_to_def(def, ugen = %Control.Ir{}) do
+    add_ugengraph_to_def_control(def, ugen)
+  end
+
+  defp add_ugengraph_to_def(def, ugen = %Control.Tr{}) do
+    add_ugengraph_to_def_control(def, ugen)
   end
 
   defp add_ugengraph_to_def(def, ugen) do
@@ -309,7 +308,7 @@ defmodule SCSynthDef.Maker do
 
     if(input.index_of_ugen == -1) do
       %SCSynthDef.Info.InputSpec{
-        name: :out,
+        name: :_out,
         init_value: Enum.at(def.constants, input.index_of_output),
         rate: 0,
         id: -1,
@@ -348,11 +347,9 @@ defmodule SCSynthDef.Maker do
   defp validate_out_parameters!(def) do
     input_specs = get_out_ugens(def) |> find_out_bus_input_specs()
 
-    # IO.inspect(input_specs)
-
     Enum.map(input_specs, fn input_spec ->
-      if !String.starts_with?(Atom.to_string(input_spec.name), "out") do
-        raise "out ugens should always use constants or parameter names that start with \"out\"."
+      if !String.starts_with?(Atom.to_string(input_spec.name), "_out") do
+        raise "out ugens should always use constants or parameter names that start with '_out'."
       end
 
       if input_spec.rate == 2 do

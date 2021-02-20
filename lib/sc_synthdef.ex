@@ -10,7 +10,7 @@ defmodule SCSynthDef do
   end
 
   defp fade_in_env() do
-    time = Control.kr(transition_time: 0.0)
+    time = Control.kr(_transition_time: 0.0)
     freq = UGen.div(1.0, time)
     Slew.kr(Delay2.kr(DC.kr(1.0)), freq, freq)
   end
@@ -18,13 +18,13 @@ defmodule SCSynthDef do
   defp xout_with_ugen_rate(env, ugen) do
     case apply(ugen.__struct__, :rate, [ugen]) do
       2 ->
-        XOut.ar(Control.ir(out: 0), env, ugen)
+        XOut.ar(Control.ir(_out: 0), env, ugen)
 
       1 ->
-        XOut.kr(Control.ir(out: 0), env, ugen)
+        XOut.kr(Control.ir(_out: 0), env, ugen)
 
       _ ->
-        raise "replace_fade_def doesn't make sense with rates different from ar or kr ... i think. #{}  #{
+        raise "replace_fade_def doesn't make sense with rates different from ar or kr ... i think.  #{
                 inspect(ugen)
               }"
     end
@@ -38,7 +38,7 @@ defmodule SCSynthDef do
   # end
 
   def replace_fade_wrapper(ugen) do
-    id = Control.ir(:replace_id, -2, :out)
+    id = Control.ir(:_replace_id, -2, :_out)
     env = fade_in_env()
     [xout_with_ugen_rate(env, ugen), Free.kr(UGen.sub(env, 0.999999), id)]
   end

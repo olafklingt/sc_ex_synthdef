@@ -41,12 +41,12 @@ defmodule SCSynthDef.Writer do
     end)
   end
 
-  defp print_byte_at_pos(head, f, code_pos) do
-    n = byte_size(head) - 1
-    a = :binary.at(head, n)
-    b = :binary.at(f, n)
-    IO.puts("at #{code_pos} byte #{n} is #{a} == #{b}? #{a == b}")
-  end
+  # defp print_byte_at_pos(head, f, code_pos) do
+  #   n = byte_size(head) - 1
+  #   a = :binary.at(head, n)
+  #   b = :binary.at(f, n)
+  #   IO.puts("at #{code_pos} byte #{n} is #{a} == #{b}? #{a == b}")
+  # end
 
   @spec byte_encode(SCSynthDef.Struct.t()) :: binary
   def byte_encode(sdef) when is_map(sdef) do
