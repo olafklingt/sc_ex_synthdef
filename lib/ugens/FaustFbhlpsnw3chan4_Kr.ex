@@ -3,7 +3,7 @@ defmodule UGen.FaustFbhlpsnw3chan4.Kr do
   def rate(_ugen_struct), do: 1
   def number_of_outputs(_ugen_struct), do: 1
   def outputs(_ugen_struct), do: [1]
-  def args(_ugen_struct), do: [:in1, :in2, :in3, :in4, :in5, :in6, :in7, :in8, :in9, :in10, :in11, :in12, :in13, :in14, :in15, :in16, :in17, :in18, :in19, :in20, :in21, :in22, :in23, :att, :feedbacksize, :outmix, :ratio, :rel, :thresh]
+  def args(_ugen_struct), do: [:in1, :in2, :in3, :in4, :in5, :in6, :in7, :in8, :in9, :in10, :in11, :in12, :in13, :in14, :in15, :in16, :in17, :att, :feedbacksize, :hq1, :hq2, :hq3, :lq1, :lq2, :lq3, :outmix, :ratio, :rel, :thresh]
   def special_index(_ugen_struct), do: 0
   def description do
     "(Undocumented class)"
@@ -29,18 +29,18 @@ defmodule UGen.FaustFbhlpsnw3chan4.Kr do
     field(:in15, float, default: nil)
     field(:in16, float, default: nil)
     field(:in17, float, default: nil)
-    field(:in18, float, default: nil)
-    field(:in19, float, default: nil)
-    field(:in20, float, default: nil)
-    field(:in21, float, default: nil)
-    field(:in22, float, default: nil)
-    field(:in23, float, default: nil)
     field(:att, float, default: 0.01)
     field(:feedbacksize, float, default: 0.0)
+    field(:hq1, float, default: 1.0)
+    field(:hq2, float, default: 1.0)
+    field(:hq3, float, default: 1.0)
+    field(:lq1, float, default: 1.0)
+    field(:lq2, float, default: 1.0)
+    field(:lq3, float, default: 1.0)
     field(:outmix, float, default: 0.0)
     field(:ratio, float, default: 10.0)
     field(:rel, float, default: 0.1)
-    field(:thresh, float, default: 0.9)
+    field(:thresh, float, default: -6.0)
 
   end
 end

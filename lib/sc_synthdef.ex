@@ -30,17 +30,23 @@ defmodule SCSynthDef do
     end
   end
 
-  # def trigger_at_end_fade_def(name, ugen) do
-  #   id = Control.kr(:replace_id, -2, :out)
-  #   env = fade_in_env()
-  #   def = new(name, xout_with_ugen_rate(env, ugen))
-  #   add_ugen(def, SendReply.kr(UGen.sub(env, 0.999999), "/fade_end_reply", 0, id))
-  # end
-
   def replace_fade_wrapper(ugen) do
-    id = Control.ir(:_replace_id, -2, :_out)
+    id = Control.ir(:_replace_id, -2, :any)
     env = fade_in_env()
-    [xout_with_ugen_rate(env, ugen), Free.kr(UGen.sub(env, 0.999999), id)]
+    end_trig = UGen.sub(env, 0.999999)
+
+    [
+      xout_with_ugen_rate(env, ugen),
+      Free.kr(end_trig, id)
+    ]
+  end
+
+  def global_mod_kr(name) when is_binary(name) do
+    In.kr(Control.ir(String.to_atom("in_kr_" <> name), 42, :any), 1)
+  end
+
+  def global_mod_ar(name) when is_binary(name) do
+    InFeedback.ar(Control.ir(String.to_atom("in_ar_" <> name), 42, :any), 1)
   end
 
   def amp_wrapper(ugen) do
@@ -93,14 +99,6 @@ defmodule SCSynthDef do
     |> UGen.add(Control.kr(:add, 0.0, spec))
   end
 
-  # def replace_fade_def(name, ugen) do
-  #   IO.puts("replace_fade_def is deprecated")
-  #   id = Control.kr(:replace_id, -2, :out)
-  #   env = fade_in_env()
-  #   def = new(name, xout_with_ugen_rate(env, ugen))
-  #   add_ugen(def, Free.kr(UGen.sub(env, 0.999999), id))
-  # end
-
   def add_ugen(def, ugen) do
     SCSynthDef.Maker.add_ugen(def, ugen)
   end
@@ -111,7 +109,6 @@ defmodule SCSynthDef do
     bytes = SCSynthDef.encode_to_bytes(def)
 
     if(byte_size(bytes) > 16383) do
-      # if(byte_size(bytes) > 0) do
       dir = System.tmp_dir!()
       tmp_file = Path.join(dir, name)
       File.write!(tmp_file, bytes)

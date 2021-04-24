@@ -119,30 +119,6 @@ defmodule SCSynthDef.UGen.Maker do
     )
   end
 
-  # defp func_args_list(arguments) do
-  #   for x <- arguments do
-  #     n = Enum.at(x, 0)
-  #     v = Enum.at(x, 1)
-  #
-  #     cond do
-  #       is_number(v) ->
-  #         """
-  #         #{":" <> n}, float, default: #{v})
-  #         """
-  #
-  #       is_nil(v) ->
-  #         """
-  #         field(#{":" <> n}, float, default: #{inspect(nil)})
-  #         """
-  #
-  #       true ->
-  #         """
-  #         field(#{":" <> n}, float, default: #{inspect(nil)})
-  #         """
-  #     end
-  #   end
-  # end
-
   defp args_list(arguments) do
     for x <- arguments do
       String.to_atom(Enum.at(x, 0))

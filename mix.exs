@@ -26,10 +26,10 @@ defmodule ScExSynthdef.MixProject do
       {:jason, "~> 1.2"},
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
-      # {:sc_ex_lib, path: "../../github/sc_ex_lib/"},
-      # {:sc_ex_scsoundserver, path: "../../github/sc_ex_scsoundserver/"}
-      {:sc_ex_lib, git: "https://github.com/olafklingt/sc_ex_lib"},
-      {:sc_ex_scsoundserver, git: "https://github.com/olafklingt/sc_ex_scsoundserver"}
+      {:sc_ex_lib, path: "../../github/sc_ex_lib/"},
+      {:sc_ex_scsoundserver, path: "../../github/sc_ex_scsoundserver/"}
+      # {:sc_ex_lib, git: "https://github.com/olafklingt/sc_ex_lib"},
+      # {:sc_ex_scsoundserver, git: "https://github.com/olafklingt/sc_ex_scsoundserver"}
     ]
   end
 end

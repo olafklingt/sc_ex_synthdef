@@ -100,12 +100,12 @@ defmodule Control do
     end
   end
 
-  # @spec kr([{atom, number}, {atom, boolean}]) :: Control.Kr.t()
+  @spec kr(keyword) :: Control.Kr.t()
   def kr([{key, value}, {:strict, strict}]) do
     kr(key, value, key, strict)
   end
 
-  # @spec kr([{atom, number}]) :: Control.Kr.t()
+  @spec kr([{atom, number}]) :: Control.Kr.t()
   def kr([{key, value}]) do
     kr(key, value, key)
   end
@@ -127,12 +127,12 @@ defmodule Control do
     end
   end
 
-  # @spec ir([{atom, number}]) :: Control.Ir.t()
+  @spec ir([{atom, number}]) :: Control.Ir.t()
   def ir([{key, value}]) do
     ir(key, value, key)
   end
 
-  # @spec ir([{atom, number}, {atom, boolean}]) :: Control.Ir.t()
+  @spec ir(keyword) :: Control.Ir.t()
   def ir([{key, value}, strict: strict]) do
     ir(key, value, key, strict)
   end
@@ -154,12 +154,12 @@ defmodule Control do
     end
   end
 
-  # @spec ar([{atom, number}]) :: Control.Ar.t()
+  @spec ar([{atom, number}]) :: Control.Ar.t()
   def ar([{key, value}]) do
     ar(key, value, key)
   end
 
-  # @spec ar([{atom, number}, {atom, boolean}]) :: Control.Ar.t()
+  @spec ar(keyword) :: Control.Ar.t()
   def ar([{key, value}, strict: strict]) do
     ar(key, value, key, strict)
   end
@@ -181,12 +181,12 @@ defmodule Control do
     end
   end
 
-  # @spec tr([{atom, number}]) :: Control.Tr.t()
+  @spec tr([{atom, number}]) :: Control.Tr.t()
   def tr([{key, value}]) do
     tr(key, value, key)
   end
 
-  # @spec tr([{atom, number}, {atom, boolean}]) :: Control.Tr.t()
+  @spec tr(keyword) :: Control.Tr.t()
   def tr([{key, value}, strict: strict]) do
     tr(key, value, key, strict)
   end

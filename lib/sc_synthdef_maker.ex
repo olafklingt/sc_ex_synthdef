@@ -1,6 +1,4 @@
 defmodule SCSynthDef.Maker do
-  # second idea
-
   defp name(struct) do
     apply(struct.__struct__, :name, [struct])
   end
@@ -103,12 +101,6 @@ defmodule SCSynthDef.Maker do
   end
 
   defp add_map_ugen_input_to_def(def, _ugen, inputs, _key, val) do
-    # IO.puts(
-    #   "ugen input: #{key}: name #{inspect(name(val))}   number of outputs #{
-    #     inspect(number_of_outputs(val))
-    #   }"
-    # )
-
     {def, index} = add_ugengraph_to_def(def, val)
 
     if(number_of_outputs(val) < 1) do
@@ -126,12 +118,9 @@ defmodule SCSynthDef.Maker do
   end
 
   defp add_list_ugen_input_to_def(def, ugen, inputs, key, val) do
-    # IO.puts("list input: #{key}: #{inspect(val)}")
-
     Enum.reduce(val, {def, inputs}, fn val, {def, inputs} ->
       if(is_number(val)) do
         {def, inputs} = add_number_ugen_input_to_def(def, ugen, inputs, key, val)
-        # IO.inspect({key, inputs})
         {def, inputs}
       else
         {def, index} = add_ugengraph_to_def(def, val)
@@ -164,7 +153,6 @@ defmodule SCSynthDef.Maker do
         add_map_ugen_input_to_def(def, ugen, inputs, key, val)
 
       is_list(val) ->
-        # IO.inspect(val)
         add_list_ugen_input_to_def(def, ugen, inputs, key, val)
 
       true ->
@@ -234,23 +222,10 @@ defmodule SCSynthDef.Maker do
     {%{def | constants: nc, number_of_constants: Kernel.length(nc)}, index}
   end
 
-  # def add_parameter_to_parameters_set(parameters, val) do
-  #   if Enum.member?(parameters, val) do
-  #     {parameters, Enum.find_index(parameters, fn x -> x == val end)}
-  #   else
-  #     nc = parameters ++ [val]
-  #     i = Kernel.length(nc) - 1
-  #     {nc, i}
-  #   end
-  # end
-
   defp add_parameter_to_def(def, val) do
     val = val / 1
 
     nc = def.parameters ++ [val]
-    # index = Kernel.length(nc) - 1
-    # {nc, index} = add_parameter_to_parameters_set(def.parameters, val)
-    # {%{def | parameters: nc, number_of_parameters: Kernel.length(nc)}, index}
     %{def | parameters: nc, number_of_parameters: Kernel.length(nc)}
   end
 
@@ -283,18 +258,6 @@ defmodule SCSynthDef.Maker do
     {nug, index} = add_ugen_to_ugens_set(def.ugens, ugen)
     {%{def | ugens: nug, number_of_ugens: Kernel.length(nug)}, index}
   end
-
-  # def test_too() do
-  #   def = %SCSynthDef.Struct{name: "test"}
-  #   sig = %SinOsc.Ar{freq: 440}
-  #
-  #   out = %ReplaceOut.Ar{
-  #     bus: 0,
-  #     channelsArray: [sig, %BOp{selector: :*, a: sig, b: 0.5}]
-  #   }
-  #
-  #   SCSynthDef.Maker.add_ugen(def, out)
-  # end
 
   def get_out_ugens(def) do
     {def,
