@@ -1,6 +1,12 @@
 # ScExSynthdef
 
-**TODO: Add description**
+ExSCSynthDef An experimental SynthDef writer that treats UGens as functions. Written in Elixir.
+
+`SCSynthDef.Reader` reads SynthDef binaries
+
+`SCSynthDef.Writer` writes SynthDef binaries from SCSynthDef data structure
+
+`SCSynthDef.Maker` create the SCSynthDef data structure from trees of UGens
 
 ## Installation
 
