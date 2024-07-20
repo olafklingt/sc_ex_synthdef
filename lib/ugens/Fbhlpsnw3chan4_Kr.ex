@@ -1,8 +1,8 @@
-defmodule UGen.FaustFbhlpsnw3chan4.Ar do
-  def name(_ugen_struct), do: "FaustFbhlpsnw3chan4"
-  def rate(_ugen_struct), do: 2
+defmodule UGen.Fbhlpsnw3chan4.Kr do
+  def name(_ugen_struct), do: "Fbhlpsnw3chan4"
+  def rate(_ugen_struct), do: 1
   def number_of_outputs(_ugen_struct), do: 1
-  def outputs(_ugen_struct), do: [2]
+  def outputs(_ugen_struct), do: [1]
   def args(_ugen_struct), do: [:in1, :in2, :in3, :in4, :in5, :in6, :in7, :in8, :in9, :in10, :in11, :in12, :in13, :in14, :in15, :in16, :in17, :att, :feedbacksize, :hq1, :hq2, :hq3, :lq1, :lq2, :lq3, :outmix, :ratio, :rel, :thresh]
   def special_index(_ugen_struct), do: 0
   def description do
